@@ -281,53 +281,77 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Prominent Location Banner for Visitors */}
-      <section className="py-16 px-6 md:px-12 bg-white relative z-10 border-t border-cream">
-        <div className="group max-w-7xl mx-auto rounded-[2.5rem] bg-coffee-dark text-white p-8 md:p-14 relative overflow-hidden shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.3)] hover:-translate-y-2 border border-cappuccino/20 hover:border-cappuccino/60 transition-all duration-500">
-          <div className="absolute -right-10 -bottom-10 w-80 h-80 bg-cappuccino/10 rounded-full blur-[70px] group-hover:bg-cappuccino/25 group-hover:scale-125 transition-all duration-700 pointer-events-none" />
+      {/* Prominent Location Banner for Visitors - Unique Gaming Sanctuary Card */}
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-8 md:px-12 bg-white relative z-10 border-t border-cream">
+        <div className="group max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#1C1414] via-coffee-dark to-[#140D0D] text-white p-6 sm:p-10 md:p-14 relative overflow-hidden shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.3)] hover:-translate-y-1.5 border border-cappuccino/25 hover:border-cappuccino/60 transition-all duration-500">
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative z-10">
+          {/* Subtle Ambient Golden Glow */}
+          <div className="absolute -right-10 -bottom-10 w-72 sm:w-96 h-72 sm:h-96 bg-cappuccino/10 rounded-full blur-[80px] group-hover:bg-cappuccino/25 group-hover:scale-125 transition-all duration-700 pointer-events-none" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
+            
+            {/* Info Section */}
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-2 space-y-4"
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:col-span-7 space-y-4"
             >
-              <span className="text-[10px] uppercase tracking-[0.4em] text-cappuccino font-bold">
-                Direct Walk-in Welcome
-              </span>
-              <h2 className="text-3xl md:text-4xl font-serif italic text-white">
-                Visit Clutch Gaming Cafe in Trichy
+              {/* Live Status Pill */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/10 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em] backdrop-blur-xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Open Everyday • Direct Walk-In</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white leading-tight">
+                Visit Clutch Gaming Cafe <span className="text-cappuccino font-sans not-italic text-xs sm:text-sm font-bold uppercase tracking-wider block sm:inline-block sm:ml-2">Trichy • ₹80/hr</span>
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-white/80 text-sm">
-                <div className="flex items-start gap-3">
-                  <MapPin className="text-cappuccino shrink-0 mt-1" size={18} />
-                  <span>1st Floor (Above KFC), Samayapuram, Trichy - 621112</span>
+
+              {/* Mobile-First Interactive Glass Chips */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/40 transition-colors">
+                  <div className="w-8 h-8 rounded-xl bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino mt-0.5">
+                    <MapPin size={16} />
+                  </div>
+                  <div>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block mb-0.5">Location</span>
+                    <span className="text-xs sm:text-sm text-white/90 leading-snug">1st Floor (Above KFC), Samayapuram, Trichy</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="text-cappuccino shrink-0" size={18} />
-                  <span>Open 7 Days: 10:00 AM – 11:00 PM</span>
+
+                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/40 transition-colors">
+                  <div className="w-8 h-8 rounded-xl bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino mt-0.5">
+                    <Clock size={16} />
+                  </div>
+                  <div>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block mb-0.5">Operating Hours</span>
+                    <span className="text-xs sm:text-sm text-white/90 leading-snug">10:00 AM – 11:00 PM (All 7 Days)</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            <div className="flex flex-col sm:flex-row lg:flex-col gap-4 justify-center">
+            {/* Action Buttons Container */}
+            <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center pt-2 sm:pt-0">
               <a 
                 href="https://www.google.com/maps/search/?api=1&query=1st+Floor+No+21%2FB+Above+KFC+Trichy-Chennai+Highway+Samayapuram+Tiruchirappalli+Tamil+Nadu+621112" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white transition-all shadow-lg active:scale-95"
+                className="w-full py-3.5 sm:py-4 px-6 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.5)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
               >
-                Get Google Maps Route
+                <MapPin size={15} />
+                <span>Get Google Maps Route</span>
               </a>
               <a 
                 href="tel:+919345469023" 
-                className="px-8 py-4 border border-white/30 text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+                className="w-full py-3.5 sm:py-4 px-6 border border-white/20 bg-white/[0.03] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 hover:border-cappuccino/50 transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
               >
-                <Phone size={16} className="text-cappuccino" /> Call: +91 93454 69023
+                <Phone size={15} className="text-cappuccino" /> 
+                <span>Call Helpline: +91 93454 69023</span>
               </a>
             </div>
+
           </div>
         </div>
       </section>

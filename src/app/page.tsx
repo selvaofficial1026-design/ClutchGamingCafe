@@ -222,38 +222,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section - Original Dark Glowing Style */}
-      <section className="py-20 md:py-32 px-6 md:px-12 bg-background relative z-10">
+      {/* Testimonials Section - Compact & Unique Dark Glowing Style */}
+      <section className="py-12 sm:py-20 md:py-28 px-4 sm:px-8 md:px-12 bg-background relative z-10">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             subtitle="Gamer Community"
             title="Loved by Trichy's Gamers"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
             {testimonials.map((test, i) => (
               <motion.div 
                 key={test.name}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="bg-gradient-to-br from-[#2E2020] to-[#1C1414] p-8 md:p-10 rounded-[2rem] text-white flex flex-col justify-between shadow-premium hover:shadow-[0_20px_50px_rgba(200,160,120,0.25)] transition-all relative overflow-hidden group border border-cappuccino/20"
+                whileHover={{ y: -6, scale: 1.015 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="bg-gradient-to-br from-[#2A1D1D] to-[#181010] p-5 sm:p-7 md:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-white flex flex-col justify-between shadow-premium hover:shadow-[0_15px_40px_rgba(200,160,120,0.22)] transition-all relative overflow-hidden group border border-cappuccino/25"
               >
-                <div className="absolute top-0 right-0 w-48 h-48 bg-cappuccino/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-cappuccino/20 transition-colors duration-500 blur-[40px]" />
-                <Star className="text-cappuccino absolute top-8 right-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-110 drop-shadow-[0_0_15px_rgba(200,149,95,0.5)]" size={24} fill="currentColor" />
+                {/* Subtle Ambient Aura */}
+                <div className="absolute top-0 right-0 w-36 sm:w-48 h-36 sm:h-48 bg-cappuccino/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-cappuccino/20 transition-colors duration-500 blur-[35px] pointer-events-none" />
                 
-                <p className="text-lg md:text-xl font-serif leading-relaxed mb-8 italic relative z-10 text-white drop-shadow-md">
+                {/* Top Row: 5-Star Rating & Verified Badge */}
+                <div className="flex items-center justify-between gap-2 mb-3.5 relative z-10">
+                  <div className="flex items-center gap-1 text-cappuccino">
+                    {[...Array(5)].map((_, sI) => (
+                      <Star key={sI} size={13} fill="currentColor" className="drop-shadow-[0_0_8px_rgba(200,149,95,0.6)]" />
+                    ))}
+                  </div>
+                  <span className="text-[8.5px] uppercase tracking-wider font-bold text-cappuccino bg-white/5 border border-cappuccino/30 px-2.5 py-0.5 rounded-full backdrop-blur-xs">
+                    5.0 ★ Verified
+                  </span>
+                </div>
+                
+                {/* Compact Quote Text */}
+                <p className="text-sm sm:text-base md:text-lg font-serif leading-snug sm:leading-relaxed mb-4 sm:mb-6 italic relative z-10 text-white/95 drop-shadow-sm">
                   &ldquo;{test.quote}&rdquo;
                 </p>
-                <div className="relative z-10 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-cappuccino/20 flex items-center justify-center text-cappuccino shadow-lg group-hover:bg-cappuccino group-hover:text-coffee-dark transition-colors duration-500">
-                    <User2 size={20} />
+                
+                {/* User Info Footer */}
+                <div className="relative z-10 flex items-center justify-between pt-3 border-t border-white/10">
+                  <div className="flex items-center gap-2.5 sm:gap-3">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-cappuccino/20 border border-cappuccino/40 flex items-center justify-center text-cappuccino shadow-sm group-hover:bg-cappuccino group-hover:text-coffee-dark transition-colors duration-500 shrink-0">
+                      <User2 size={16} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-xs sm:text-sm text-white leading-tight">{test.name}</h4>
+                      <p className="text-cappuccino font-sans text-[8.5px] sm:text-[9.5px] font-bold uppercase tracking-widest">{test.role}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-base text-white">{test.name}</h4>
-                    <p className="text-cappuccino font-sans text-[10px] font-bold uppercase tracking-widest">{test.role}</p>
-                  </div>
+                  <span className="text-[8px] uppercase tracking-widest text-white/40 font-bold hidden xs:inline-block">
+                    Trichy Arena
+                  </span>
                 </div>
               </motion.div>
             ))}

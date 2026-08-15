@@ -1,0 +1,109 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Play } from "lucide-react";
+
+interface MenuItemCardProps {
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+  category?: string;
+  is4K?: boolean;
+  tag?: string;
+  youtubeId?: string;
+  index?: number;
+  onPlay?: (youtubeId: string) => void;
+}
+
+export default function MenuItemCard({ name, description, price, image, category, is4K, tag, youtubeId, index = 0, onPlay }: MenuItemCardProps) {
+  const handleAction = () => {
+    if (onPlay && youtubeId) onPlay(youtubeId);
+  };
+
+  return (
+    <motion.div
+      onClick={handleAction}
+      onKeyDown={(e) => {
+        if (youtubeId && (e.key === "Enter" || e.key === " ")) {
+          e.preventDefault();
+          handleAction();
+        }
+      }}
+      role={youtubeId ? "button" : undefined}
+      tabIndex={youtubeId ? 0 : undefined}
+      aria-label={youtubeId ? `Play official trailer for ${name}` : undefined}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      whileHover={{ y: -12, scale: 1.03 }}
+      transition={{ duration: 0.6, delay: Math.min(index * 0.15, 0.45), ease: [0.16, 1, 0.3, 1] }}
+      className={`group bg-white rounded-premium overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-500 border border-cream/50 ${youtubeId ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-cappuccino' : ''}`}
+    >
+      <div className="relative aspect-video overflow-hidden">
+        <Image
+          src={image}
+          alt={name}
+          fill
+          quality={100}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+          className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-in-out"
+        />
+        <div className="absolute inset-0 bg-coffee-dark/20 group-hover:bg-coffee-dark/50 transition-colors duration-500" />
+        
+        {youtubeId && (
+          <div className="absolute inset-0 flex items-center justify-center opacity-85 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 transform scale-90 md:scale-75 md:group-hover:scale-100">
+            <div className="w-13 h-13 bg-cappuccino text-coffee-dark rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(200,160,120,0.8)] hover:scale-110 hover:bg-white transition-all">
+              <Play className="fill-current ml-1" size={24} />
+            </div>
+          </div>
+        )}
+        
+        <div className="absolute top-3 left-3 flex flex-col gap-2">
+          {category && (
+            <div className="bg-cappuccino/90 backdrop-blur-md text-coffee-dark px-3 py-1 rounded-full text-[9px] uppercase tracking-[0.2em] font-bold shadow-lg w-fit">
+              {category}
+            </div>
+          )}
+          {tag && (
+            <div className="bg-coffee-dark text-white px-3 py-1 rounded-full text-[9px] uppercase tracking-[0.2em] font-bold shadow-lg w-fit">
+              {tag}
+            </div>
+          )}
+        </div>
+
+        {is4K !== undefined && (
+          <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-2 py-1 rounded-lg shadow-xl border border-cream flex items-center gap-1.5">
+            <div className={`w-2 h-2 rounded-full border-2 ${is4K ? 'border-green-600' : 'border-red-600'} flex items-center justify-center`}>
+              <div className={`w-1 h-1 rounded-full ${is4K ? 'bg-green-600' : 'bg-red-600'}`} />
+            </div>
+            <span className={`text-[8px] font-bold uppercase tracking-widest ${is4K ? 'text-green-700' : 'text-red-700'}`}>
+              {is4K ? '4K' : 'HD'}
+            </span>
+          </div>
+        )}
+      </div>
+      <div className="p-5 md:p-6">
+        <div className="flex justify-between items-start mb-2">
+          <h3 className="text-lg font-serif text-coffee-dark font-bold group-hover:text-cappuccino transition-colors duration-300 line-clamp-1">
+            {name}
+          </h3>
+          <span className="text-cappuccino font-bold font-sans text-lg">{price}</span>
+        </div>
+        <p className="text-coffee-dark/80 text-xs font-sans line-clamp-2 leading-relaxed font-normal min-h-[2.5rem]">
+          {description}
+        </p>
+        <div className="mt-4 pt-3.5 border-t border-cream flex justify-between items-center text-[10px] uppercase tracking-wider font-bold">
+          <span className="text-coffee-dark/50 text-[9px] tracking-widest">Rate: ₹80/hr</span>
+          {youtubeId && (
+            <span className="text-cappuccino flex items-center gap-1 group-hover:underline">
+              Watch Trailer <Play size={10} className="fill-current" />
+            </span>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+}

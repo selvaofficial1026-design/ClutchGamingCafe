@@ -158,14 +158,14 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar: Copyright & Legal */}
-      <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left text-white/45 text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.18em] relative z-10">
+      <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left text-white/70 text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-[0.18em] relative z-10">
         <p>© {new Date().getFullYear()} Clutch Gaming Cafe. All rights reserved.</p>
         <div className="flex items-center gap-4 sm:gap-6">
-          <Link href="/privacy" className="hover:text-cappuccino transition-colors duration-300">
+          <Link href="/privacy" className="hover:text-cappuccino text-white/75 transition-colors duration-300">
             House Rules &amp; Privacy
           </Link>
-          <span className="text-white/20">•</span>
-          <Link href="/terms" className="hover:text-cappuccino transition-colors duration-300">
+          <span className="text-white/30">•</span>
+          <Link href="/terms" className="hover:text-cappuccino text-white/75 transition-colors duration-300">
             Terms &amp; Conditions
           </Link>
         </div>

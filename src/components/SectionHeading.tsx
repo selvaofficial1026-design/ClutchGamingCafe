@@ -21,7 +21,7 @@ export default function SectionHeading({ title, subtitle, centered = true, class
       className={cn("mb-12 md:mb-20", centered ? "text-center" : "text-left", className)}
     >
       {subtitle && (
-        <span className="inline-block text-cappuccino font-bold text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-3 sm:mb-5">
+        <span className="inline-block text-[#B87D43] font-bold text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase mb-3 sm:mb-5">
           {subtitle}
         </span>
       )}

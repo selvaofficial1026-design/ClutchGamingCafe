@@ -12,6 +12,8 @@
 }
 
 @theme {
+  --breakpoint-xs: 480px;
+
   --color-primary: #2A1D1D;
   --color-secondary: #C8955F;
   --color-coffee-dark: #2A1D1D;
@@ -32,8 +34,6 @@
   --shadow-premium: 0 12px 30px rgba(0, 0, 0, 0.08);
   --shadow-premium-hover: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
-
-
 
 @layer base {
   html, body {
@@ -66,7 +66,7 @@
   text-wrap: balance;
 }
 
-/* Grain Texture Overlay */
+/* Grain Texture Overlay — Reliable Base64 SVG (No Network Delay) */
 .grain-overlay {
   position: fixed;
   top: -50%;
@@ -75,28 +75,22 @@
   bottom: -50%;
   width: 200%;
   height: 200%;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.038;
   pointer-events: none;
   z-index: 5;
-  animation: noise 0.2s infinite;
+  animation: noise 0.3s steps(2) infinite;
   will-change: transform;
   transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 @keyframes noise {
   0% { transform: translate3d(0, 0, 0); }
-  10% { transform: translate3d(-5%, -5%, 0); }
-  20% { transform: translate3d(-10%, 5%, 0); }
-  30% { transform: translate3d(5%, -10%, 0); }
-  40% { transform: translate3d(-5%, 15%, 0); }
-  50% { transform: translate3d(-10%, 5%, 0); }
-  60% { transform: translate3d(15%, 0, 0); }
-  70% { transform: translate3d(0, 10%, 0); }
-  80% { transform: translate3d(-15%, 0, 0); }
-  90% { transform: translate3d(10%, 5%, 0); }
-  100% { transform: translate3d(5%, 0, 0); }
+  20% { transform: translate3d(-3%, 3%, 0); }
+  40% { transform: translate3d(3%, -3%, 0); }
+  60% { transform: translate3d(-2%, -2%, 0); }
+  80% { transform: translate3d(2%, 2%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -112,7 +106,7 @@
   body {
     cursor: none;
   }
-  a, button {
+  a, button, [role="button"] {
     cursor: none;
   }
 }
@@ -135,19 +129,19 @@
   width: 60vmax;
   height: 60vmax;
   border-radius: 50%;
-  opacity: 0.05;
-  background: radial-gradient(circle at center, var(--cappuccino) 0%, rgba(200,160,120,0) 60%);
-  animation: float 20s infinite alternate ease-in-out;
+  opacity: 0.06;
+  background: radial-gradient(circle at center, var(--cappuccino) 0%, rgba(200,160,120,0) 65%);
+  animation: float 18s infinite alternate ease-in-out;
   will-change: transform;
 }
 
 .aura-blob-1 { top: -10%; left: -10%; animation-delay: 0s; }
-.aura-blob-2 { bottom: -10%; right: -10%; background: radial-gradient(circle at center, var(--coffee-dark) 0%, rgba(20,15,10,0) 60%); animation-delay: -10s; }
+.aura-blob-2 { bottom: -10%; right: -10%; background: radial-gradient(circle at center, var(--coffee-dark) 0%, rgba(20,15,10,0) 65%); animation-delay: -9s; }
 
 @keyframes float {
   0% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(5%, 10%, 0) scale(1.1); }
-  100% { transform: translate3d(-5%, -5%, 0) scale(0.9); }
+  50% { transform: translate3d(4%, 8%, 0) scale(1.08); }
+  100% { transform: translate3d(-4%, -4%, 0) scale(0.92); }
 }
 
 /* Vogue Masking */
@@ -158,42 +152,34 @@
 
 .vogue-text {
   display: block;
-  letter-spacing: 0.5em;
-  animation: letter-settle 1.2s forwards cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.3em;
+  animation: letter-settle 1s forwards cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes letter-settle {
-  from { letter-spacing: 0.5em; opacity: 0; }
-  to { letter-spacing: 0.1em; opacity: 1; }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Kinetic Left Slide Letter & Text Animations */
 @keyframes letter-slide-in-left {
   0% {
     opacity: 0;
-    transform: translateX(-50px);
-    letter-spacing: -0.04em;
-    filter: blur(4px);
-  }
-  60% {
-    transform: translateX(4px);
-    filter: blur(0);
+    transform: translateX(-35px);
   }
   100% {
     opacity: 1;
     transform: translateX(0);
-    letter-spacing: normal;
-    filter: blur(0);
   }
 }
 
 .animate-slide-left {
-  animation: letter-slide-in-left 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: letter-slide-in-left 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Continuous Left Marquee Animation */
 .animate-marquee-left {
-  animation: marquee-left 25s linear infinite;
+  animation: marquee-left 22s linear infinite;
   will-change: transform;
 }
 

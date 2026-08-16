@@ -29,18 +29,22 @@ export default function PortfolioSlider({ items, onPlay, isPaused = false }: Por
   useEffect(() => {
     if (isPaused || isSliderHovered) return;
 
-    const interval = setInterval(() => {
+    let animId: number;
+    // Fluid continuous animation using requestAnimationFrame for buttery smooth speed
+    const step = () => {
       if (sliderRef.current) {
-        sliderRef.current.scrollLeft += 1;
-        
+        sliderRef.current.scrollLeft += 1.8; // Fast and dynamic speed
+
         // Reset scroll position for seamless infinite loop effect
         if (sliderRef.current.scrollLeft >= sliderRef.current.scrollWidth / 2) {
           sliderRef.current.scrollLeft = 0;
         }
       }
-    }, 12);
+      animId = requestAnimationFrame(step);
+    };
 
-    return () => clearInterval(interval);
+    animId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(animId);
   }, [isPaused, isSliderHovered]);
 
   if (items.length === 0) {
@@ -73,7 +77,7 @@ export default function PortfolioSlider({ items, onPlay, isPaused = false }: Por
       {/* Continuous Marquee Container */}
       <div 
         ref={sliderRef}
-        className="flex gap-6 pl-6 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+        className="flex gap-6 pl-6 overflow-x-auto [&::-webkit-scrollbar]:hidden select-none"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {duplicatedItems.map((item, index) => {
@@ -108,7 +112,6 @@ export default function PortfolioSlider({ items, onPlay, isPaused = false }: Por
                     src={item.image}
                     alt={item.name}
                     fill
-                    unoptimized
                     sizes="(max-width: 768px) 70vw, 360px"
                     className="object-cover transition-transform duration-700 ease-out group-hover/card:scale-110"
                   />
@@ -125,12 +128,12 @@ export default function PortfolioSlider({ items, onPlay, isPaused = false }: Por
 
                   {/* Badges on Top */}
                   <div className="absolute top-2.5 sm:top-3.5 left-2.5 sm:left-3.5 right-2.5 sm:right-3.5 flex items-center justify-between pointer-events-none z-10">
-                    <div className="bg-coffee-dark/90 text-cappuccino border border-cappuccino/30 px-2 sm:px-2.5 py-0.5 rounded-full text-[7.5px] sm:text-[8.5px] uppercase tracking-widest font-bold shadow-md">
+                    <div className="bg-coffee-dark/90 text-cappuccino border border-cappuccino/30 px-2 sm:px-2.5 py-0.5 rounded-full text-[8.5px] sm:text-[9.5px] uppercase tracking-widest font-bold shadow-md">
                       {item.category}
                     </div>
 
                     {item.is4K && (
-                      <div className="bg-white/95 text-coffee-dark px-2 py-0.5 rounded-full text-[7.5px] sm:text-[8px] font-bold uppercase tracking-widest shadow-md flex items-center gap-1">
+                      <div className="bg-white/95 text-coffee-dark px-2 py-0.5 rounded-full text-[8px] sm:text-[9px] font-bold uppercase tracking-widest shadow-md flex items-center gap-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-green-600 inline-block" /> 4K
                       </div>
                     )}

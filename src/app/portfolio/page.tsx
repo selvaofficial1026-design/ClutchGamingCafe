@@ -119,21 +119,6 @@ const portfolioItems: PortfolioItem[] = [
     category: "Co-op & Sports",
     is4K: true,
     videoId: "M5uH8fL-2jA"
-  },
-  // Cafe Items
-  {
-    name: "Artisan Iced Cold Coffee",
-    description: "Rich, bold roasted espresso blend served chilled over ice—the ultimate fuel for late-night gaming clutches.",
-    image: "/images/coffee.png",
-    category: "Cafe & Snacks",
-    is4K: false,
-  },
-  {
-    name: "Gourmet Burgers & Loaded Fries",
-    description: "Crisp seasoned fries, cheesy melts, and toasted burgers prepared fresh at our in-house cafe counter.",
-    image: "/images/pastry.png",
-    category: "Cafe & Snacks",
-    is4K: false,
   }
 ];
 

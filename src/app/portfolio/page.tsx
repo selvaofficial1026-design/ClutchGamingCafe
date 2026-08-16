@@ -6,7 +6,7 @@ import PortfolioSlider, { PortfolioItem } from "@/components/PortfolioSlider";
 import VideoModal from "@/components/VideoModal";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Sparkles, MapPin, Trophy, Flame } from "lucide-react";
+import { Sparkles, MapPin, Trophy, Flame, Gamepad2, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 const categories = ["All", "Action & Open World", "Co-op & Sports", "Racing & Fighting", "FPS Warfare"];

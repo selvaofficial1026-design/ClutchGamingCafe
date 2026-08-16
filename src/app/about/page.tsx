@@ -374,13 +374,15 @@ export default function AboutPage() {
                 return (
                   <motion.div
                     key={zoneItem.id}
-                    initial={{ opacity: 0, scale: 0.88, y: 35 }}
+                    initial={{ opacity: 0, scale: 0.82, y: 40 }}
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-40px" }}
+                    viewport={{ once: true, amount: 0.15 }}
                     transition={{ 
-                      duration: 0.6, 
-                      delay: idx * 0.18, 
-                      ease: [0.22, 1, 0.36, 1] 
+                      type: "spring",
+                      stiffness: 240,
+                      damping: 18,
+                      mass: 0.7,
+                      delay: (idx % 2) * 0.18 + Math.floor(idx / 2) * 0.12,
                     }}
                     onMouseEnter={() => setHoveredZone(zoneItem.id)}
                     onMouseLeave={() => setHoveredZone(null)}

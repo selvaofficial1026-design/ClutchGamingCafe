@@ -237,33 +237,39 @@ export default function PortfolioPage() {
           />
         </div>
 
-        {/* Walk-in CTA Strip - Unique Gaming Sanctuary Card */}
+        {/* Walk-in CTA Strip - Clean Dark Gaming Sanctuary Card */}
         <div className="max-w-4xl mx-auto mt-12 sm:mt-16 px-4 sm:px-6">
-          <div className="group p-6 sm:p-10 md:p-12 rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#221616] via-coffee-dark to-[#140C0C] text-white border border-cappuccino/30 shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.3)] hover:-translate-y-1 relative overflow-hidden transition-all duration-500 text-center">
+          <div className="group p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-[2.25rem] bg-[#180E0E] text-white border border-cappuccino/30 shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1 relative overflow-hidden transition-all duration-500 text-center">
             
-            {/* Ambient Golden Glow */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-cappuccino/15 rounded-full -translate-y-1/2 translate-x-1/2 blur-[75px] group-hover:scale-125 transition-all duration-700 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-cappuccino/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-[60px] pointer-events-none" />
+            {/* Clean Subtle Warm Radial Glow — Zero White Glare */}
+            <div 
+              className="absolute top-0 right-0 w-72 h-72 pointer-events-none opacity-35 group-hover:opacity-60 transition-opacity duration-700" 
+              style={{ background: "radial-gradient(circle at top right, rgba(200,149,95,0.18) 0%, transparent 65%)" }} 
+            />
+            <div 
+              className="absolute bottom-0 left-0 w-60 h-60 pointer-events-none opacity-25" 
+              style={{ background: "radial-gradient(circle at bottom left, rgba(200,149,95,0.12) 0%, transparent 65%)" }} 
+            />
             
             <div className="relative z-10 space-y-4">
               
               {/* Top Rate & Status Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cappuccino/15 border border-cappuccino/40 text-cappuccino text-[9.5px] sm:text-xs font-bold uppercase tracking-[0.25em] shadow-xs">
                 <Flame size={14} className="animate-pulse" />
-                <span>700+ Titles • 5v5 Squad LAN Matchmaking</span>
+                <span>700+ Titles • Direct Walk-In • ₹80/Hr</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white italic leading-tight">
-                Massive Game Vault &amp; <span className="text-cappuccino not-italic font-bold">5v5 LAN Battles</span>
+                Massive Game Vault &amp; <span className="text-cappuccino not-italic font-bold">High-FPS Gaming</span>
               </h3>
 
               <p className="text-white/75 text-xs sm:text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed">
-                All major Triple-A and competitive eSports titles pre-installed on ultra-fast Gen4 NVMe arrays. Join 5v5 custom rooms, solo story campaigns, or couch co-op at ₹80/hr.
+                All major Triple-A and competitive eSports titles pre-installed on ultra-fast Gen4 NVMe arrays. Play solo campaigns, multiplayer showdowns, or PS5 4K lounge co-op at flat ₹80/hr.
               </p>
 
               {/* 3 Gaming-Specific Feature Badges */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 py-2 max-w-2xl mx-auto text-left">
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <Gamepad2 size={16} className="text-cappuccino shrink-0" />
                   <div>
                     <span className="text-[9px] uppercase font-bold text-cappuccino block">Library</span>
@@ -271,7 +277,7 @@ export default function PortfolioPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <ShieldCheck size={16} className="text-emerald-400 shrink-0" />
                   <div>
                     <span className="text-[9px] uppercase font-bold text-emerald-400 block">Low Ping</span>
@@ -279,7 +285,7 @@ export default function PortfolioPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <Sparkles size={16} className="text-cappuccino shrink-0" />
                   <div>
                     <span className="text-[9px] uppercase font-bold text-cappuccino block">Cloud Sync</span>

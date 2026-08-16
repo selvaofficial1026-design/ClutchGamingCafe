@@ -292,9 +292,9 @@ export default function ContactPage() {
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
-                        <Zap size={13} />
+                        <Sparkles size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">50+ Battle Rigs • Zero Waiting</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Ice-Cold AC &amp; Ergonomic Seating</span>
                     </div>
                   </div>
                 </div>

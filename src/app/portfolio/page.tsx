@@ -261,30 +261,41 @@ export default function PortfolioPage() {
               {/* Top Rate & Status Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cappuccino/15 border border-cappuccino/40 text-cappuccino text-[9.5px] sm:text-xs font-bold uppercase tracking-[0.25em] shadow-xs">
                 <Flame size={14} className="animate-pulse" />
-                <span>₹80 / Hour Standard Rate • Direct Walk-In</span>
+                <span>700+ Titles • 5v5 Squad LAN Matchmaking</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white italic leading-tight">
-                Walk in &amp; Play Any Game at <span className="text-cappuccino not-italic font-bold">₹80/hr</span>
+                Massive Game Vault &amp; <span className="text-cappuccino not-italic font-bold">5v5 LAN Battles</span>
               </h3>
 
               <p className="text-white/75 text-xs sm:text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed">
-                Over 700+ titles pre-installed on ultra-fast NVMe SSDs. Instant login, 240Hz Fast-IPS monitors, and DualSense PS5 controllers with zero wait time.
+                All major Triple-A and competitive eSports titles pre-installed on ultra-fast Gen4 NVMe arrays. Join 5v5 custom rooms, solo story campaigns, or couch co-op at ₹80/hr.
               </p>
 
-              {/* 3 Compact Feature Highlights */}
+              {/* 3 Gaming-Specific Feature Badges */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 py-2 max-w-2xl mx-auto text-left">
                 <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-cappuccino shrink-0" />
-                  <span className="text-[10px] sm:text-xs font-bold text-white/90">700+ Games Pre-Loaded</span>
+                  <Gamepad2 size={16} className="text-cappuccino shrink-0" />
+                  <div>
+                    <span className="text-[9px] uppercase font-bold text-cappuccino block">Library</span>
+                    <span className="text-[10px] sm:text-xs font-bold text-white/95">700+ Pre-Installed Titles</span>
+                  </div>
                 </div>
+
                 <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0 animate-pulse" />
-                  <span className="text-[10px] sm:text-xs font-bold text-white/90">240Hz &amp; 15ms Fiber Ping</span>
+                  <ShieldCheck size={16} className="text-emerald-400 shrink-0" />
+                  <div>
+                    <span className="text-[9px] uppercase font-bold text-emerald-400 block">Low Ping</span>
+                    <span className="text-[10px] sm:text-xs font-bold text-white/95">Sub-10ms Dedicated Routing</span>
+                  </div>
                 </div>
+
                 <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
-                  <span className="w-2 h-2 rounded-full bg-cappuccino shrink-0" />
-                  <span className="text-[10px] sm:text-xs font-bold text-white/90">PS5 4K OLED Lounge</span>
+                  <Sparkles size={16} className="text-cappuccino shrink-0" />
+                  <div>
+                    <span className="text-[9px] uppercase font-bold text-cappuccino block">Cloud Sync</span>
+                    <span className="text-[10px] sm:text-xs font-bold text-white/95">Steam, Epic &amp; Riot Ready</span>
+                  </div>
                 </div>
               </div>
 

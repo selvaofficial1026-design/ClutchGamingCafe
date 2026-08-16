@@ -226,18 +226,18 @@ export default function ContactPage() {
                     {/* Live Status Pill */}
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/15 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.22em] mb-2">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>Direct Walk-In • No Booking Needed</span>
+                      <span>Zero Wait-Time • Instant Station Assignment</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-serif italic text-white leading-tight group-hover:text-cappuccino transition-colors">
-                      Walk-In &amp; Start Playing
+                      Walk In &amp; Claim Your Rig
                     </h3>
                   </div>
 
                   <p className="text-white/75 text-xs sm:text-sm font-light leading-relaxed">
-                    No prior booking or reservations needed. Step into our air-conditioned arena, grab any battle station or PS5 recliner, and game at flat ₹80/hr.
+                    No advance deposit or membership needed. Walk in directly, pick any 240Hz PC station or PS5 recliner, and enjoy ice-cold AC comfort at flat ₹80/hr.
                   </p>
 
-                  {/* 3-Step Walk-In Process for Desktop Balance */}
+                  {/* 3-Step Walk-In Process */}
                   <div className="hidden sm:grid grid-cols-3 gap-2 py-2 border-y border-white/10 text-center">
                     <div className="p-2 rounded-xl bg-[#221515] border border-cappuccino/15">
                       <span className="text-[9px] font-bold text-cappuccino uppercase tracking-widest block">01. Walk-In</span>
@@ -249,52 +249,52 @@ export default function ContactPage() {
                     </div>
                     <div className="p-2 rounded-xl bg-[#221515] border border-cappuccino/15">
                       <span className="text-[9px] font-bold text-cappuccino uppercase tracking-widest block">03. Play</span>
-                      <span className="text-[10px] text-white/80">₹80 / Hour</span>
+                      <span className="text-[10px] text-white/80">Flat ₹80 / Hr</span>
                     </div>
                   </div>
 
-                  {/* 6 High-Contrast Feature Chips — Fills Desktop Grid Perfectly */}
+                  {/* 6 Real Venue & Amenity Chips */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <MapPin size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">1st Floor (Above KFC)</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">1st Floor (Above KFC), Trichy Hwy</span>
                     </div>
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
-                        <Gamepad2 size={13} />
+                        <Navigation size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">240Hz Fast-IPS &amp; PS5 4K</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Dedicated Free Parking On-Site</span>
                     </div>
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <ShieldCheck size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">1 Gbps Dedicated Fiber</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">100% UPS &amp; Dual Fiber Backup</span>
                     </div>
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <Sparkles size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Flat ₹80 / Hour Standard</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Sanitized Stations &amp; Clean Headsets</span>
                     </div>
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <Clock size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Open 10:00 AM – 11:00 PM</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Open 10:00 AM – 11:00 PM Daily</span>
                     </div>
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <Zap size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">50+ Gaming Stations</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">50+ Battle Rigs • Zero Waiting</span>
                     </div>
                   </div>
                 </div>

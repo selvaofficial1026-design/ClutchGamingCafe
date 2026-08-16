@@ -486,24 +486,30 @@ export default function AboutPage() {
               {/* Top Live Pill */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/15 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Direct Walk-In Sanctuary • No Booking Needed</span>
+                <span>Tournament Architecture • Zero Throttling</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white leading-tight">
-                Ready to Experience <span className="text-cappuccino">Clutch Gaming Cafe?</span>
+                Built for Uncapped FPS &amp; <span className="text-cappuccino">Thermal Dominance</span>
               </h3>
 
               <p className="text-white/75 text-xs sm:text-sm md:text-base font-light leading-relaxed">
-                Open 7 days a week (10:00 AM – 11:00 PM). ₹80 per hour with 700+ titles ready to play at 1st Floor (Above KFC), Samayapuram, Trichy.
+                Engineered with 240Hz Fast-IPS panels, high-grade RTX architecture, optical mechanical switches, and dual-zone industrial climate control for zero frame drops.
               </p>
 
-              {/* Quick Info Tags */}
+              {/* Hardware-Specific Info Tags */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
-                <span className="px-3 py-1 rounded-lg bg-white/[0.05] border border-white/10 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
-                  <MapPin size={13} className="text-cappuccino" /> 1st Floor (Above KFC), Samayapuram
+                <span className="px-3 py-1.5 rounded-lg bg-white/[0.05] border border-white/10 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
+                  <Monitor size={13} className="text-cappuccino" /> 240Hz Fast-IPS (0.5ms GTG)
                 </span>
-                <span className="px-3 py-1 rounded-lg bg-white/[0.05] border border-white/10 text-[10px] sm:text-xs text-cappuccino font-bold">
-                  ₹80 / Hr Flat Rate
+                <span className="px-3 py-1.5 rounded-lg bg-white/[0.05] border border-white/10 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
+                  <Cpu size={13} className="text-cappuccino" /> High-Performance RTX Rigs
+                </span>
+                <span className="px-3 py-1.5 rounded-lg bg-white/[0.05] border border-white/10 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
+                  <Gamepad2 size={13} className="text-cappuccino" /> PS5 4K OLED HDR Lounge
+                </span>
+                <span className="px-3 py-1.5 rounded-lg bg-white/[0.05] border border-white/10 text-[10px] sm:text-xs text-cappuccino font-bold">
+                  Flat ₹80 / Hr
                 </span>
               </div>
             </div>

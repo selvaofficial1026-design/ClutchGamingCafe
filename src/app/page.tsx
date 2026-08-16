@@ -304,45 +304,57 @@ export default function Home() {
               {/* Live Status Pill */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/10 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Open Everyday • Direct Walk-In</span>
+                <span>Prime Highway Landmark • Direct Walk-In</span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl font-serif italic text-white leading-tight">
-                Visit Clutch Gaming Cafe <span className="text-cappuccino font-sans not-italic text-xs sm:text-sm font-bold uppercase tracking-wider block sm:inline-block sm:ml-2">Trichy • ₹80/hr</span>
+                Visit Clutch Gaming Cafe <span className="text-cappuccino font-sans not-italic text-xs sm:text-sm font-bold uppercase tracking-wider block sm:inline-block sm:ml-2">Samayapuram, Trichy</span>
               </h2>
 
               <p className="text-white/75 text-xs sm:text-sm font-light leading-relaxed">
-                Step into our air-conditioned arena at Samayapuram with 50+ high-FPS PC battle stations and PS5 4K OLED lounge.
+                Located right on the Trichy-Chennai National Highway (1st Floor Above KFC). Step in anytime for high-FPS PC battle stations and 4K PS5 gaming lounge at ₹80/hr.
               </p>
 
-              {/* 4 Clean Dark Chips */}
+              {/* 4 Location & Visit Chips */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
                 <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
                     <MapPin size={14} />
                   </div>
-                  <span className="text-[11px] sm:text-xs text-white/95 font-medium">1st Floor (Above KFC)</span>
+                  <div>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block">Landmark</span>
+                    <span className="text-[11px] sm:text-xs text-white/95 font-medium">1st Floor (Above KFC), Samayapuram</span>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
                     <Clock size={14} />
                   </div>
-                  <span className="text-[11px] sm:text-xs text-white/95 font-medium">10:00 AM – 11:00 PM</span>
+                  <div>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block">Schedule</span>
+                    <span className="text-[11px] sm:text-xs text-white/95 font-medium">10:00 AM – 11:00 PM (All 7 Days)</span>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
-                    <Gamepad2 size={14} />
+                    <Navigation size={14} />
                   </div>
-                  <span className="text-[11px] sm:text-xs text-white/95 font-medium">240Hz PC &amp; PS5 4K</span>
+                  <div>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block">Accessibility</span>
+                    <span className="text-[11px] sm:text-xs text-white/95 font-medium">Highway Frontage &amp; Free Parking</span>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
-                    <ShieldCheck size={14} />
+                    <Sparkles size={14} />
                   </div>
-                  <span className="text-[11px] sm:text-xs text-white/95 font-medium">1 Gbps Dedicated Fiber</span>
+                  <div>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block">Pricing</span>
+                    <span className="text-[11px] sm:text-xs text-white/95 font-medium">Flat ₹80 / Hour (PC &amp; PS5)</span>
+                  </div>
                 </div>
               </div>
             </motion.div>

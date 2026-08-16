@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Sparkles, MapPin, Trophy, Flame } from "lucide-react";
 import Link from "next/link";
 
-const categories = ["All", "Action & Open World", "Co-op & Sports", "FPS Warfare", "Racing & Fighting", "Cafe & Snacks"];
+const categories = ["All", "Action & Open World", "Co-op & Sports", "Racing & Fighting", "FPS Warfare"];
 
 const portfolioItems: PortfolioItem[] = [
   // 1. FIFA / FC 24
@@ -176,8 +176,8 @@ export default function PortfolioPage() {
           {/* Categories - Mobile (3 on top, 2 on bottom) / Desktop (Fluid Row) */}
           <div className="mb-10 md:mb-16">
             
-            {/* Mobile Layout: 3 on Top, 2 on Bottom */}
-            <div className="flex flex-col items-center gap-2.5 sm:hidden px-2">
+            {/* Mobile Layout: 3 on Top (All, Action & Open World, Co-op & Sports), 2 on Bottom (Racing & Fighting, FPS Warfare) */}
+            <div className="flex flex-col items-center gap-2 sm:hidden px-1">
               {/* Top Row: 3 Categories */}
               <div className="grid grid-cols-3 gap-1.5 w-full">
                 {categories.slice(0, 3).map((cat) => (
@@ -185,31 +185,31 @@ export default function PortfolioPage() {
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={cn(
-                      "py-2 px-1 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs",
+                      "py-2 px-1.5 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
                       activeCategory === cat 
                         ? "bg-coffee-dark text-white shadow-md scale-[1.02]" 
-                        : "bg-white text-coffee-dark/70 border border-cream hover:border-cappuccino/40"
+                        : "bg-white text-coffee-dark/80 border border-cream hover:border-cappuccino/40"
                     )}
                   >
-                    <span className="truncate">{cat}</span>
+                    <span>{cat}</span>
                   </button>
                 ))}
               </div>
 
               {/* Bottom Row: 2 Categories */}
-              <div className="grid grid-cols-2 gap-2 w-full max-w-[280px]">
+              <div className="grid grid-cols-2 gap-2 w-full max-w-[310px]">
                 {categories.slice(3, 5).map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={cn(
-                      "py-2 px-2 rounded-full text-[9.5px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs",
+                      "py-2 px-2 rounded-full text-[9.5px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
                       activeCategory === cat 
                         ? "bg-coffee-dark text-white shadow-md scale-[1.02]" 
-                        : "bg-white text-coffee-dark/70 border border-cream hover:border-cappuccino/40"
+                        : "bg-white text-coffee-dark/80 border border-cream hover:border-cappuccino/40"
                     )}
                   >
-                    <span className="truncate">{cat}</span>
+                    <span>{cat}</span>
                   </button>
                 ))}
               </div>

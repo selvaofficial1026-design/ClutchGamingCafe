@@ -12,7 +12,8 @@ export default function PageTransition({ children }: { children: React.ReactNode
       key={pathname}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+      style={{ willChange: "opacity" }}
       className="relative"
     >
       {children}

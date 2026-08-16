@@ -230,22 +230,11 @@ export default function PortfolioPage() {
 
         {/* Continuous Auto-Sliding Marquee Gallery */}
         <div className="w-full relative px-2">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeCategory}
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
-              style={{ willChange: "transform, opacity" }}
-            >
-              <PortfolioSlider 
-                items={filteredItems} 
-                onPlay={(videoId) => setActiveVideo(videoId)} 
-                isPaused={!!activeVideo}
-              />
-            </motion.div>
-          </AnimatePresence>
+          <PortfolioSlider 
+            items={filteredItems} 
+            onPlay={(videoId) => setActiveVideo(videoId)} 
+            isPaused={!!activeVideo}
+          />
         </div>
 
         {/* Walk-in CTA Strip - Unique Gaming Sanctuary Card */}

@@ -50,14 +50,6 @@ export default function LoadingScreen() {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="relative text-center px-4 z-10 flex flex-col items-center"
           >
-            {/* Logo Monogram Badge */}
-            <div className="w-18 h-18 sm:w-22 sm:h-22 mb-6 rounded-full border border-cappuccino/50 bg-[#251717] flex items-center justify-center shadow-[0_0_35px_rgba(200,149,95,0.4)] relative">
-              <span className="font-serif font-bold italic text-cappuccino text-2xl sm:text-3xl tracking-tighter">
-                CGC
-              </span>
-              <div className="absolute -inset-1 rounded-full border border-cappuccino/20 animate-ping opacity-30 pointer-events-none" />
-            </div>
-
             {/* Brand Title */}
             <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl italic font-bold mb-3 tracking-tight text-white drop-shadow-xl">
               Clutch <span className="text-cappuccino not-italic font-normal">Gaming Cafe</span>

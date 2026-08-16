@@ -314,7 +314,7 @@ export default function ContactPage() {
                     className="w-full sm:w-auto px-5 py-2.5 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.6)] transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Phone size={13} />
-                    <span>Call: 93454 69023</span>
+                    <span>Direct Call</span>
                   </a>
                 </div>
 

@@ -302,7 +302,7 @@ export default function PortfolioPage() {
                   className="w-full sm:w-auto px-7 py-3.5 border border-white/20 bg-white/[0.03] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 hover:border-cappuccino/50 transition-all flex items-center justify-center gap-2 active:scale-95"
                 >
                   <Trophy size={15} className="text-cappuccino" />
-                  <span>Call: +91 93454 69023</span>
+                  <span>Direct Call</span>
                 </a>
               </div>
 

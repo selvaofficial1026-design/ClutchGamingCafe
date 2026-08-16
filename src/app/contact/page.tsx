@@ -213,10 +213,13 @@ export default function ContactPage() {
                transition={{ delay: 0.2, duration: 0.8 }}
                className="flex flex-col justify-between"
             >
-              <div className="group bg-gradient-to-br from-[#241717] via-coffee-dark to-[#140D0D] text-white p-5 sm:p-7 md:p-9 rounded-2xl sm:rounded-[2.25rem] shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.3)] hover:-translate-y-1.5 hover:border-cappuccino/60 relative overflow-hidden h-full flex flex-col justify-between border border-cappuccino/25 transition-all duration-500">
+              <div className="group bg-[#180E0E] text-white p-5 sm:p-7 md:p-9 rounded-2xl sm:rounded-[2.25rem] shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1.5 hover:border-cappuccino/50 relative overflow-hidden h-full flex flex-col justify-between border border-cappuccino/30 transition-all duration-500">
                 
-                {/* Subtle Glow with Hover Pulse */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-cappuccino/15 rounded-full -translate-y-1/2 translate-x-1/2 blur-[80px] group-hover:bg-cappuccino/30 group-hover:scale-125 transition-all duration-700 pointer-events-none" />
+                {/* Clean Warm Golden Subtle Glow — No White Glare on Mobile */}
+                <div 
+                  className="absolute top-0 right-0 w-64 h-64 pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-700" 
+                  style={{ background: "radial-gradient(circle at top right, rgba(200,149,95,0.18) 0%, transparent 65%)" }} 
+                />
                 
                 <div className="relative z-10 space-y-4">
                   <div>
@@ -234,34 +237,34 @@ export default function ContactPage() {
                     No prior booking or reservations needed. Step into our air-conditioned lounge, grab any battle station or PS5 recliner, and game at ₹80/hr.
                   </p>
 
-                  {/* Compact 2x2 Highlights Grid */}
+                  {/* Clean Dark High-Contrast Chips — Zero White Shade */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <MapPin size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/90 font-medium">1st Floor (Above KFC)</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">1st Floor (Above KFC)</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <Gamepad2 size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/90 font-medium">240Hz PC &amp; PS5 OLED</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">240Hz PC &amp; PS5 OLED</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <ShieldCheck size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/90 font-medium">1 Gbps Low Ping Fiber</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">1 Gbps Low Ping Fiber</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <Sparkles size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/90 font-medium">₹80 / Hour Standard</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">₹80 / Hour Standard</span>
                     </div>
                   </div>
                 </div>
@@ -278,7 +281,7 @@ export default function ContactPage() {
                   </div>
                   <a
                     href="tel:+919345469023"
-                    className="w-full sm:w-auto px-5 py-2.5 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.6)] transition-all active:scale-95 flex items-center justify-center gap-1.5"
+                    className="w-full sm:w-auto px-5 py-2.5 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.6)] transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Phone size={13} />
                     <span>Call: 93454 69023</span>

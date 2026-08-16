@@ -283,10 +283,13 @@ export default function Home() {
 
       {/* Prominent Location Banner for Visitors - Unique Gaming Sanctuary Card */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-8 md:px-12 bg-white relative z-10 border-t border-cream">
-        <div className="group max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#1C1414] via-coffee-dark to-[#140D0D] text-white p-6 sm:p-10 md:p-14 relative overflow-hidden shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.3)] hover:-translate-y-1.5 border border-cappuccino/25 hover:border-cappuccino/60 transition-all duration-500">
+        <div className="group max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.5rem] bg-[#180E0E] text-white p-6 sm:p-10 md:p-14 relative overflow-hidden shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1.5 border border-cappuccino/30 hover:border-cappuccino/60 transition-all duration-500">
           
-          {/* Subtle Ambient Golden Glow */}
-          <div className="absolute -right-10 -bottom-10 w-72 sm:w-96 h-72 sm:h-96 bg-cappuccino/10 rounded-full blur-[80px] group-hover:bg-cappuccino/25 group-hover:scale-125 transition-all duration-700 pointer-events-none" />
+          {/* Subtle Ambient Golden Glow — Clean Radial Gradient */}
+          <div 
+            className="absolute -right-10 -bottom-10 w-72 sm:w-96 h-72 sm:h-96 pointer-events-none opacity-30 group-hover:opacity-60 transition-opacity duration-700" 
+            style={{ background: "radial-gradient(circle at bottom right, rgba(200,149,95,0.2) 0%, transparent 65%)" }} 
+          />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
             
@@ -308,25 +311,25 @@ export default function Home() {
                 Visit Clutch Gaming Cafe <span className="text-cappuccino font-sans not-italic text-xs sm:text-sm font-bold uppercase tracking-wider block sm:inline-block sm:ml-2">Trichy • ₹80/hr</span>
               </h2>
 
-              {/* Mobile-First Interactive Glass Chips */}
+              {/* Mobile-First Clean Dark Chips */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/40 transition-colors">
+                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <div className="w-8 h-8 rounded-xl bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino mt-0.5">
                     <MapPin size={16} />
                   </div>
                   <div>
                     <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block mb-0.5">Location</span>
-                    <span className="text-xs sm:text-sm text-white/90 leading-snug">1st Floor (Above KFC), Samayapuram, Trichy</span>
+                    <span className="text-xs sm:text-sm text-white/95 leading-snug">1st Floor (Above KFC), Samayapuram, Trichy</span>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/40 transition-colors">
+                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                   <div className="w-8 h-8 rounded-xl bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino mt-0.5">
                     <Clock size={16} />
                   </div>
                   <div>
                     <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block mb-0.5">Operating Hours</span>
-                    <span className="text-xs sm:text-sm text-white/90 leading-snug">10:00 AM – 11:00 PM (All 7 Days)</span>
+                    <span className="text-xs sm:text-sm text-white/95 leading-snug">10:00 AM – 11:00 PM (All 7 Days)</span>
                   </div>
                 </div>
               </div>

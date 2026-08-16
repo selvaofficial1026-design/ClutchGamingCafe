@@ -18,7 +18,9 @@ import {
   ZoomIn,
   Target,
   MapPin,
-  Phone
+  Phone,
+  Monitor,
+  Cpu
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";

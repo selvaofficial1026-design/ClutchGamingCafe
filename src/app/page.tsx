@@ -193,19 +193,19 @@ export default function Home() {
       {/* Parallax Divider */}
       <section className="relative h-[45vh] md:h-[55vh] overflow-hidden">
         <motion.div
-          initial={{ y: -40 }}
-          whileInView={{ y: 40 }}
-          viewport={{ once: false }}
-          transition={{ ease: "linear", duration: 0.1 }}
-          className="absolute inset-0"
+          initial={{ opacity: 0.9 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="absolute inset-0 will-change-transform"
         >
           <Image
             src="/images/hero_cyber_arena.jpg"
             alt="Clutch Gaming Arena Ambience"
             fill
-            unoptimized
+            quality={80}
             sizes="100vw"
-            className="object-cover opacity-90 brightness-[0.28]"
+            className="object-cover brightness-[0.28]"
           />
         </motion.div>
         <div className="relative z-10 h-full flex items-center justify-center px-6">

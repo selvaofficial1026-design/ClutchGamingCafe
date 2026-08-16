@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
@@ -18,7 +18,18 @@ interface MenuItemCardProps {
   onPlay?: (youtubeId: string) => void;
 }
 
-export default function MenuItemCard({ name, description, price, image, category, is4K, tag, youtubeId, index = 0, onPlay }: MenuItemCardProps) {
+function MenuItemCard({
+  name,
+  description,
+  price,
+  image,
+  category,
+  is4K,
+  tag,
+  youtubeId,
+  index = 0,
+  onPlay,
+}: MenuItemCardProps) {
   const handleAction = () => {
     if (onPlay && youtubeId) onPlay(youtubeId);
   };
@@ -35,28 +46,29 @@ export default function MenuItemCard({ name, description, price, image, category
       role={youtubeId ? "button" : undefined}
       tabIndex={youtubeId ? 0 : undefined}
       aria-label={youtubeId ? `Play official trailer for ${name}` : undefined}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 35 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      whileHover={{ y: -12, scale: 1.03 }}
-      transition={{ duration: 0.6, delay: Math.min(index * 0.15, 0.45), ease: [0.16, 1, 0.3, 1] }}
-      className={`group bg-white rounded-premium overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-500 border border-cream/50 ${youtubeId ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-cappuccino' : ''}`}
+      viewport={{ once: true, margin: "-40px" }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      transition={{ duration: 0.5, delay: Math.min(index * 0.1, 0.3), ease: [0.16, 1, 0.3, 1] }}
+      style={{ willChange: "transform, opacity" }}
+      className={`group bg-white rounded-premium overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-300 border border-cream/50 ${youtubeId ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-cappuccino' : ''}`}
     >
       <div className="relative aspect-video overflow-hidden">
         <Image
           src={image}
           alt={name}
           fill
-          quality={100}
+          quality={80}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
-          className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-in-out"
+          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
         />
-        <div className="absolute inset-0 bg-coffee-dark/20 group-hover:bg-coffee-dark/50 transition-colors duration-500" />
+        <div className="absolute inset-0 bg-coffee-dark/20 group-hover:bg-coffee-dark/50 transition-colors duration-300" />
         
         {youtubeId && (
           <div className="absolute inset-0 flex items-center justify-center opacity-85 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 transform scale-90 md:scale-75 md:group-hover:scale-100">
-            <div className="w-13 h-13 bg-cappuccino text-coffee-dark rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(200,160,120,0.8)] hover:scale-110 hover:bg-white transition-all">
-              <Play className="fill-current ml-1" size={24} />
+            <div className="w-12 h-12 bg-cappuccino text-coffee-dark rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(200,160,120,0.8)] hover:scale-110 hover:bg-white transition-all">
+              <Play className="fill-current ml-0.5" size={20} />
             </div>
           </div>
         )}
@@ -87,7 +99,7 @@ export default function MenuItemCard({ name, description, price, image, category
       </div>
       <div className="p-3.5 sm:p-5 md:p-6">
         <div className="flex justify-between items-start mb-1.5 sm:mb-2">
-          <h3 className="text-base sm:text-lg font-serif text-coffee-dark font-bold group-hover:text-cappuccino transition-colors duration-300 line-clamp-1">
+          <h3 className="text-base sm:text-lg font-serif text-coffee-dark font-bold group-hover:text-cappuccino transition-colors duration-200 line-clamp-1">
             {name}
           </h3>
           <span className="text-cappuccino font-bold font-sans text-sm sm:text-lg">{price}</span>
@@ -108,3 +120,5 @@ export default function MenuItemCard({ name, description, price, image, category
     </motion.div>
   );
 }
+
+export default memo(MenuItemCard);

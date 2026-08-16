@@ -379,7 +379,7 @@ export default function AboutPage() {
                     onMouseLeave={() => setHoveredZone(null)}
                     onClick={() => setZoomedZoneIndex(idx)}
                     className={cn(
-                      "max-w-[560px] w-full mx-auto bg-background rounded-[2.25rem] overflow-hidden border transition-all duration-500 group flex flex-col justify-between relative shadow-sm cursor-pointer",
+                      "max-w-[560px] w-full mx-auto bg-background rounded-2xl sm:rounded-[2.25rem] overflow-hidden border transition-all duration-500 group flex flex-col justify-between relative shadow-sm cursor-pointer",
                       isHovered ? "border-cappuccino shadow-2xl -translate-y-2" : "border-cream hover:border-cappuccino/60 hover:shadow-premium"
                     )}
                   >
@@ -402,51 +402,51 @@ export default function AboutPage() {
                       </div>
 
                       {/* Interactive Connected Pin Indicator */}
-                      <div className="absolute top-3.5 left-3.5 z-20 flex items-center gap-2">
-                        <div className="flex items-center gap-2 bg-coffee-dark/95 border border-cappuccino/60 px-3 py-1 rounded-full shadow-lg backdrop-blur-md">
-                          <span className="w-2 h-2 rounded-full bg-cappuccino animate-pulse" />
-                          <span className="text-[8.5px] uppercase tracking-widest font-extrabold text-cappuccino">
+                      <div className="absolute top-2.5 sm:top-3.5 left-2.5 sm:left-3.5 z-20 flex items-center gap-2">
+                        <div className="flex items-center gap-2 bg-coffee-dark/95 border border-cappuccino/60 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full shadow-lg backdrop-blur-md">
+                          <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-cappuccino animate-pulse" />
+                          <span className="text-[7.5px] sm:text-[8.5px] uppercase tracking-widest font-extrabold text-cappuccino">
                             PIN {zoneItem.pinNumber} • {zoneItem.pinLabel}
                           </span>
                         </div>
                       </div>
 
                       {/* Sector Tag */}
-                      <div className="absolute top-3.5 right-3.5 z-20">
-                        <span className="text-[8px] uppercase tracking-widest font-bold bg-black/60 text-white/80 px-2.5 py-0.5 rounded-full border border-white/10 backdrop-blur-sm">
+                      <div className="absolute top-2.5 sm:top-3.5 right-2.5 sm:right-3.5 z-20">
+                        <span className="text-[7.5px] sm:text-[8px] uppercase tracking-widest font-bold bg-black/60 text-white/80 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/10 backdrop-blur-sm">
                           {zoneItem.coords}
                         </span>
                       </div>
 
                       {/* Title & Subtitle overlay on Photo */}
-                      <div className="absolute bottom-3.5 left-5 right-5 z-20">
-                        <h3 className="text-xl sm:text-2xl font-serif text-white font-bold drop-shadow-md leading-tight group-hover:text-cappuccino transition-colors">
+                      <div className="absolute bottom-2.5 sm:bottom-3.5 left-3.5 sm:left-5 right-3.5 sm:right-5 z-20">
+                        <h3 className="text-lg sm:text-2xl font-serif text-white font-bold drop-shadow-md leading-tight group-hover:text-cappuccino transition-colors line-clamp-1">
                           {zoneItem.title}
                         </h3>
-                        <p className="text-cappuccino/90 text-xs font-sans mt-0.5 font-semibold flex items-center gap-1.5">
-                          <Radio size={12} className="text-cappuccino shrink-0" />
+                        <p className="text-cappuccino/90 text-[11px] sm:text-xs font-sans mt-0.5 font-semibold flex items-center gap-1.5">
+                          <Radio size={11} className="text-cappuccino shrink-0" />
                           {zoneItem.subtitle}
                         </p>
                       </div>
                     </div>
 
                     {/* Zone Details & Pinned Circuit Info */}
-                    <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
-                      <p className="text-coffee-dark/70 text-xs sm:text-sm leading-relaxed mb-5 font-light">
+                    <div className="p-4 sm:p-5 md:p-6 flex flex-col justify-between flex-1">
+                      <p className="text-coffee-dark/70 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-5 font-light line-clamp-3 sm:line-clamp-none">
                         {zoneItem.desc}
                       </p>
 
                       {/* Specs Tags & Pinned Status */}
-                      <div className="flex flex-wrap items-center justify-between gap-3 pt-3.5 border-t border-cream/80">
+                      <div className="flex flex-wrap items-center justify-between gap-2.5 pt-3 border-t border-cream/80">
                         <div className="flex flex-wrap items-center gap-1.5">
                           {zoneItem.specs.map((sp, sIdx) => (
-                            <span key={sIdx} className="text-[9px] uppercase tracking-wider font-bold bg-white text-coffee-dark/80 px-2.5 py-0.5 rounded-full border border-cream shadow-xs">
+                            <span key={sIdx} className="text-[8px] sm:text-[9px] uppercase tracking-wider font-bold bg-white text-coffee-dark/80 px-2 sm:px-2.5 py-0.5 rounded-full border border-cream shadow-xs">
                               {sp}
                             </span>
                           ))}
                         </div>
-                        <div className="text-[9px] uppercase tracking-widest font-bold text-cappuccino flex items-center gap-1">
-                          <Maximize2 size={11} /> Zoom HD
+                        <div className="text-[8px] sm:text-[9px] uppercase tracking-widest font-bold text-cappuccino flex items-center gap-1">
+                          <Maximize2 size={10} /> Zoom HD
                         </div>
                       </div>
                     </div>

@@ -85,21 +85,22 @@ export default function MenuItemCard({ name, description, price, image, category
           </div>
         )}
       </div>
-      <div className="p-5 md:p-6">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-lg font-serif text-coffee-dark font-bold group-hover:text-cappuccino transition-colors duration-300 line-clamp-1">
+      <div className="p-3.5 sm:p-5 md:p-6">
+        <div className="flex justify-between items-start mb-1.5 sm:mb-2">
+          <h3 className="text-base sm:text-lg font-serif text-coffee-dark font-bold group-hover:text-cappuccino transition-colors duration-300 line-clamp-1">
             {name}
           </h3>
-          <span className="text-cappuccino font-bold font-sans text-lg">{price}</span>
+          <span className="text-cappuccino font-bold font-sans text-sm sm:text-lg">{price}</span>
         </div>
-        <p className="text-coffee-dark/80 text-xs font-sans line-clamp-2 leading-relaxed font-normal min-h-[2.5rem]">
+        <p className="text-coffee-dark/80 text-[11px] sm:text-xs font-sans line-clamp-2 leading-relaxed font-normal min-h-[2.2rem] sm:min-h-[2.5rem]">
           {description}
         </p>
-        <div className="mt-4 pt-3.5 border-t border-cream flex justify-between items-center text-[10px] uppercase tracking-wider font-bold">
-          <span className="text-coffee-dark/50 text-[9px] tracking-widest">Rate: ₹80/hr</span>
+        <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3.5 border-t border-cream flex justify-between items-center text-[9px] sm:text-[10px] uppercase tracking-wider font-bold">
+          <span className="text-coffee-dark/50 text-[8.5px] sm:text-[9px] tracking-widest">Rate: ₹80/hr</span>
           {youtubeId && (
-            <span className="text-cappuccino flex items-center gap-1 group-hover:underline">
-              Watch Trailer <Play size={10} className="fill-current" />
+            <span className="text-cappuccino flex items-center gap-1.5 group-hover:underline">
+              <span>Watch Trailer</span>
+              <Play size={10} fill="currentColor" />
             </span>
           )}
         </div>

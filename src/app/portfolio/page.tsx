@@ -173,29 +173,73 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          {/* Categories - Fluid Responsive Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 md:mb-16 px-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={cn(
-                  "relative py-2.5 sm:py-3 px-4 sm:px-6 rounded-full text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 overflow-hidden flex items-center justify-center cursor-pointer",
-                  activeCategory === cat 
-                    ? "text-white shadow-xl scale-105" 
-                    : "text-coffee-dark/70 hover:text-coffee-dark bg-white/70 hover:bg-white backdrop-blur-sm border border-cream hover:border-cappuccino/40 hover:shadow-md"
-                )}
-              >
-                <span className="relative z-10">{cat} <span className="opacity-60 ml-1 font-normal">({getCategoryCount(cat)})</span></span>
-                {activeCategory === cat && (
-                  <motion.div 
-                    layoutId="activeCategory"
-                    className="absolute inset-0 bg-coffee-dark"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-              </button>
-            ))}
+          {/* Categories - Mobile (3 on top, 2 on bottom) / Desktop (Fluid Row) */}
+          <div className="mb-10 md:mb-16">
+            
+            {/* Mobile Layout: 3 on Top, 2 on Bottom */}
+            <div className="flex flex-col items-center gap-2.5 sm:hidden px-2">
+              {/* Top Row: 3 Categories */}
+              <div className="grid grid-cols-3 gap-1.5 w-full">
+                {categories.slice(0, 3).map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={cn(
+                      "py-2 px-1 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs",
+                      activeCategory === cat 
+                        ? "bg-coffee-dark text-white shadow-md scale-[1.02]" 
+                        : "bg-white text-coffee-dark/70 border border-cream hover:border-cappuccino/40"
+                    )}
+                  >
+                    <span className="truncate">{cat}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Bottom Row: 2 Categories */}
+              <div className="grid grid-cols-2 gap-2 w-full max-w-[280px]">
+                {categories.slice(3, 5).map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={cn(
+                      "py-2 px-2 rounded-full text-[9.5px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs",
+                      activeCategory === cat 
+                        ? "bg-coffee-dark text-white shadow-md scale-[1.02]" 
+                        : "bg-white text-coffee-dark/70 border border-cream hover:border-cappuccino/40"
+                    )}
+                  >
+                    <span className="truncate">{cat}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Tablet & Desktop Layout: Single Fluid Row */}
+            <div className="hidden sm:flex flex-wrap justify-center gap-2 sm:gap-3 px-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={cn(
+                    "relative py-2.5 sm:py-3 px-4 sm:px-6 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 overflow-hidden flex items-center justify-center cursor-pointer",
+                    activeCategory === cat 
+                      ? "text-white shadow-xl scale-105" 
+                      : "text-coffee-dark/70 hover:text-coffee-dark bg-white/70 hover:bg-white backdrop-blur-sm border border-cream hover:border-cappuccino/40 hover:shadow-md"
+                  )}
+                >
+                  <span className="relative z-10">{cat} <span className="opacity-60 ml-1 font-normal">({getCategoryCount(cat)})</span></span>
+                  {activeCategory === cat && (
+                    <motion.div 
+                      layoutId="activeCategory"
+                      className="absolute inset-0 bg-coffee-dark"
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
+
           </div>
         </div>
 

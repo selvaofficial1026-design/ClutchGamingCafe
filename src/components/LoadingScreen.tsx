@@ -8,7 +8,7 @@ export default function LoadingScreen() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // 5 seconds progress animation (0% to 100%)
+    // 3 seconds progress animation (0% to 100%)
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -17,11 +17,11 @@ export default function LoadingScreen() {
         }
         return prev + 1;
       });
-    }, 48); // 48ms * 100 = ~4.8s + fade
+    }, 28); // 28ms * 100 = ~2.8s + smooth fade
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 3000);
 
     return () => {
       clearInterval(interval);
@@ -35,8 +35,8 @@ export default function LoadingScreen() {
         <motion.div
           key="loading-overlay"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          exit={{ opacity: 0, y: -25 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           role="status"
           aria-label="Loading Clutch Gaming Cafe"
           className="fixed inset-0 z-[99999] bg-[#170E0E] flex flex-col items-center justify-center text-white select-none pointer-events-auto"
@@ -45,9 +45,9 @@ export default function LoadingScreen() {
           <div className="absolute w-80 sm:w-[450px] h-80 sm:h-[450px] bg-cappuccino/15 rounded-full blur-[120px] pointer-events-none animate-pulse" />
 
           <motion.div
-            initial={{ scale: 0.88, opacity: 0, y: 20 }}
+            initial={{ scale: 0.88, opacity: 0, y: 15 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             className="relative text-center px-4 z-10 flex flex-col items-center"
           >
             {/* Brand Title */}
@@ -60,7 +60,7 @@ export default function LoadingScreen() {
               Trichy&apos;s Premier Gaming Lounge • ₹80 / Hr
             </p>
 
-            {/* 5-Second Smooth Progress Bar */}
+            {/* 3-Second Smooth Progress Bar */}
             <div className="w-56 sm:w-72 h-[3px] bg-white/10 relative overflow-hidden rounded-full my-2">
               <motion.div 
                 className="h-full bg-gradient-to-r from-cappuccino via-[#E8B87D] to-cappuccino rounded-full shadow-[0_0_12px_rgba(200,149,95,0.8)]"

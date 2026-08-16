@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MapPin, Phone, Clock, MessageSquare, Sparkles, Navigation, ShieldCheck, Gamepad2, CheckCircle2, Compass, Zap } from "lucide-react";
+import { MapPin, Phone, Clock, MessageSquare, Sparkles, Navigation, ShieldCheck, Gamepad2, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";

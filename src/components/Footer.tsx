@@ -4,46 +4,42 @@ import { MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-coffee-dark text-white pt-10 sm:pt-16 md:pt-20 pb-8 px-4 sm:px-8 md:px-12 relative overflow-hidden font-sans border-t border-white/5">
+    <footer className="bg-coffee-dark text-white pt-8 sm:pt-10 md:pt-12 pb-6 px-4 sm:px-8 md:px-12 relative overflow-hidden font-sans border-t border-white/5">
       {/* Decorative ambient glow */}
-      <div className="absolute bottom-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-cappuccino/5 rounded-full translate-y-1/3 translate-x-1/3 pointer-events-none blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-64 sm:w-80 h-64 sm:h-80 bg-cappuccino/5 rounded-full translate-y-1/3 translate-x-1/3 pointer-events-none blur-3xl" />
       
-      <div className="max-w-7xl mx-auto mb-8 sm:mb-12 relative z-10">
+      <div className="max-w-7xl mx-auto mb-5 sm:mb-6 relative z-10">
         
         {/* Top Header: Brand on Left with Social Icons directly below it */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-white/10">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-white/10">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
             <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="relative w-10 h-10 sm:w-12 sm:h-12 overflow-hidden rounded-full border border-cappuccino/40 shadow-[0_0_15px_rgba(200,160,120,0.25)] flex items-center justify-center bg-white/5 group-hover:bg-cappuccino/10 group-hover:border-cappuccino transition-all duration-300 shrink-0">
-                <span className="font-serif font-bold italic text-cappuccino tracking-tighter text-sm sm:text-base group-hover:scale-110 transition-transform">
+              <div className="relative w-9 h-9 sm:w-10 sm:h-10 overflow-hidden rounded-full border border-cappuccino/40 shadow-[0_0_15px_rgba(200,160,120,0.25)] flex items-center justify-center bg-white/5 group-hover:bg-cappuccino/10 group-hover:border-cappuccino transition-all duration-300 shrink-0">
+                <span className="font-serif font-bold italic text-cappuccino tracking-tighter text-xs sm:text-sm group-hover:scale-110 transition-transform">
                   CGC
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-lg sm:text-2xl font-bold tracking-tight italic text-white leading-tight">
+                <span className="font-serif text-base sm:text-xl font-bold tracking-tight italic text-white leading-tight">
                   Clutch <span className="text-cappuccino">Gaming Cafe</span>
                 </span>
-                <span className="text-[8.5px] sm:text-[10px] uppercase tracking-[0.25em] text-cappuccino/90 font-bold">
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] text-cappuccino/90 font-bold">
                   Trichy • ₹80 / Hour
                 </span>
               </div>
             </Link>
 
-            {/* 3 Quick-Connect Icons directly below the logo on the left */}
-            <div className="flex items-center gap-3">
-              <span className="text-[9px] uppercase tracking-[0.25em] font-bold text-cappuccino/80 hidden xs:inline-block mr-1">
-                Connect:
-              </span>
-              
+            {/* 3 Quick-Connect Icons directly below/next to the logo */}
+            <div className="flex items-center gap-2.5">
               {/* Instagram */}
               <a 
                 href="https://www.instagram.com/clutch.trichy/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] active:bg-gradient-to-tr active:from-[#F58529] active:via-[#DD2A7B] active:to-[#8134AF] hover:shadow-[0_0_20px_rgba(221,42,123,0.7)] active:shadow-[0_0_20px_rgba(221,42,123,0.7)] hover:scale-110 active:scale-95 transition-all duration-300 group cursor-pointer" 
+                className="w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] active:bg-gradient-to-tr active:from-[#F58529] active:via-[#DD2A7B] active:to-[#8134AF] hover:shadow-[0_0_15px_rgba(221,42,123,0.6)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
                 aria-label="Instagram Profile"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
               </a>
 
               {/* WhatsApp */}
@@ -51,13 +47,13 @@ export default function Footer() {
                 href="https://wa.me/919345469023" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#25D366] active:bg-[#25D366] hover:shadow-[0_0_20px_rgba(37,211,102,0.7)] active:shadow-[0_0_20px_rgba(37,211,102,0.7)] hover:scale-110 active:scale-95 transition-all duration-300 group cursor-pointer" 
+                className="w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#25D366] active:bg-[#25D366] hover:shadow-[0_0_15px_rgba(37,211,102,0.6)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
                 aria-label="WhatsApp Direct Chat"
               >
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width="18" 
-                  height="18" 
+                  width="16" 
+                  height="16" 
                   viewBox="0 0 24 24" 
                   fill="currentColor" 
                   className="transition-transform group-hover:scale-110"
@@ -69,30 +65,30 @@ export default function Footer() {
               {/* Phone Call */}
               <a 
                 href="tel:+919345469023" 
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#007AFF] active:bg-[#007AFF] hover:shadow-[0_0_20px_rgba(0,122,255,0.7)] active:shadow-[0_0_20px_rgba(0,122,255,0.7)] hover:scale-110 active:scale-95 transition-all duration-300 group cursor-pointer" 
+                className="w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#007AFF] active:bg-[#007AFF] hover:shadow-[0_0_15px_rgba(0,122,255,0.6)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
                 aria-label="Direct Phone Call"
               >
-                <Phone size={16} className="transition-transform group-hover:scale-110" />
+                <Phone size={14} className="transition-transform group-hover:scale-110" />
               </a>
             </div>
           </div>
 
           {/* Right Side: Quick Highlight Tag */}
-          <div className="hidden md:flex flex-col items-end gap-1">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-cappuccino font-bold">Premier Gaming Lounge</span>
-            <span className="text-xs text-white/60 font-light">1st Floor (Above KFC), Samayapuram, Trichy</span>
+          <div className="hidden md:flex flex-col items-end gap-0.5">
+            <span className="text-[9.5px] uppercase tracking-[0.25em] text-cappuccino font-bold">Premier Gaming Lounge</span>
+            <span className="text-[11px] text-white/60 font-light">1st Floor (Above KFC), Samayapuram, Trichy</span>
           </div>
         </div>
 
-        {/* 2-Column Compact Grid on Mobile / 3-Column on Desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 pt-8">
+        {/* 2-Column on Mobile / 3-Column Compact Grid on Desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 pt-5">
           
           {/* Quick Links */}
           <div className="col-span-1">
-            <h4 className="font-serif text-base sm:text-lg font-bold mb-3 sm:mb-4 italic text-cappuccino">
+            <h4 className="font-serif text-sm sm:text-base font-bold mb-2.5 italic text-cappuccino">
               Explore
             </h4>
-            <ul className="space-y-2 sm:space-y-2.5 text-white/70 text-xs sm:text-sm font-light">
+            <ul className="space-y-1.5 text-white/70 text-[11px] sm:text-xs font-light">
               <li>
                 <Link href="/" className="hover:text-cappuccino active:text-cappuccino transition-colors block py-0.5">
                   Home
@@ -118,10 +114,10 @@ export default function Footer() {
 
           {/* Location & Contact Info */}
           <div className="col-span-1">
-            <h4 className="font-serif text-base sm:text-lg font-bold mb-3 sm:mb-4 italic text-cappuccino">
+            <h4 className="font-serif text-sm sm:text-base font-bold mb-2.5 italic text-cappuccino">
               Visit Us
             </h4>
-            <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm">
+            <ul className="space-y-2 text-[11px] sm:text-xs">
               <li>
                 <a 
                   href="https://www.google.com/maps/search/?api=1&query=1st+Floor+No+21%2FB+Above+KFC+Trichy-Chennai+Highway+Samayapuram+Tiruchirappalli+Tamil+Nadu+621112"
@@ -129,7 +125,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-start gap-1.5 text-white/75 hover:text-white transition-colors"
                 >
-                  <MapPin size={14} className="text-cappuccino shrink-0 mt-0.5" />
+                  <MapPin size={13} className="text-cappuccino shrink-0 mt-0.5" />
                   <span className="leading-snug">1st Floor (Above KFC), Samayapuram</span>
                 </a>
               </li>
@@ -138,25 +134,25 @@ export default function Footer() {
                   href="tel:+919345469023" 
                   className="flex items-center gap-1.5 text-white/75 hover:text-cappuccino font-semibold transition-colors"
                 >
-                  <Phone size={13} className="text-cappuccino shrink-0" />
+                  <Phone size={12} className="text-cappuccino shrink-0" />
                   <span>+91 93454 69023</span>
                 </a>
               </li>
-              <li className="text-[10px] uppercase tracking-wider text-cappuccino font-bold pt-0.5">
+              <li className="text-[9.5px] uppercase tracking-wider text-cappuccino font-bold pt-0.5">
                 10 AM – 11 PM Daily
               </li>
             </ul>
           </div>
 
           {/* Arena Brief (Desktop Only) */}
-          <div className="hidden md:block col-span-1 space-y-3">
-            <h4 className="font-serif text-lg font-bold italic text-cappuccino">
+          <div className="hidden md:block col-span-1 space-y-2">
+            <h4 className="font-serif text-sm sm:text-base font-bold italic text-cappuccino">
               The Arena
             </h4>
-            <p className="text-white/60 text-xs sm:text-sm font-light leading-relaxed">
-              Where high-FPS gaming meets luxury cafe comfort. 50+ battle stations, 240Hz monitors, and PS5 4K lounge.
+            <p className="text-white/60 text-[11px] font-light leading-relaxed">
+              50+ high-FPS battle stations, 240Hz Fast-IPS monitors, and PS5 4K OLED lounge at ₹80/hr.
             </p>
-            <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase tracking-widest font-bold text-cappuccino">
+            <div className="inline-block px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-[9px] uppercase tracking-widest font-bold text-cappuccino">
               ₹80 / Hour Standard Rate
             </div>
           </div>
@@ -166,9 +162,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar: Copyright */}
-      <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left text-white/70 text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-[0.18em] relative z-10">
+      <div className="max-w-7xl mx-auto pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left text-white/60 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.16em] relative z-10">
         <p>© {new Date().getFullYear()} Clutch Gaming Cafe. All rights reserved.</p>
-        <p className="text-cappuccino/90 text-[9.5px] sm:text-[10.5px] tracking-widest font-semibold">Trichy&apos;s Premier Gaming Lounge • ₹80 / Hr</p>
+        <p className="text-cappuccino/90 text-[9px] sm:text-[10px] tracking-widest font-semibold">Trichy&apos;s Premier Gaming Lounge • ₹80 / Hr</p>
       </div>
     </footer>
   );

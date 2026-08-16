@@ -471,34 +471,57 @@ export default function AboutPage() {
 
           </div>
 
-          {/* Visitor Call to Action Strip */}
-          <div className="mt-20 p-10 md:p-14 bg-coffee-dark rounded-[2.5rem] text-white shadow-premium relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="space-y-2 text-center md:text-left">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-cappuccino font-bold">
-                Direct Walk-In Sanctuary
-              </span>
-              <h3 className="text-2xl md:text-4xl font-serif italic text-white">
-                Ready to Experience Clutch Gaming Cafe?
+          {/* Visitor Call to Action Strip - Executive Gaming Sanctuary Card */}
+          <div className="mt-12 sm:mt-16 md:mt-20 p-6 sm:p-10 md:p-12 bg-gradient-to-br from-[#241717] via-coffee-dark to-[#140D0D] rounded-[2rem] sm:rounded-[2.5rem] text-white border border-cappuccino/30 shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.3)] hover:-translate-y-1 relative overflow-hidden transition-all duration-500 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 text-center lg:text-left">
+            
+            {/* Ambient Golden Glow Orb */}
+            <div className="absolute top-0 right-0 w-72 h-72 bg-cappuccino/15 rounded-full -translate-y-1/2 translate-x-1/2 blur-[80px] group-hover:scale-125 transition-all duration-700 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-52 h-52 bg-cappuccino/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-[65px] pointer-events-none" />
+
+            <div className="space-y-3 sm:space-y-4 relative z-10 max-w-xl">
+              {/* Top Live Pill */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/15 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em]">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Direct Walk-In Sanctuary • No Booking Needed</span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white leading-tight">
+                Ready to Experience <span className="text-cappuccino">Clutch Gaming Cafe?</span>
               </h3>
-              <p className="text-white/70 text-sm max-w-xl font-light">
+
+              <p className="text-white/75 text-xs sm:text-sm md:text-base font-light leading-relaxed">
                 Open 7 days a week (10:00 AM – 11:00 PM). ₹80 per hour with 700+ titles ready to play at 1st Floor (Above KFC), Samayapuram, Trichy.
               </p>
+
+              {/* Quick Info Tags */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
+                <span className="px-3 py-1 rounded-lg bg-white/[0.05] border border-white/10 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
+                  <MapPin size={13} className="text-cappuccino" /> 1st Floor (Above KFC), Samayapuram
+                </span>
+                <span className="px-3 py-1 rounded-lg bg-white/[0.05] border border-white/10 text-[10px] sm:text-xs text-cappuccino font-bold">
+                  ₹80 / Hr Flat Rate
+                </span>
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 shrink-0 justify-center">
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 justify-center w-full sm:w-auto relative z-10">
               <Link 
                 href="/contact"
-                className="px-8 py-4 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition-all shadow-lg active:scale-95 cursor-pointer"
+                className="w-full sm:w-auto px-7 py-3.5 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.6)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
               >
-                Get Directions
+                <MapPin size={15} />
+                <span>Get Directions</span>
               </Link>
-              <Link 
-                href="/portfolio"
-                className="px-8 py-4 border border-white/30 text-white rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/10 transition-all cursor-pointer"
+              <a 
+                href="tel:+919345469023"
+                className="w-full sm:w-auto px-7 py-3.5 border border-white/20 bg-white/[0.03] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 hover:border-cappuccino/50 transition-all flex items-center justify-center gap-2 active:scale-95"
               >
-                700+ Games Vault
-              </Link>
+                <Phone size={15} className="text-cappuccino" />
+                <span>Call: +91 93454 69023</span>
+              </a>
             </div>
+
           </div>
 
         </div>

@@ -16,7 +16,9 @@ import {
   ChevronLeft,
   ChevronRight,
   ZoomIn,
-  Target
+  Target,
+  MapPin,
+  Phone
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";

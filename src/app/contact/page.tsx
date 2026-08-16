@@ -63,12 +63,16 @@ export default function ContactPage() {
       </section>
 
       {/* Continuous Kinetic Location Ticker Strip */}
-      <section className="py-3.5 bg-coffee-dark border-y border-cappuccino/20 overflow-hidden relative z-10">
+      <section className="py-2.5 sm:py-3.5 bg-coffee-dark border-y border-cappuccino/20 overflow-hidden relative z-10">
+        {/* Left & Right Edge Fade Masks */}
+        <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-coffee-dark to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-coffee-dark to-transparent z-10 pointer-events-none" />
+
         <div className="flex w-max">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ ease: "linear", duration: 24, repeat: Infinity }}
-            className="flex items-center gap-8 whitespace-nowrap px-6"
+            transition={{ ease: "linear", duration: 30, repeat: Infinity }}
+            className="flex items-center gap-6 sm:gap-8 whitespace-nowrap px-4 sm:px-6"
           >
             {[
               "1st Floor (Above KFC)",
@@ -87,11 +91,11 @@ export default function ContactPage() {
               "Standard Rate: ₹80 / Hour"
             ].map((locItem, lI) => (
               <React.Fragment key={lI}>
-                <span className="text-xs md:text-sm font-bold uppercase tracking-[0.25em] text-white flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cappuccino animate-pulse" />
-                  {locItem}
+                <span className="text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cappuccino animate-pulse shrink-0" />
+                  <span>{locItem}</span>
                 </span>
-                <span className="text-cappuccino/60 text-xs">•</span>
+                <span className="text-cappuccino/50 text-xs">•</span>
               </React.Fragment>
             ))}
           </motion.div>

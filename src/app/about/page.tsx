@@ -268,13 +268,18 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
-          {/* Continuous Kinetic Specs Ticker Strip */}
-          <div className="mt-16 overflow-hidden bg-coffee-dark rounded-2xl border border-cappuccino/30 py-4 shadow-premium">
+          {/* Continuous Kinetic Specs Ticker Strip - Mobile Optimized with Side Fades */}
+          <div className="mt-8 sm:mt-12 md:mt-16 overflow-hidden bg-coffee-dark rounded-full sm:rounded-2xl border border-cappuccino/30 py-2.5 sm:py-3.5 shadow-premium relative">
+            
+            {/* Left & Right Smooth Edge Fade Masks */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-coffee-dark to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-coffee-dark to-transparent z-10 pointer-events-none" />
+
             <div className="flex w-max">
               <motion.div
                 animate={{ x: ["0%", "-50%"] }}
-                transition={{ ease: "linear", duration: 25, repeat: Infinity }}
-                className="flex items-center gap-10 whitespace-nowrap px-6"
+                transition={{ ease: "linear", duration: 32, repeat: Infinity }}
+                className="flex items-center gap-6 sm:gap-8 md:gap-10 whitespace-nowrap px-4 sm:px-6"
               >
                 {[
                   "240Hz Fast-IPS Displays",
@@ -295,11 +300,11 @@ export default function AboutPage() {
                   "₹80 / Hour Standard Rate"
                 ].map((specItem, sI) => (
                   <React.Fragment key={sI}>
-                    <span className="text-xs md:text-sm font-bold uppercase tracking-[0.25em] text-white flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cappuccino animate-pulse" />
-                      {specItem}
+                    <span className="text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cappuccino animate-pulse shrink-0" />
+                      <span>{specItem}</span>
                     </span>
-                    <span className="text-cappuccino/60 text-xs">•</span>
+                    <span className="text-cappuccino/50 text-xs">•</span>
                   </React.Fragment>
                 ))}
               </motion.div>

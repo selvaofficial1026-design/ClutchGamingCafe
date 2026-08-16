@@ -93,6 +93,17 @@
   100% { transform: translate3d(0, 0, 0); }
 }
 
+@media (max-width: 768px) {
+  .grain-overlay {
+    animation: none !important;
+    display: none !important;
+  }
+  .aura-blob {
+    animation: none !important;
+    opacity: 0.03 !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .grain-overlay,
   .aura-blob,

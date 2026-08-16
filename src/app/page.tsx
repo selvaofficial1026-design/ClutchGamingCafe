@@ -281,56 +281,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Prominent Location Banner for Visitors - Unique Gaming Sanctuary Card */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-8 md:px-12 bg-white relative z-10 border-t border-cream">
-        <div className="group max-w-7xl mx-auto rounded-[2rem] sm:rounded-[2.5rem] bg-[#180E0E] text-white p-6 sm:p-10 md:p-14 relative overflow-hidden shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1.5 border border-cappuccino/30 hover:border-cappuccino/60 transition-all duration-500">
+      {/* Prominent Location Banner for Visitors - Compact & Balanced Gaming Sanctuary Card */}
+      <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-8 md:px-12 bg-white relative z-10 border-t border-cream">
+        <div className="group max-w-5xl mx-auto rounded-2xl sm:rounded-[2.25rem] bg-[#180E0E] text-white p-6 sm:p-8 md:p-10 relative overflow-hidden shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1 border border-cappuccino/30 hover:border-cappuccino/60 transition-all duration-500">
           
-          {/* Subtle Ambient Golden Glow — Clean Radial Gradient */}
+          {/* Subtle Ambient Golden Glow */}
           <div 
-            className="absolute -right-10 -bottom-10 w-72 sm:w-96 h-72 sm:h-96 pointer-events-none opacity-30 group-hover:opacity-60 transition-opacity duration-700" 
+            className="absolute -right-10 -bottom-10 w-64 sm:w-80 h-64 sm:h-80 pointer-events-none opacity-30 group-hover:opacity-60 transition-opacity duration-700" 
             style={{ background: "radial-gradient(circle at bottom right, rgba(200,149,95,0.2) 0%, transparent 65%)" }} 
           />
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
             
             {/* Info Section */}
             <motion.div 
-              initial={{ opacity: 0, x: -40 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-7 space-y-4"
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:col-span-7 space-y-3.5"
             >
               {/* Live Status Pill */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/10 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em] backdrop-blur-xs">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/10 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span>Open Everyday • Direct Walk-In</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl font-serif italic text-white leading-tight">
                 Visit Clutch Gaming Cafe <span className="text-cappuccino font-sans not-italic text-xs sm:text-sm font-bold uppercase tracking-wider block sm:inline-block sm:ml-2">Trichy • ₹80/hr</span>
               </h2>
 
-              {/* Mobile-First Clean Dark Chips */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                  <div className="w-8 h-8 rounded-xl bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino mt-0.5">
-                    <MapPin size={16} />
+              <p className="text-white/75 text-xs sm:text-sm font-light leading-relaxed">
+                Step into our air-conditioned arena at Samayapuram with 50+ high-FPS PC battle stations and PS5 4K OLED lounge.
+              </p>
+
+              {/* 4 Clean Dark Chips */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
+                    <MapPin size={14} />
                   </div>
-                  <div>
-                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block mb-0.5">Location</span>
-                    <span className="text-xs sm:text-sm text-white/95 leading-snug">1st Floor (Above KFC), Samayapuram, Trichy</span>
-                  </div>
+                  <span className="text-[11px] sm:text-xs text-white/95 font-medium">1st Floor (Above KFC)</span>
                 </div>
 
-                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                  <div className="w-8 h-8 rounded-xl bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino mt-0.5">
-                    <Clock size={16} />
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
+                    <Clock size={14} />
                   </div>
-                  <div>
-                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block mb-0.5">Operating Hours</span>
-                    <span className="text-xs sm:text-sm text-white/95 leading-snug">10:00 AM – 11:00 PM (All 7 Days)</span>
+                  <span className="text-[11px] sm:text-xs text-white/95 font-medium">10:00 AM – 11:00 PM</span>
+                </div>
+
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
+                    <Gamepad2 size={14} />
                   </div>
+                  <span className="text-[11px] sm:text-xs text-white/95 font-medium">240Hz PC &amp; PS5 4K</span>
+                </div>
+
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
+                    <ShieldCheck size={14} />
+                  </div>
+                  <span className="text-[11px] sm:text-xs text-white/95 font-medium">1 Gbps Dedicated Fiber</span>
                 </div>
               </div>
             </motion.div>
@@ -341,17 +353,17 @@ export default function Home() {
                 href="https://www.google.com/maps/search/?api=1&query=1st+Floor+No+21%2FB+Above+KFC+Trichy-Chennai+Highway+Samayapuram+Tiruchirappalli+Tamil+Nadu+621112" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full py-3.5 sm:py-4 px-6 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.5)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-3.5 px-6 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.5)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <MapPin size={15} />
                 <span>Get Google Maps Route</span>
               </a>
               <a 
                 href="tel:+919345469023" 
-                className="w-full py-3.5 sm:py-4 px-6 border border-white/20 bg-white/[0.03] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 hover:border-cappuccino/50 transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
+                className="w-full py-3.5 px-6 border border-white/20 bg-white/[0.03] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 hover:border-cappuccino/50 transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
               >
                 <Phone size={15} className="text-cappuccino" /> 
-                <span>Call Helpline: +91 93454 69023</span>
+                <span>Call: +91 93454 69023</span>
               </a>
             </div>
 

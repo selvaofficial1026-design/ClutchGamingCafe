@@ -157,18 +157,10 @@ export default function Footer() {
 
       </div>
 
-      {/* Bottom Bar: Copyright & Legal */}
+      {/* Bottom Bar: Copyright */}
       <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-center sm:text-left text-white/70 text-[10.5px] sm:text-[11.5px] font-bold uppercase tracking-[0.18em] relative z-10">
         <p>© {new Date().getFullYear()} Clutch Gaming Cafe. All rights reserved.</p>
-        <div className="flex items-center gap-4 sm:gap-6">
-          <Link href="/privacy" className="hover:text-cappuccino text-white/75 transition-colors duration-300">
-            House Rules &amp; Privacy
-          </Link>
-          <span className="text-white/30">•</span>
-          <Link href="/terms" className="hover:text-cappuccino text-white/75 transition-colors duration-300">
-            Terms &amp; Conditions
-          </Link>
-        </div>
+        <p className="text-cappuccino/90 text-[9.5px] sm:text-[10.5px] tracking-widest font-semibold">Trichy&apos;s Premier Gaming Lounge • ₹80 / Hr</p>
       </div>
     </footer>
   );

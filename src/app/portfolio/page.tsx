@@ -247,32 +247,66 @@ export default function PortfolioPage() {
           </AnimatePresence>
         </div>
 
-        {/* Walk-in CTA Strip */}
-        <div className="max-w-4xl mx-auto mt-16 px-6 text-center">
-          <div className="p-8 md:p-10 rounded-3xl bg-white border border-cream shadow-premium">
-            <div className="inline-flex items-center gap-2 text-cappuccino text-[10px] uppercase tracking-widest font-bold mb-2">
-              <Flame size={16} /> 700+ Games Library Ready to Play
+        {/* Walk-in CTA Strip - Unique Gaming Sanctuary Card */}
+        <div className="max-w-4xl mx-auto mt-12 sm:mt-16 px-4 sm:px-6">
+          <div className="group p-6 sm:p-10 md:p-12 rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-[#221616] via-coffee-dark to-[#140C0C] text-white border border-cappuccino/30 shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.3)] hover:-translate-y-1 relative overflow-hidden transition-all duration-500 text-center">
+            
+            {/* Ambient Golden Glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-cappuccino/15 rounded-full -translate-y-1/2 translate-x-1/2 blur-[75px] group-hover:scale-125 transition-all duration-700 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-cappuccino/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-[60px] pointer-events-none" />
+            
+            <div className="relative z-10 space-y-4">
+              
+              {/* Top Rate & Status Badge */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cappuccino/15 border border-cappuccino/40 text-cappuccino text-[9.5px] sm:text-xs font-bold uppercase tracking-[0.25em] shadow-xs">
+                <Flame size={14} className="animate-pulse" />
+                <span>₹80 / Hour Standard Rate • Direct Walk-In</span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white italic leading-tight">
+                Walk in &amp; Play Any Game at <span className="text-cappuccino not-italic font-bold">₹80/hr</span>
+              </h3>
+
+              <p className="text-white/75 text-xs sm:text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed">
+                Over 700+ titles pre-installed on ultra-fast NVMe SSDs. Instant login, 240Hz Fast-IPS monitors, and DualSense PS5 controllers with zero wait time.
+              </p>
+
+              {/* 3 Compact Feature Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 py-2 max-w-2xl mx-auto text-left">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                  <span className="w-2 h-2 rounded-full bg-cappuccino shrink-0" />
+                  <span className="text-[10px] sm:text-xs font-bold text-white/90">700+ Games Pre-Loaded</span>
+                </div>
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0 animate-pulse" />
+                  <span className="text-[10px] sm:text-xs font-bold text-white/90">240Hz &amp; 15ms Fiber Ping</span>
+                </div>
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-cappuccino/30 transition-colors">
+                  <span className="w-2 h-2 rounded-full bg-cappuccino shrink-0" />
+                  <span className="text-[10px] sm:text-xs font-bold text-white/90">PS5 4K OLED Lounge</span>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+                <Link 
+                  href="/contact"
+                  className="w-full sm:w-auto px-7 py-3.5 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.6)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <MapPin size={15} />
+                  <span>Get Arena Location</span>
+                </Link>
+                <a 
+                  href="tel:+919345469023"
+                  className="w-full sm:w-auto px-7 py-3.5 border border-white/20 bg-white/[0.03] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 hover:border-cappuccino/50 transition-all flex items-center justify-center gap-2 active:scale-95"
+                >
+                  <Trophy size={15} className="text-cappuccino" />
+                  <span>Call: +91 93454 69023</span>
+                </a>
+              </div>
+
             </div>
-            <h3 className="text-2xl md:text-3xl font-serif text-coffee-dark italic mb-3">
-              Walk in &amp; Play Any Game at ₹80/hr
-            </h3>
-            <p className="text-coffee-dark/70 text-sm mb-6 max-w-xl mx-auto">
-              Over 700+ titles pre-installed on ultra-fast NVMe SSDs. Instant login, 240Hz Fast-IPS monitors, and DualSense PS5 controllers.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                href="/contact"
-                className="px-8 py-3.5 bg-coffee-dark text-white rounded-full font-bold text-xs uppercase tracking-widest hover:bg-cappuccino hover:text-coffee-dark transition-all shadow-md active:scale-95 flex items-center gap-2 cursor-pointer"
-              >
-                <Trophy size={16} className="text-cappuccino" /> Contact &amp; Arena Hours
-              </Link>
-              <a 
-                href="tel:+919345469023"
-                className="px-8 py-3.5 border border-coffee-dark/20 text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest hover:bg-coffee-dark hover:text-white transition-all active:scale-95"
-              >
-                Call: +91 93454 69023
-              </a>
-            </div>
+
           </div>
         </div>
       </section>

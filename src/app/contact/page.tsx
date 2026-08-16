@@ -213,11 +213,11 @@ export default function ContactPage() {
                transition={{ delay: 0.2, duration: 0.8 }}
                className="flex flex-col justify-between"
             >
-              <div className="group bg-[#180E0E] text-white p-5 sm:p-7 md:p-9 rounded-2xl sm:rounded-[2.25rem] shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1.5 hover:border-cappuccino/50 relative overflow-hidden h-full flex flex-col justify-between border border-cappuccino/30 transition-all duration-500">
+              <div className="group bg-[#180E0E] text-white p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-[2.25rem] shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1 hover:border-cappuccino/50 relative overflow-hidden h-full flex flex-col justify-between border border-cappuccino/30 transition-all duration-500">
                 
-                {/* Clean Warm Golden Subtle Glow — No White Glare on Mobile */}
+                {/* Clean Warm Golden Subtle Glow */}
                 <div 
-                  className="absolute top-0 right-0 w-64 h-64 pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-700" 
+                  className="absolute top-0 right-0 w-72 h-72 pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-700" 
                   style={{ background: "radial-gradient(circle at top right, rgba(200,149,95,0.18) 0%, transparent 65%)" }} 
                 />
                 
@@ -234,11 +234,27 @@ export default function ContactPage() {
                   </div>
 
                   <p className="text-white/75 text-xs sm:text-sm font-light leading-relaxed">
-                    No prior booking or reservations needed. Step into our air-conditioned lounge, grab any battle station or PS5 recliner, and game at ₹80/hr.
+                    No prior booking or reservations needed. Step into our air-conditioned arena, grab any battle station or PS5 recliner, and game at flat ₹80/hr.
                   </p>
 
-                  {/* Clean Dark High-Contrast Chips — Zero White Shade */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                  {/* 3-Step Walk-In Process for Desktop Balance */}
+                  <div className="hidden sm:grid grid-cols-3 gap-2 py-2 border-y border-white/10 text-center">
+                    <div className="p-2 rounded-xl bg-[#221515] border border-cappuccino/15">
+                      <span className="text-[9px] font-bold text-cappuccino uppercase tracking-widest block">01. Walk-In</span>
+                      <span className="text-[10px] text-white/80">Direct Entry</span>
+                    </div>
+                    <div className="p-2 rounded-xl bg-[#221515] border border-cappuccino/15">
+                      <span className="text-[9px] font-bold text-cappuccino uppercase tracking-widest block">02. Pick Rig</span>
+                      <span className="text-[10px] text-white/80">PC or PS5</span>
+                    </div>
+                    <div className="p-2 rounded-xl bg-[#221515] border border-cappuccino/15">
+                      <span className="text-[9px] font-bold text-cappuccino uppercase tracking-widest block">03. Play</span>
+                      <span className="text-[10px] text-white/80">₹80 / Hour</span>
+                    </div>
+                  </div>
+
+                  {/* 6 High-Contrast Feature Chips — Fills Desktop Grid Perfectly */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <MapPin size={13} />
@@ -250,21 +266,35 @@ export default function ContactPage() {
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <Gamepad2 size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">240Hz PC &amp; PS5 OLED</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">240Hz Fast-IPS &amp; PS5 4K</span>
                     </div>
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <ShieldCheck size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">1 Gbps Low Ping Fiber</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">1 Gbps Dedicated Fiber</span>
                     </div>
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
                       <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
                         <Sparkles size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">₹80 / Hour Standard</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Flat ₹80 / Hour Standard</span>
+                    </div>
+
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
+                      <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
+                        <Clock size={13} />
+                      </div>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Open 10:00 AM – 11:00 PM</span>
+                    </div>
+
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
+                      <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
+                        <Zap size={13} />
+                      </div>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">50+ Gaming Stations</span>
                     </div>
                   </div>
                 </div>
@@ -276,7 +306,7 @@ export default function ContactPage() {
                       Direct Walk-In Helpline
                     </span>
                     <span className="text-[11px] text-white/70 font-light">
-                      Call anytime for routes &amp; station status
+                      Call anytime for station availability &amp; routes
                     </span>
                   </div>
                   <a

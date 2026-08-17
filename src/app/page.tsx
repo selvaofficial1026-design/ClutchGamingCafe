@@ -22,10 +22,10 @@ const featuredItems = [
   },
   {
     name: "Grand Theft Auto V & VI",
-    description: "Jump into high-stakes GTA Online heists, custom RP servers, and get ready for Vice City on our 120Hz RTX battle stations.",
+    description: "Jump into high-stakes GTA Online heists, custom stunts, and get ready for Vice City on our Sony PlayStation 5 & PS4 setups.",
     price: "₹80 / hr",
     image: "/images/games/gta5.jpg",
-    category: "PC & PS4 Arena",
+    category: "PS5 & PS4 Gaming",
     tag: "High FPS",
     youtubeId: "QkkoHAzjnUs"
   },
@@ -48,8 +48,8 @@ const testimonials = [
   },
   {
     name: "Karthik R.",
-    role: "Competitive FPS Gamer",
-    quote: "120Hz Fast-IPS panels and dedicated fiber ping give a proper competitive edge. Top-tier PC rigs and consoles."
+    role: "Competitive Console Gamer",
+    quote: "120Hz Fast-IPS displays and dedicated fiber ping give a proper competitive edge. Top-tier PlayStation console setups."
   }
 ];
 
@@ -58,14 +58,16 @@ const tickerHighlights = [
   "PS4 HD: ₹80 / HOUR",
   "PS5 CONTROLLER: ₹80",
   "PS4 CONTROLLER: ₹60",
+  "SONY PS5 4K 120HZ",
+  "SONY PS4 HD GAMING",
   "EA SPORTS FC 24 & FIFA",
   "IT TAKES TWO CO-OP",
   "GTA V & GTA VI READY",
   "GOD OF WAR RAGNARÖK",
   "MORTAL KOMBAT 1",
   "FORZA HORIZON 5",
-  "120HZ FAST-IPS MONITORS",
-  "1 GBPS ULTRA-LOW PING FIBER"
+  "120HZ FAST-IPS DISPLAYS",
+  "ULTRA-LOW PING DEDICATED FIBER"
 ];
 
 export default function Home() {
@@ -97,13 +99,13 @@ export default function Home() {
           
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-semibold text-white/90">
             <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS5 4K: ₹100/hr (Ctrl ₹80)
+              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS5 4K 120Hz: ₹100/hr
             </div>
             <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS4: ₹80/hr (Ctrl ₹60)
+              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS4 HD: ₹80/hr
             </div>
             <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <Monitor size={15} className="text-[#00D2FF]" /> 120Hz Fast-IPS Panels
+              <Monitor size={15} className="text-[#00D2FF]" /> 120Hz Fast-IPS Displays
             </div>
           </div>
         </div>
@@ -145,7 +147,7 @@ export default function Home() {
              Built by Gamers, for Gamers
            </h2>
            <p className="text-slate-300 leading-relaxed text-base sm:text-lg font-light max-w-2xl mx-auto mb-10">
-             Clutch Gaming Cafe was created to bring tournament-grade gaming hardware, 120Hz Fast-IPS displays, low-latency dedicated optical fiber, and premium lounge comfort directly to gamers in Trichy.
+             Clutch Gaming Cafe was created to bring high-end PlayStation console gaming, 120Hz Fast-IPS displays, low-latency dedicated optical fiber, and premium lounge comfort directly to gamers in Trichy.
            </p>
 
            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-slate-800">
@@ -158,8 +160,8 @@ export default function Home() {
                <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Fast-IPS Panels</p>
              </div>
              <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
-               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">1 Gbps</h4>
-               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Low Ping Fiber</p>
+               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">Low Ping</h4>
+               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Dedicated Fiber</p>
              </div>
              <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
                <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">PS5 &amp; PS4</h4>
@@ -312,7 +314,7 @@ export default function Home() {
               </h2>
 
               <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
-                Located right on the Trichy-Chennai National Highway (1st Floor Above KFC). Step in anytime for high-FPS PC battle stations and 4K PS5 / PS4 gaming lounge.
+                Located right on the Trichy-Chennai National Highway (1st Floor Above KFC). Step in anytime for Sony PlayStation 5 (4K 120Hz) and PlayStation 4 console gaming lounge.
               </p>
 
               {/* 4 Location & Visit Chips */}

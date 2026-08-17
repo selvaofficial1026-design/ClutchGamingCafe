@@ -23,8 +23,8 @@ export default function PrivacyPage() {
     },
     {
       icon: Lock,
-      title: "Account Security on Rigs",
-      content: "Players log in with their personal accounts (Steam, Riot, Epic, Battle.net, PSN). We strongly encourage every player to log out after their gaming session. Our systems are routinely wiped to ensure credentials remain secure."
+      title: "Account Security on Consoles",
+      content: "Players can log in with their personal PlayStation Network (PSN) accounts. We strongly encourage every player to log out after their gaming session to ensure credentials remain secure."
     },
     {
       icon: Shield,

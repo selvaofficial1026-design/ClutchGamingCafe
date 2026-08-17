@@ -154,7 +154,7 @@ export default function PortfolioPage() {
           {/* Quick Rate Pill */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
             <div className="px-6 py-2.5 rounded-full bg-[#0D131F] text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 border border-[#00D2FF]/30 shadow-[0_0_15px_rgba(0,210,255,0.15)]">
-              <Sparkles size={14} className="text-[#00D2FF]" /> Standard Rate: ₹80 / Hour (All PC &amp; PS5 Setups)
+              <Sparkles size={14} className="text-[#00D2FF]" /> PS5 4K: ₹100/hr (Ctrl ₹80) • PS4 HD: ₹80/hr (Ctrl ₹60)
             </div>
           </div>
 

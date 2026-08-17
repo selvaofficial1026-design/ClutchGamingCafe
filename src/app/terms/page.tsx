@@ -13,13 +13,13 @@ export default function TermsPage() {
           <p className="text-xs uppercase tracking-widest text-[#00D2FF] font-bold">Clutch Gaming Cafe • Trichy</p>
           
           <h2 className="text-2xl font-serif text-white mt-8 italic">1. Station Rates &amp; Usage</h2>
-          <p>Station rates are ₹100 per hour for PlayStation 5 (Extra controller: ₹80) and ₹80 per hour for PlayStation 4 / PC (Extra controller: ₹60). Time begins once logged into the station.</p>
+          <p>Station rates are ₹100 per hour for PlayStation 5 (Extra controller: ₹80) and ₹80 per hour for PlayStation 4 (Extra controller: ₹60). Time begins once logged into the station.</p>
           
           <h2 className="text-2xl font-serif text-white mt-8 italic">2. Hardware &amp; Peripherals Care</h2>
-          <p>All gaming rigs, mechanical keyboards, mice, headsets, and PS5 DualSense controllers are high-end precision equipment. Please handle with care. Any deliberate hardware damage is subject to replacement costs.</p>
+          <p>All PlayStation 5 and PlayStation 4 consoles, 120Hz displays, DualSense and DualShock wireless controllers are high-end precision equipment. Please handle with care. Any deliberate hardware damage is subject to replacement costs.</p>
           
           <h2 className="text-2xl font-serif text-white mt-8 italic">3. Fair Play &amp; Personal Accounts</h2>
-          <p>Use of third-party cheats, hacks, or malicious software on cafe PCs is strictly prohibited and results in immediate termination of the session. Players are responsible for logging out of their personal Steam, Riot, or PlayStation accounts after use.</p>
+          <p>Players are responsible for logging out of their personal PlayStation Network (PSN) accounts after their gaming session. Toxic conduct or physical disruption is strictly prohibited in the lounge.</p>
           
           <h2 className="text-2xl font-serif text-white mt-8 italic">4. Food &amp; Drinks Policy</h2>
           <p>Cafe beverages and food items are available at our fuel counter. Please keep drinks inside designated cup holders to prevent accidental spills on equipment.</p>

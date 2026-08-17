@@ -26,9 +26,9 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const keyStats = [
-  { value: "700+", label: "Games Pre-Installed", desc: "Steam, Epic, Riot, EA & PSN Ready" },
-  { value: "120Hz", label: "Fast-IPS Displays", desc: "1ms GtG Response & G-Sync" },
-  { value: "1 Gbps", label: "Dedicated Fiber", desc: "Ultra-Low 10-15ms Server Ping" },
+  { value: "700+", label: "Games Available", desc: "Top PlayStation & EA Titles Ready" },
+  { value: "120Hz", label: "Fast-IPS Displays", desc: "Ultra-Fluid Low Latency Panels" },
+  { value: "Low Ping", label: "Dedicated Fiber", desc: "Stable Sub-15ms Server Routing" },
   { value: "₹100/₹80", label: "Hourly Pricing", desc: "PS5: ₹100/hr • PS4: ₹80/hr" }
 ];
 
@@ -36,13 +36,13 @@ const zones = [
   {
     id: "zone-01",
     pinNumber: "01",
-    pinLabel: "ARENA",
+    pinLabel: "PS4 HD",
     zone: "Zone 01",
-    title: "120Hz Battle Arena",
-    subtitle: "High-FPS PC & Console Rigs",
-    desc: "Equipped with mechanical keyboards, studio noise-isolating headsets, high-DPI optical mice, and high-back ergonomic gaming chairs for long competitive sessions.",
+    title: "PS4 HD Gaming Arena",
+    subtitle: "PlayStation 4 Co-op & Squad Battles",
+    desc: "Equipped with high-performance Sony PS4 consoles, 120Hz displays, original DualShock 4 wireless controllers, and comfortable gaming seats for extended squad sessions.",
     image: "/images/arena/zone_pc_arena.jpg",
-    specs: ["120Hz Fast-IPS", "RTX Architecture", "1 Gbps Leased Fiber"],
+    specs: ["PlayStation 4", "120Hz Displays", "DualShock 4 Gamepads"],
     coords: "Sector A • Northern Hub"
   },
   {
@@ -50,11 +50,11 @@ const zones = [
     pinNumber: "02",
     pinLabel: "PS5 4K",
     zone: "Zone 02",
-    title: "PS5 4K OLED Lounge",
-    subtitle: "Console Co-op & Couch Gaming",
-    desc: "Designed for social multiplayer and story immersion. Play EA Sports FC 24, Mortal Kombat 1, Tekken 8, and God of War Ragnarök in 4K HDR fidelity.",
+    title: "PS5 4K 120Hz OLED Lounge",
+    subtitle: "Flagship PlayStation 5 Console Arena",
+    desc: "Designed for social multiplayer and story immersion. Play EA Sports FC 24, Mortal Kombat 1, Tekken 8, and God of War Ragnarök in 4K 120Hz HDR fidelity.",
     image: "/images/arena/zone_ps5_lounge.jpg",
-    specs: ["PlayStation 5", "4K HDR OLED", "DualSense Haptics"],
+    specs: ["PlayStation 5", "4K 120Hz OLED", "DualSense Haptics"],
     coords: "Sector B • Eastern Lounge"
   },
   {
@@ -72,14 +72,14 @@ const zones = [
   {
     id: "zone-04",
     pinNumber: "04",
-    pinLabel: "VIP LAN",
+    pinLabel: "VIP SQUAD",
     zone: "Zone 04",
-    title: "VIP LAN & Squad Hub",
-    subtitle: "Private 5v5 Squad Gaming",
-    desc: "A dedicated team battle room tailored for 5v5 squad practice, LAN rivalries, private community matches, and uninterrupted team comms.",
+    title: "VIP 4-Player Console Arena",
+    subtitle: "Private Co-op & Tournament Matches",
+    desc: "Private gaming sanctuary for friends and local tournaments. Dual high-res displays, 4 wireless gamepads, and plush seating for intense group battles.",
     image: "/images/arena/zone_vip_lan.jpg",
-    specs: ["5v5 Layout", "Low-Ping Routing", "Acoustic Insulation"],
-    coords: "Sector D • Private Squad Bay"
+    specs: ["4-Player Co-op", "4K Displays", "Private AC Lounge"],
+    coords: "Sector D • Western Bay"
   }
 ];
 
@@ -286,20 +286,20 @@ export default function AboutPage() {
               >
                 {[
                   "120Hz Fast-IPS Displays",
-                  "RTX High-FPS PC Battle Rigs",
-                  "1 Gbps Dedicated Low-Ping Fiber",
-                  "PS5 4K 60FPS OLED Lounge",
+                  "Sony PS5 4K 120Hz Consoles",
+                  "Sony PS4 HD Gaming Consoles",
+                  "Dedicated Low-Ping Optical Fiber",
                   "Sony DualSense Haptic Feedback",
-                  "Ultra-Fast NVMe Gen4 Storage",
-                  "15ms Stable Ping to Mumbai",
+                  "Original DualShock 4 Controllers",
+                  "Sub-15ms Low Server Ping",
                   "PS5: ₹100/hr • PS4: ₹80/hr",
                   "120Hz Fast-IPS Displays",
-                  "RTX High-FPS PC Battle Rigs",
-                  "1 Gbps Dedicated Low-Ping Fiber",
-                  "PS5 4K 60FPS OLED Lounge",
+                  "Sony PS5 4K 120Hz Consoles",
+                  "Sony PS4 HD Gaming Consoles",
+                  "Dedicated Low-Ping Optical Fiber",
                   "Sony DualSense Haptic Feedback",
-                  "Ultra-Fast NVMe Gen4 Storage",
-                  "15ms Stable Ping to Mumbai",
+                  "Original DualShock 4 Controllers",
+                  "Sub-15ms Low Server Ping",
                   "PS5: ₹100/hr • PS4: ₹80/hr"
                 ].map((specItem, sI) => (
                   <React.Fragment key={sI}>
@@ -490,23 +490,23 @@ export default function AboutPage() {
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white leading-tight">
-                Built for Uncapped FPS &amp; <span className="text-[#00D2FF]">Thermal Dominance</span>
+                Built for 120Hz &amp; <span className="text-[#00D2FF]">Pure Console Dominance</span>
               </h3>
 
               <p className="text-slate-300 text-xs sm:text-sm md:text-base font-light leading-relaxed">
-                Engineered with 120Hz Fast-IPS panels, high-grade RTX architecture, optical mechanical switches, and dual-zone industrial climate control for zero frame drops.
+                Engineered with 120Hz Fast-IPS panels, Sony PlayStation 5 (4K 120Hz) and PS4 consoles, original DualSense haptics, and dual-zone industrial climate control for zero frame drops.
               </p>
 
               {/* Hardware-Specific Info Tags */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
                 <span className="px-3 py-1.5 rounded-lg bg-[#080C14] border border-slate-800 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
-                  <Monitor size={13} className="text-[#00D2FF]" /> 120Hz Fast-IPS (1ms GTG)
+                  <Monitor size={13} className="text-[#00D2FF]" /> 120Hz Fast-IPS Displays
                 </span>
                 <span className="px-3 py-1.5 rounded-lg bg-[#080C14] border border-slate-800 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
-                  <Cpu size={13} className="text-[#00D2FF]" /> High-Performance RTX Rigs
+                  <Gamepad2 size={13} className="text-[#00D2FF]" /> Sony PS5 4K 120Hz Consoles
                 </span>
                 <span className="px-3 py-1.5 rounded-lg bg-[#080C14] border border-slate-800 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
-                  <Gamepad2 size={13} className="text-[#00D2FF]" /> PS5 4K OLED HDR Lounge
+                  <Gamepad2 size={13} className="text-[#00D2FF]" /> Sony PS4 HD Gaming Lounge
                 </span>
                 <span className="px-3 py-1.5 rounded-lg bg-[#080C14] border border-slate-800 text-[10px] sm:text-xs text-[#00D2FF] font-bold">
                   PS5: ₹100/hr • PS4: ₹80/hr

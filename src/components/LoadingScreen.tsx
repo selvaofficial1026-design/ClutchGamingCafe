@@ -71,7 +71,7 @@ export default function LoadingScreen() {
 
             {/* Percentage Indicator */}
             <div className="text-[10px] font-mono text-[#00D2FF]/75 tracking-widest mt-2">
-              INITIALIZING RIGS • {progress}%
+              INITIALIZING CONSOLES • {progress}%
             </div>
           </motion.div>
         </motion.div>

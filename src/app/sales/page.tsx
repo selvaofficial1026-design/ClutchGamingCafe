@@ -21,7 +21,7 @@ const WHATSAPP_NUMBER = "918489800905";
 interface Product {
   id: string;
   name: string;
-  category: "ps5" | "ps4" | "pc" | "service" | "accessories";
+  category: "ps5" | "ps4" | "service" | "accessories";
   badge: string;
   availability: string;
   description: string;
@@ -96,52 +96,52 @@ const products: Product[] = [
     whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the PlayStation 4 Slim console. Please share price options and stock details."
   },
   {
-    id: "custom-rtx-gaming-pc",
-    name: "Custom RTX Gaming PC Rig",
-    category: "pc",
-    badge: "Custom Build",
-    availability: "Built to Order",
-    description: "Custom-tailored battle station for high-FPS esports and 1440p gaming. Stress-tested with warranty.",
-    specs: [
-      "Intel i5 / AMD Ryzen 5 Processor",
-      "NVIDIA RTX 4060 / 3060 Series",
-      "16GB/32GB RAM + 1TB NVMe SSD",
-      "3 Years Brand Component Warranty"
-    ],
-    image: "/images/store/pc.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to build/buy a Custom RTX Gaming PC. Please share configuration options and quotation."
-  },
-  {
     id: "dualsense-accessories",
-    name: "PS5 DualSense & PS4 Controllers",
+    name: "PS5 DualSense Wireless Controllers",
     category: "accessories",
     badge: "100% Original",
     availability: "In Stock",
-    description: "100% genuine Sony wireless gamepads in multiple colorways for multiplayer battles.",
+    description: "100% genuine Sony DualSense wireless gamepads with adaptive triggers and haptic feedback.",
     specs: [
-      "PS5 DualSense Haptic Triggers",
-      "PS4 DualShock 4 Wireless",
-      "Multiple Color Options Available",
-      "Ergonomic Precision Grip"
+      "Dynamic Haptic Feedback",
+      "Adaptive Triggers Engine",
+      "Midnight Black, Cosmic Red, White",
+      "1 Year Warranty Backed"
     ],
     image: "/images/store/controllers.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy PS5 DualSense / PS4 DualShock controllers. Please share available colors and pricing."
+    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy Sony PS5 DualSense controllers. Please share available colors and pricing."
   },
   {
-    id: "console-pc-service",
-    name: "Console & PC Thermal Service / Repair",
+    id: "dualshock4-accessories",
+    name: "PS4 DualShock 4 Wireless Controllers",
+    category: "accessories",
+    badge: "100% Original",
+    availability: "In Stock",
+    description: "Original Sony DualShock 4 gamepads for PlayStation 4 gaming with precision analog sticks.",
+    specs: [
+      "High-Precision Analog Sticks",
+      "Multi-Touch Responsive Touchpad",
+      "Built-in Speaker & Stereo Jack",
+      "Tested & Quality Certified"
+    ],
+    image: "/images/store/controllers.jpg",
+    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy Sony PS4 DualShock 4 controllers. Please share available colors and pricing."
+  },
+  {
+    id: "console-service",
+    name: "Console Thermal Service & Repair",
     category: "service",
     badge: "Expert Service",
     availability: "Same-Day Service",
-    description: "Professional maintenance: dust cleaning, thermal paste replacement, stick drift fixes, and SSD upgrades.",
+    description: "Professional PlayStation maintenance: dust cleaning, thermal paste replacement, and stick drift fixes.",
     specs: [
-      "PS4/PS5 Deep Dust Cleaning",
+      "PS4 & PS5 Deep Dust Cleaning",
       "Premium Thermal Paste Replacement",
       "Analog Stick Drift Fix",
-      "SSD Upgrade & Data Transfer"
+      "SSD / Storage Upgrades"
     ],
     image: "/images/arena/zone_vip_lan.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to book a service/repair for my PlayStation Console / Gaming PC."
+    whatsappMessage: "Hello Clutch Gaming Cafe! I want to book a thermal service / repair for my PlayStation Console (PS4/PS5)."
   }
 ];
 
@@ -170,8 +170,8 @@ export default function SalesPage() {
           
           {/* Header */}
           <SectionHeading
-            subtitle="Clutch Gaming Store"
-            title="Sales, Custom Rigs &amp; Console Services"
+            subtitle="Clutch PlayStation Store"
+            title="PlayStation Sales &amp; Console Services"
           />
 
           {/* Compact Store Trust Badges */}
@@ -223,9 +223,8 @@ export default function SalesPage() {
               { id: "all", label: "All Items" },
               { id: "ps5", label: "PlayStation 5" },
               { id: "ps4", label: "PlayStation 4" },
-              { id: "pc", label: "Custom PCs" },
-              { id: "accessories", label: "Controllers" },
-              { id: "service", label: "Services" },
+              { id: "accessories", label: "Controllers & Gear" },
+              { id: "service", label: "Console Service" },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -322,10 +321,10 @@ export default function SalesPage() {
           <div className="mt-10 sm:mt-14 p-5 sm:p-8 rounded-2xl bg-[#0D131F] border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
             <div className="space-y-1 max-w-xl">
               <span className="text-[9.5px] uppercase tracking-[0.25em] font-bold text-[#00D2FF] block">
-                Custom PC Specs • Console Stock • Bulk Inquiries
+                PlayStation Stock • Game Bundles • Bulk Inquiries
               </span>
               <h3 className="text-xl sm:text-2xl font-serif text-white italic">
-                Get Best Pricing on Any Console or Rig
+                Get Best Pricing on Any PlayStation Console
               </h3>
               <p className="text-slate-300 text-xs font-light leading-relaxed">
                 Connect directly for live inventory, game setups, trade-ins, or on-site testing at our Samayapuram lounge.
@@ -334,7 +333,7 @@ export default function SalesPage() {
 
             <div className="flex flex-col sm:flex-row gap-2.5 shrink-0 w-full sm:w-auto">
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Clutch Gaming Cafe! I have an inquiry regarding console purchase / PC build / gaming service.")}`}
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Clutch Gaming Cafe! I have an inquiry regarding PlayStation console purchase / controller / service.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_15px_rgba(0,210,255,0.6)] flex items-center justify-center gap-1.5 active:scale-95"

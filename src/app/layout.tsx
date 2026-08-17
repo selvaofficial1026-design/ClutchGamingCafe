@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     template: "%s | Clutch Gaming Cafe",
   },
   description:
-    "Trichy's premier gaming lounge. High-FPS RTX gaming rigs, 120Hz Fast-IPS monitors, PS5 4K OLED lounge (₹100/hr), PS4 gaming (₹80/hr), ultra-low ping fiber. 1st Floor Above KFC, Samayapuram, Trichy.",
+    "Trichy's premier PlayStation console gaming lounge. Sony PlayStation 5 (4K 120Hz) and PlayStation 4 with 120Hz displays, ultra-low ping fiber. 1st Floor Above KFC, Samayapuram, Trichy.",
   keywords: [
     "Clutch Gaming Cafe",
     "Gaming Cafe Trichy",
     "PS5 Gaming Lounge Trichy",
     "PS4 Gaming Cafe Trichy",
     "Gaming Arena Samayapuram",
-    "120Hz PC Gaming Trichy",
+    "PlayStation Lounge Trichy",
     "FIFA PS5 Gaming Trichy",
-    "Esports Cafe Tiruchirappalli",
+    "Console Gaming Tiruchirappalli",
   ],
   authors: [{ name: "Clutch Gaming Cafe" }],
   creator: "Clutch Gaming Cafe",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Clutch Gaming Cafe",
     title: "Clutch Gaming Cafe | Premier Gaming Lounge - Trichy",
     description:
-      "Play on high-FPS RTX PC rigs, 120Hz monitors, PS5 4K OLED lounge (₹100/hr), and PS4 (₹80/hr) with ultra-low ping fiber in Trichy.",
+      "Play on Sony PS5 4K 120Hz OLED lounge (₹100/hr) and PS4 (₹80/hr) with ultra-low ping fiber in Trichy.",
     images: [
       {
         url: "/images/hero_real_arena.jpg",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clutch Gaming Cafe | Premier Gaming Lounge - Trichy",
     description:
-      "Play on high-FPS RTX PC rigs, 120Hz monitors, PS5 4K OLED lounge (₹100/hr), and PS4 (₹80/hr) with ultra-low ping fiber in Trichy.",
+      "Play on Sony PS5 4K 120Hz OLED lounge (₹100/hr) and PS4 (₹80/hr) with ultra-low ping fiber in Trichy.",
     images: ["/images/hero_real_arena.jpg"],
   },
   robots: {

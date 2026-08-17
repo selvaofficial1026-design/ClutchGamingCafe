@@ -155,7 +155,7 @@ export default function Footer() {
               The Arena &amp; Store
             </h4>
             <p className="text-slate-300 text-[11px] font-light leading-relaxed">
-              High-FPS battle stations, 120Hz Fast-IPS displays, PS5 4K OLED lounge (₹100/hr), and PS4 gaming (₹80/hr).
+              Sony PlayStation 5 (4K 120Hz) and PlayStation 4 console lounge with 120Hz Fast-IPS displays.
             </p>
             <div className="inline-block px-2.5 py-0.5 rounded-full bg-[#0D131F] border border-[#00D2FF]/30 text-[9px] uppercase tracking-widest font-bold text-[#00D2FF] shadow-[0_0_10px_rgba(0,210,255,0.2)]">
               PS5: ₹100/Hr • PS4: ₹80/Hr

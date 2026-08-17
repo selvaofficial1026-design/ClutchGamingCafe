@@ -227,12 +227,12 @@ export default function ContactPage() {
                       <span>Zero Wait-Time • Instant Station Assignment</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-serif italic text-white leading-tight group-hover:text-[#00D2FF] transition-colors">
-                      Walk In &amp; Claim Your Rig
+                      Walk In &amp; Play Directly
                     </h3>
                   </div>
 
                   <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
-                    No advance deposit or membership needed. Walk in directly, pick any 120Hz station or PS5/PS4 lounge, and enjoy ice-cold AC comfort (PS5: ₹100/hr • PS4: ₹80/hr).
+                    No advance deposit or membership needed. Walk in directly, pick any PS5 4K or PS4 station, and enjoy ice-cold AC comfort (PS5: ₹100/hr • PS4: ₹80/hr).
                   </p>
 
                   {/* 3-Step Walk-In Process */}
@@ -242,8 +242,8 @@ export default function ContactPage() {
                       <span className="text-[10px] text-slate-300">Direct Entry</span>
                     </div>
                     <div className="p-2 rounded-xl bg-[#080C14] border border-slate-800">
-                      <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">02. Pick Station</span>
-                      <span className="text-[10px] text-slate-300">PS5, PS4 or PC</span>
+                      <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">02. Pick Console</span>
+                      <span className="text-[10px] text-slate-300">PS5 or PS4</span>
                     </div>
                     <div className="p-2 rounded-xl bg-[#080C14] border border-slate-800">
                       <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">03. Play</span>

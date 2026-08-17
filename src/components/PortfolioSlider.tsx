@@ -101,8 +101,17 @@ export default function PortfolioSlider({ items, onPlay, isPaused = false }: Por
               )}
             >
               <div 
+                role="button"
+                tabIndex={0}
+                aria-label={`Play official 4K trailer for ${item.name}`}
                 onClick={() => item.videoId && onPlay(item.videoId)}
-                className="group/card bg-[#0D131F] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer h-full flex flex-col transition-all duration-500 border border-slate-800 hover:border-[#00D2FF]/60 shadow-[0_4px_25px_rgba(0,0,0,0.6)] hover:shadow-[0_10px_35px_rgba(0,210,255,0.25)]"
+                onKeyDown={(e) => {
+                  if ((e.key === "Enter" || e.key === " ") && item.videoId) {
+                    e.preventDefault();
+                    onPlay(item.videoId);
+                  }
+                }}
+                className="group/card bg-[#0D131F] rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer h-full flex flex-col transition-all duration-500 border border-slate-800 hover:border-[#00D2FF]/60 shadow-[0_4px_25px_rgba(0,0,0,0.6)] hover:shadow-[0_10px_35px_rgba(0,210,255,0.25)] focus:outline-none focus:border-[#00D2FF]"
               >
                 {/* Aspect Ratio Official Game Poster Image Frame */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#080C14]">

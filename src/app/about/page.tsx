@@ -16,7 +16,6 @@ import {
   ChevronLeft,
   ChevronRight,
   ZoomIn,
-  Target,
   MapPin,
   Phone,
   Monitor,

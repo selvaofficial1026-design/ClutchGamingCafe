@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 import SectionHeading from "@/components/SectionHeading";
 import { Shield, Lock, Eye, Database } from "lucide-react";
 

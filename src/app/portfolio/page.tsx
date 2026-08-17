@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import SectionHeading from "@/components/SectionHeading";
 import PortfolioSlider, { PortfolioItem } from "@/components/PortfolioSlider";
 import VideoModal from "@/components/VideoModal";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Sparkles, MapPin, Trophy, Flame, Gamepad2, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -312,7 +312,7 @@ export default function PortfolioPage() {
                   <Sparkles size={16} className="text-[#00D2FF] shrink-0" />
                   <div>
                     <span className="text-[9px] uppercase font-bold text-[#00D2FF] block">Cloud Sync</span>
-                    <span className="text-[10px] sm:text-xs font-bold text-white/95">Steam, Epic &amp; Riot Ready</span>
+                    <span className="text-[10px] sm:text-xs font-bold text-white/95">PSN Cloud Sync &amp; Saves</span>
                   </div>
                 </div>
               </div>

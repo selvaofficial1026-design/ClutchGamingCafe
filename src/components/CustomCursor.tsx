@@ -57,7 +57,7 @@ export default function CustomCursor() {
   }
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-[99999] hidden [@media(hover:hover)]:block">
+    <div aria-hidden="true" className="fixed inset-0 pointer-events-none z-[99999] hidden [@media(hover:hover)]:block">
       <motion.div
         className="w-4 h-4 bg-[#00D2FF] rounded-full flex items-center justify-center mix-blend-difference shadow-[0_0_10px_#00D2FF]"
         style={{
@@ -76,7 +76,7 @@ export default function CustomCursor() {
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="w-1 h-1 bg-coffee-dark rounded-full"
+            className="w-1 h-1 bg-[#080C14] rounded-full"
           />
         )}
       </motion.div>

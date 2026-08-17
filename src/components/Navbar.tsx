@@ -84,7 +84,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3 group shrink-0 whitespace-nowrap">
           <div className={cn(
             "relative overflow-hidden rounded-full border border-[#00D2FF]/50 group-hover:scale-105 shadow-[0_0_15px_rgba(0,210,255,0.4)] flex items-center justify-center bg-[#0D131F] shrink-0 transition-[width,height,transform] duration-300",
-            scrolled ? "w-9 h-9 sm:w-10 sm:h-10" : "w-11 h-11 md:w-13 md:h-13"
+            scrolled ? "w-9 h-9 sm:w-10 sm:h-10" : "w-11 h-11 md:w-12 md:h-12"
           )}>
             <span className={cn(
               "font-serif font-bold italic text-[#00D2FF] tracking-tighter transition-all duration-300",
@@ -134,6 +134,8 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-nav"
           className="md:hidden p-2 text-white hover:text-[#00D2FF] transition-colors shrink-0"
           onClick={toggleMenu}
         >

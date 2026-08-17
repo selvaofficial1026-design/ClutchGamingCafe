@@ -10,10 +10,8 @@ import {
   CheckCircle2, 
   MessageSquare, 
   Phone, 
-  Truck, 
-  Sparkles
+  Truck
 } from "lucide-react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const WHATSAPP_NUMBER = "918489800905";

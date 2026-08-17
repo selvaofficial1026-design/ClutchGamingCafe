@@ -2,17 +2,24 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { MessageSquare, Send, CheckCircle2 } from "lucide-react";
+
+const WHATSAPP_NUMBER = "918489800905";
 
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    message: "",
+  });
   const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitting(true);
-    // Simulate async send (replace with real API call or mailto action)
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setSubmitting(false);
+    const text = `🎮 *CLUTCH GAMING CAFE — DIRECT INQUIRY*\n━━━━━━━━━━━━━━━━━━━━\n👤 *Name:* ${formData.fullName}\n📱 *Contact:* ${formData.phone || "Not specified"}\n💬 *Message:* ${formData.message}\n━━━━━━━━━━━━━━━━━━━━\nSent from website contact form.`;
+    
+    // Open WhatsApp directly
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
     setSubmitted(true);
   };
 
@@ -21,15 +28,23 @@ export default function ContactForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-white p-8 md:p-12 rounded-premium shadow-premium border border-cream text-center space-y-4"
+        role="status"
+        aria-live="polite"
+        className="bg-[#0D131F] p-8 md:p-12 rounded-[2rem] shadow-[0_15px_45px_rgba(0,0,0,0.8)] border border-slate-800 text-center space-y-4"
       >
-        <div className="w-16 h-16 rounded-full bg-cappuccino/20 flex items-center justify-center mx-auto">
-          <span className="text-cappuccino text-3xl">✓</span>
+        <div className="w-16 h-16 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/40 flex items-center justify-center mx-auto text-[#00D2FF]">
+          <CheckCircle2 size={32} />
         </div>
-        <h3 className="text-2xl font-serif text-coffee-dark italic">Message Sent!</h3>
-        <p className="text-coffee-dark/70 text-sm">
-          Thank you for reaching out. We&apos;ll get back to you shortly at our cafe.
+        <h3 className="text-2xl font-serif text-white italic">Inquiry Dispatched!</h3>
+        <p className="text-slate-300 text-sm max-w-md mx-auto">
+          Thank you for reaching out. We have opened WhatsApp to connect you directly with our lounge manager at Samayapuram, Trichy.
         </p>
+        <button
+          onClick={() => setSubmitted(false)}
+          className="mt-4 px-6 py-2.5 bg-[#080C14] border border-slate-700 text-white rounded-full text-xs font-bold uppercase tracking-wider hover:border-[#00D2FF] hover:text-[#00D2FF] transition-all cursor-pointer"
+        >
+          Send Another Message
+        </button>
       </motion.div>
     );
   }
@@ -40,50 +55,60 @@ export default function ContactForm() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       onSubmit={handleSubmit}
-      className="space-y-8 bg-white p-8 md:p-12 rounded-premium shadow-premium border border-cream"
+      className="space-y-6 bg-[#0D131F] p-6 sm:p-8 md:p-10 rounded-[2rem] shadow-[0_15px_45px_rgba(0,0,0,0.8)] border border-slate-800"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-3">
-          <label htmlFor="full-name" className="text-[10px] font-bold tracking-[0.2em] text-coffee-dark/40 uppercase ml-1">Full Name</label>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="space-y-2">
+          <label htmlFor="full-name" className="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase ml-1">
+            Full Name *
+          </label>
           <input
             id="full-name"
             name="fullName"
             type="text"
             required
-            placeholder="John Doe"
-            className="w-full bg-background border border-cream rounded-2xl px-6 py-4 focus:outline-none focus:border-cappuccino transition-all duration-300 font-sans text-coffee-dark placeholder:text-coffee-dark/20"
+            placeholder="Your Name"
+            value={formData.fullName}
+            onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+            className="w-full bg-[#080C14] border border-slate-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[#00D2FF] transition-all duration-300 font-sans text-white placeholder:text-slate-500 text-sm"
           />
         </div>
-        <div className="space-y-3">
-          <label htmlFor="email-address" className="text-[10px] font-bold tracking-[0.2em] text-coffee-dark/40 uppercase ml-1">Email Address</label>
+        <div className="space-y-2">
+          <label htmlFor="phone-number" className="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase ml-1">
+            Mobile Number (Optional)
+          </label>
           <input
-            id="email-address"
-            name="email"
-            type="email"
-            required
-            placeholder="john@example.com"
-            className="w-full bg-background border border-cream rounded-2xl px-6 py-4 focus:outline-none focus:border-cappuccino transition-all duration-300 font-sans text-coffee-dark placeholder:text-coffee-dark/20"
+            id="phone-number"
+            name="phone"
+            type="tel"
+            placeholder="+91 84898 00905"
+            value={formData.phone}
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            className="w-full bg-[#080C14] border border-slate-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[#00D2FF] transition-all duration-300 font-sans text-white placeholder:text-slate-500 text-sm"
           />
         </div>
       </div>
-      <div className="space-y-3">
-        <label htmlFor="message" className="text-[10px] font-bold tracking-[0.2em] text-coffee-dark/40 uppercase ml-1">Your Message</label>
+      <div className="space-y-2">
+        <label htmlFor="message" className="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase ml-1">
+          Your Inquiry / Question *
+        </label>
         <textarea
           id="message"
           name="message"
           required
-          placeholder="How can we help you?"
+          placeholder="Ask about station availability, group booking, console sales, or tournament schedules..."
           rows={4}
-          className="w-full bg-background border border-cream rounded-2xl px-6 py-4 focus:outline-none focus:border-cappuccino transition-all duration-300 font-sans text-coffee-dark placeholder:text-coffee-dark/20 resize-none"
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          className="w-full bg-[#080C14] border border-slate-800 rounded-xl px-5 py-3.5 focus:outline-none focus:border-[#00D2FF] transition-all duration-300 font-sans text-white placeholder:text-slate-500 text-sm resize-none"
         />
       </div>
       <button
         type="submit"
-        disabled={submitting}
-        className="group relative w-full py-5 bg-coffee-dark text-white rounded-full font-bold tracking-[0.2em] uppercase overflow-hidden transition-all shadow-premium hover:shadow-premium-hover active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full py-4 bg-[#00D2FF] hover:bg-white text-[#080C14] rounded-full font-black text-xs uppercase tracking-[0.2em] transition-all duration-200 shadow-[0_0_20px_rgba(0,210,255,0.4)] hover:shadow-[0_0_30px_rgba(0,210,255,0.7)] active:scale-[0.98] flex items-center justify-center gap-2 cursor-pointer"
       >
-        <span className="relative z-10">{submitting ? "Sending…" : "Submit Inquiry"}</span>
-        <div className="absolute inset-0 bg-cappuccino translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+        <MessageSquare size={16} />
+        <span>Send on WhatsApp</span>
       </button>
     </motion.form>
   );

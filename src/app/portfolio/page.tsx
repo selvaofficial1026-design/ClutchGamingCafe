@@ -74,10 +74,10 @@ const portfolioItems: PortfolioGameItem[] = [
     is4K: true,
     videoId: "hfJ4Km46A-0"
   },
-  // 7. Mortal Kombat 1
+  // 7. Mortal Kombat 11
   {
-    name: "Mortal Kombat 1",
-    description: "Visceral next-generation 1v1 fighting action featuring a reborn universe, fluid combos, Kameo fighters, and devastating Fatalities.",
+    name: "Mortal Kombat 11",
+    description: "Visceral 1v1 fighting action featuring brutal cinematic fatalities, fluid combo strings, and deep custom character variations.",
     image: "/images/games/mortalkombat.jpg",
     category: "Racing & Fighting",
     isMultiplayer: true,

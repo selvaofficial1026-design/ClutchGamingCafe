@@ -56,7 +56,7 @@ const zones = [
     zone: "Zone 02",
     title: "PS5 4K 120Hz OLED Lounge",
     subtitle: "Flagship PlayStation 5 Console Arena",
-    desc: "Designed for social multiplayer and story immersion. Play EA Sports FC 24, Mortal Kombat 1, Tekken 8, and God of War Ragnarök in 4K 120Hz HDR fidelity.",
+    desc: "Designed for social multiplayer and story immersion. Play EA Sports FC 24, Mortal Kombat 11, Tekken 8, and God of War Ragnarök in 4K 120Hz HDR fidelity.",
     image: "/images/arena/zone_ps5_lounge.jpg",
     specs: ["PlayStation 5", "4K 120Hz OLED", "DualSense Haptics"],
     coords: "Sector B • Eastern Lounge"

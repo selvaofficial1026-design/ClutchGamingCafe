@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "Games & Arena", href: "/portfolio" },
+  { name: "Sales & Services", href: "/sales" },
   { name: "About & Specs", href: "/about" },
   { name: "Location", href: "/contact" },
 ];
@@ -187,7 +188,7 @@ export default function Navbar() {
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#00D2FF] font-bold">Connect With Us</p>
               <div className="flex gap-6 text-white/80">
                 <a href="https://www.instagram.com/clutch.trichy/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest hover:text-[#00D2FF] transition-colors">Instagram</a>
-                <a href="https://wa.me/919345469023" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest hover:text-[#00D2FF] transition-colors">WhatsApp</a>
+                <a href="https://wa.me/918489800905" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest hover:text-[#00D2FF] transition-colors">WhatsApp</a>
               </div>
             </div>
           </motion.div>

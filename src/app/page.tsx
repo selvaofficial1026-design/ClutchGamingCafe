@@ -126,9 +126,165 @@ export default function Home() {
           <div className="mt-14 sm:mt-16 md:mt-20 text-center">
             <Link
               href="/portfolio"
-              className="inline-block px-10 sm:px-12 py-4 sm:py-5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-[0.25em] hover:bg-white transition-all shadow-[0_10px_35px_rgba(0,210,255,0.4)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.7)] active:scale-95 cursor-pointer"
+              className="inline-block px-10 sm:px-12 py-4 sm:py-5 bg-[#0D131F] text-white border border-slate-700 hover:border-[#00D2FF] hover:text-[#00D2FF] rounded-full font-bold text-xs uppercase tracking-[0.25em] transition-all active:scale-95 cursor-pointer shadow-lg"
             >
               Explore Full Game Vault
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Sales & Services Showcase Section */}
+      <section className="py-16 sm:py-24 md:py-32 px-6 md:px-12 bg-[#0D131F] relative z-10 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeading
+            subtitle="Gaming Store &amp; Hardware"
+            title="Sales, Custom Rigs &amp; Console Services"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* PS5 Console Card */}
+            <div className="group bg-[#080C14] p-6 rounded-2xl sm:rounded-[2rem] border border-slate-800 hover:border-[#00D2FF]/60 shadow-[0_10px_35px_rgba(0,0,0,0.8)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.2)] transition-all duration-500 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-[#00D2FF] text-[#080C14] text-[9px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-full">
+                    Brand New
+                  </span>
+                  <span className="text-xs font-bold text-[#00D2FF] font-sans">₹44,990 - ₹49,990</span>
+                </div>
+                <h3 className="text-lg font-serif font-bold text-white group-hover:text-[#00D2FF] transition-colors leading-tight mb-2">
+                  Sony PlayStation 5 Slim (1TB)
+                </h3>
+                <p className="text-xs text-slate-300 font-light leading-relaxed mb-4">
+                  1TB Gen4 SSD, 4K 120FPS ray-traced gaming with DualSense controller. Disc &amp; Digital available.
+                </p>
+                <div className="space-y-1.5 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                  <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> 1TB Ultra-Fast SSD</div>
+                  <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> 1 Year Sony Warranty</div>
+                </div>
+              </div>
+              <div className="pt-5 mt-4 border-t border-slate-800">
+                <a
+                  href={`https://wa.me/918489800905?text=${encodeURIComponent("Hello Clutch Gaming Cafe! I want to buy the Sony PlayStation 5 Slim (1TB). Please share stock availability and best price deal.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-full font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.3)] active:scale-95 cursor-pointer"
+                >
+                  <MessageSquare size={14} />
+                  <span>Buy on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            {/* PS4 Console Card */}
+            <div className="group bg-[#080C14] p-6 rounded-2xl sm:rounded-[2rem] border border-slate-800 hover:border-[#00D2FF]/60 shadow-[0_10px_35px_rgba(0,0,0,0.8)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.2)] transition-all duration-500 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-[#00D2FF] text-[#080C14] text-[9px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-full">
+                    Top Value
+                  </span>
+                  <span className="text-xs font-bold text-[#00D2FF] font-sans">From ₹18,990</span>
+                </div>
+                <h3 className="text-lg font-serif font-bold text-white group-hover:text-[#00D2FF] transition-colors leading-tight mb-2">
+                  Sony PlayStation 4 Pro / Slim
+                </h3>
+                <p className="text-xs text-slate-300 font-light leading-relaxed mb-4">
+                  100% certified tested 1TB / 500GB consoles with DualShock 4. Hit games preloaded on demand.
+                </p>
+                <div className="space-y-1.5 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                  <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> 1TB / 500GB Storage</div>
+                  <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> Fully Serviced &amp; Cleaned</div>
+                </div>
+              </div>
+              <div className="pt-5 mt-4 border-t border-slate-800">
+                <a
+                  href={`https://wa.me/918489800905?text=${encodeURIComponent("Hello Clutch Gaming Cafe! I am interested in buying a PS4 Pro / PS4 Slim console. Please share available units and game options.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-full font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.3)] active:scale-95 cursor-pointer"
+                >
+                  <MessageSquare size={14} />
+                  <span>Buy on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Custom Gaming PC Card */}
+            <div className="group bg-[#080C14] p-6 rounded-2xl sm:rounded-[2rem] border border-slate-800 hover:border-[#00D2FF]/60 shadow-[0_10px_35px_rgba(0,0,0,0.8)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.2)] transition-all duration-500 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-[#00D2FF] text-[#080C14] text-[9px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-full">
+                    Custom Build
+                  </span>
+                  <span className="text-xs font-bold text-[#00D2FF] font-sans">From ₹58,000</span>
+                </div>
+                <h3 className="text-lg font-serif font-bold text-white group-hover:text-[#00D2FF] transition-colors leading-tight mb-2">
+                  Custom RTX Tournament Gaming PC
+                </h3>
+                <p className="text-xs text-slate-300 font-light leading-relaxed mb-4">
+                  Intel/Ryzen + NVIDIA RTX graphics, high-speed NVMe SSD, RGB glass case for 240FPS esports.
+                </p>
+                <div className="space-y-1.5 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                  <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> RTX 4060 / 3060 Ready</div>
+                  <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> 3 Years Brand Warranty</div>
+                </div>
+              </div>
+              <div className="pt-5 mt-4 border-t border-slate-800">
+                <a
+                  href={`https://wa.me/918489800905?text=${encodeURIComponent("Hello Clutch Gaming Cafe! I want to build/buy a Custom RTX Gaming PC. Please share configuration options and quotation.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-full font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.3)] active:scale-95 cursor-pointer"
+                >
+                  <MessageSquare size={14} />
+                  <span>Build on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Console & PC Service Card */}
+            <div className="group bg-[#080C14] p-6 rounded-2xl sm:rounded-[2rem] border border-slate-800 hover:border-[#00D2FF]/60 shadow-[0_10px_35px_rgba(0,0,0,0.8)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.2)] transition-all duration-500 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-[#00D2FF] text-[#080C14] text-[9px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-full">
+                    Expert Service
+                  </span>
+                  <span className="text-xs font-bold text-[#00D2FF] font-sans">From ₹499</span>
+                </div>
+                <h3 className="text-lg font-serif font-bold text-white group-hover:text-[#00D2FF] transition-colors leading-tight mb-2">
+                  Console Service &amp; Thermal Care
+                </h3>
+                <p className="text-xs text-slate-300 font-light leading-relaxed mb-4">
+                  Dust cleaning, thermal paste replacement, overheating repair, and analog stick drift fixes.
+                </p>
+                <div className="space-y-1.5 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                  <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> Same-Day Turnaround</div>
+                  <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> Expert Technicians</div>
+                </div>
+              </div>
+              <div className="pt-5 mt-4 border-t border-slate-800">
+                <a
+                  href={`https://wa.me/918489800905?text=${encodeURIComponent("Hello Clutch Gaming Cafe! I want to book a service/repair for my PlayStation Console / Gaming PC.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-full font-bold text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(37,211,102,0.3)] active:scale-95 cursor-pointer"
+                >
+                  <MessageSquare size={14} />
+                  <span>Book on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          {/* View Full Store Button */}
+          <div className="mt-12 sm:mt-16 text-center">
+            <Link
+              href="/sales"
+              className="inline-block px-10 sm:px-12 py-4 sm:py-5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-[0.25em] hover:bg-white transition-all shadow-[0_10px_35px_rgba(0,210,255,0.4)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.7)] active:scale-95 cursor-pointer"
+            >
+              View Full Sales &amp; Services Store
             </Link>
           </div>
         </div>
@@ -368,7 +524,7 @@ export default function Home() {
                 <span>Get Google Maps Route</span>
               </a>
               <a 
-                href="tel:+919345469023" 
+                href="tel:+918489800905" 
                 className="w-full py-3.5 px-6 border border-slate-700 bg-[#080C14]/90 text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-[#00D2FF]/15 hover:border-[#00D2FF] hover:text-[#00D2FF] transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
               >
                 <Phone size={15} className="text-[#00D2FF]" /> 

@@ -524,7 +524,7 @@ export default function AboutPage() {
                 <span>Get Directions</span>
               </Link>
               <a 
-                href="tel:+919345469023"
+                href="tel:+918489800905"
                 className="w-full sm:w-auto px-7 py-3.5 border border-slate-700 bg-[#080C14]/90 text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-[#00D2FF]/15 hover:border-[#00D2FF] hover:text-[#00D2FF] transition-all flex items-center justify-center gap-2 active:scale-95"
               >
                 <Phone size={15} className="text-[#00D2FF]" />

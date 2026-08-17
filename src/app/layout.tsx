@@ -95,7 +95,7 @@ export default function RootLayout({
     "@type": "EntertainmentBusiness",
     name: "Clutch Gaming Cafe",
     image: "https://clutchgamingcafe.in/images/hero_real_arena.jpg",
-    telephone: "+919345469023",
+    telephone: "+918489800905",
     priceRange: "₹80/hr",
     address: {
       "@type": "PostalAddress",
@@ -128,7 +128,7 @@ export default function RootLayout({
     ],
     sameAs: [
       "https://www.instagram.com/clutch.trichy/",
-      "https://wa.me/919345469023",
+      "https://wa.me/918489800905",
     ],
   };
 

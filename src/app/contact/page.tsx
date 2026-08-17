@@ -172,7 +172,7 @@ export default function ContactPage() {
                   <div className="relative z-10">
                     <h4 className="font-bold text-slate-400 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-[#00D2FF] transition-colors">Direct Phone &amp; WhatsApp</h4>
                     <p className="text-white text-base md:text-lg font-bold group-hover:text-[#00D2FF] transition-colors">
-                      +91 93454 69023
+                      +91 84898 00905
                     </p>
                     <p className="text-slate-400 text-xs mt-1">
                       Direct line available for directions, queries, and group sessions.
@@ -193,7 +193,7 @@ export default function ContactPage() {
                   <Navigation size={16} /> Open Google Maps
                 </a>
                 <a
-                  href="https://wa.me/919345469023"
+                  href="https://wa.me/918489800905"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-4 px-6 bg-[#25D366] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-[#1EBE5D] hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
@@ -308,7 +308,7 @@ export default function ContactPage() {
                     </span>
                   </div>
                   <a
-                    href="tel:+919345469023"
+                    href="tel:+918489800905"
                     className="w-full sm:w-auto px-5 py-2.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(0,210,255,0.7)] transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Phone size={13} />

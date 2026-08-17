@@ -44,7 +44,7 @@ export default function Footer() {
 
               {/* WhatsApp */}
               <a 
-                href="https://wa.me/919345469023" 
+                href="https://wa.me/918489800905" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full bg-[#0D131F] border border-slate-700 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#25D366] active:bg-[#25D366] hover:shadow-[0_0_15px_rgba(37,211,102,0.6)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
@@ -64,7 +64,7 @@ export default function Footer() {
 
               {/* Phone Call */}
               <a 
-                href="tel:+919345469023" 
+                href="tel:+918489800905" 
                 className="w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full bg-[#0D131F] border border-slate-700 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#00D2FF] hover:text-[#080C14] hover:shadow-[0_0_15px_rgba(0,210,255,0.8)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
                 aria-label="Direct Phone Call"
               >
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* Right Side: Quick Highlight Tag */}
           <div className="hidden md:flex flex-col items-end gap-0.5">
-            <span className="text-[9.5px] uppercase tracking-[0.25em] text-[#00D2FF] font-bold">Premier Gaming Lounge</span>
+            <span className="text-[9.5px] uppercase tracking-[0.25em] text-[#00D2FF] font-bold">Premier Gaming Lounge &amp; Store</span>
             <span className="text-[11px] text-slate-400 font-light">1st Floor (Above KFC), Samayapuram, Trichy</span>
           </div>
         </div>
@@ -97,6 +97,11 @@ export default function Footer() {
               <li>
                 <Link href="/portfolio" className="hover:text-[#00D2FF] active:text-[#00D2FF] transition-colors block py-0.5">
                   Top Games
+                </Link>
+              </li>
+              <li>
+                <Link href="/sales" className="hover:text-[#00D2FF] active:text-[#00D2FF] transition-colors block py-0.5">
+                  Sales &amp; Services
                 </Link>
               </li>
               <li>
@@ -131,11 +136,11 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="tel:+919345469023" 
+                  href="tel:+918489800905" 
                   className="flex items-center gap-1.5 text-slate-300 hover:text-[#00D2FF] font-semibold transition-colors"
                 >
                   <Phone size={12} className="text-[#00D2FF] shrink-0" />
-                  <span>+91 93454 69023</span>
+                  <span>+91 84898 00905</span>
                 </a>
               </li>
               <li className="text-[9.5px] uppercase tracking-wider text-[#00D2FF] font-bold pt-0.5">

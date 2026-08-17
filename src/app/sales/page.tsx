@@ -123,7 +123,7 @@ const products: Product[] = [
     category: "pc",
     badge: "High FPS Rig",
     price: "From ₹58,000",
-    description: "Custom-tailored battle station built for 240Hz competitive esports and 1440p ultra gaming. Assembled with branded parts and stress-tested.",
+    description: "Custom-tailored battle station built for high-FPS competitive esports and 1440p ultra gaming. Assembled with branded parts and stress-tested.",
     specs: [
       "Intel Core i5 13th/14th Gen or Ryzen 5",
       "NVIDIA GeForce RTX 4060 / 3060 8GB/12GB",
@@ -133,7 +133,7 @@ const products: Product[] = [
       "Panoramic Tempered Glass RGB Cabinet",
       "3 Years Brand Warranty on Components"
     ],
-    features: ["Custom Built", "Zero Bottleneck", "240FPS Competitive Ready"],
+    features: ["Custom Built", "Zero Bottleneck", "High-FPS Competitive Ready"],
     image: "/images/arena/zone_pc_arena.jpg",
     whatsappMessage: "Hello Clutch Gaming Cafe! I want to build/buy a Custom RTX Gaming PC. Please share configuration options and quotation."
   },

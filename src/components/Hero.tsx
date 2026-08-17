@@ -78,7 +78,7 @@ export default function Hero() {
       >
         <div>
           <span className="inline-block px-4 sm:px-6 py-2 mb-6 sm:mb-8 border border-[#00D2FF]/50 rounded-full text-[#00D2FF] text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase backdrop-blur-md bg-[#080C14]/80 shadow-[0_0_20px_rgba(0,210,255,0.25)]">
-            Trichy&apos;s Premier Gaming Lounge • Standard: ₹80 / Hour
+            Trichy&apos;s Premier Gaming Lounge • PS5: ₹100/Hr • PS4: ₹80/Hr
           </span>
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white mb-8 sm:mb-10 tracking-tight leading-[1.1] text-balance drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
             Clutch Every Round. <br />

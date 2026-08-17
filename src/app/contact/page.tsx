@@ -232,7 +232,7 @@ export default function ContactPage() {
                   </div>
 
                   <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
-                    No advance deposit or membership needed. Walk in directly, pick any 240Hz PC station or PS5 recliner, and enjoy ice-cold AC comfort at flat ₹80/hr.
+                    No advance deposit or membership needed. Walk in directly, pick any 120Hz station or PS5/PS4 lounge, and enjoy ice-cold AC comfort (PS5: ₹100/hr • PS4: ₹80/hr).
                   </p>
 
                   {/* 3-Step Walk-In Process */}
@@ -242,12 +242,12 @@ export default function ContactPage() {
                       <span className="text-[10px] text-slate-300">Direct Entry</span>
                     </div>
                     <div className="p-2 rounded-xl bg-[#080C14] border border-slate-800">
-                      <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">02. Pick Rig</span>
-                      <span className="text-[10px] text-slate-300">PC or PS5</span>
+                      <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">02. Pick Station</span>
+                      <span className="text-[10px] text-slate-300">PS5, PS4 or PC</span>
                     </div>
                     <div className="p-2 rounded-xl bg-[#080C14] border border-slate-800">
                       <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">03. Play</span>
-                      <span className="text-[10px] text-slate-300">Flat ₹80 / Hr</span>
+                      <span className="text-[10px] text-slate-300">PS5 ₹100 • PS4 ₹80</span>
                     </div>
                   </div>
 

@@ -13,8 +13,8 @@ import { motion } from "framer-motion";
 const featuredItems = [
   {
     name: "EA Sports FC 24 (FIFA)",
-    description: "Experience 4K HyperMotionV football action on our PS5 OLED lounge with DualSense haptic feedback. (₹80/hr)",
-    price: "₹80 / hr",
+    description: "Experience 4K HyperMotionV football action on our PS5 OLED lounge with DualSense haptic feedback. (₹100/hr • Extra Controller: ₹80)",
+    price: "₹100 / hr",
     image: "/images/games/fifa.jpg",
     category: "PS5 4K Gaming",
     tag: "Most Popular",
@@ -22,17 +22,17 @@ const featuredItems = [
   },
   {
     name: "Grand Theft Auto V & VI",
-    description: "Jump into high-stakes GTA Online heists, custom RP servers, and get ready for Vice City on our 240Hz RTX battle stations.",
+    description: "Jump into high-stakes GTA Online heists, custom RP servers, and get ready for Vice City on our 120Hz RTX battle stations.",
     price: "₹80 / hr",
     image: "/images/games/gta5.jpg",
-    category: "PC Battle Arena",
+    category: "PC & PS4 Arena",
     tag: "High FPS",
     youtubeId: "QkkoHAzjnUs"
   },
   {
     name: "God of War Ragnarök",
     description: "Embark on an epic mythic journey across the Nine Realms with Kratos and Atreus in glorious 4K 60FPS fidelity.",
-    price: "₹80 / hr",
+    price: "₹100 / hr",
     image: "/images/games/godofwar.jpg",
     category: "PS5 Exclusive",
     tag: "4K HDR",
@@ -49,22 +49,22 @@ const testimonials = [
   {
     name: "Karthik R.",
     role: "Competitive FPS Gamer",
-    quote: "240Hz Fast-IPS panels and dedicated fiber ping give a proper competitive edge. Top-tier PC rigs at just ₹80/hr."
+    quote: "120Hz Fast-IPS panels and dedicated fiber ping give a proper competitive edge. Top-tier PC rigs and consoles."
   }
 ];
 
 const tickerHighlights = [
-  "₹80 / HOUR FLAT RATE",
+  "PS5 4K: ₹100 / HOUR",
+  "PS4 HD: ₹80 / HOUR",
+  "PS5 CONTROLLER: ₹80",
+  "PS4 CONTROLLER: ₹60",
   "EA SPORTS FC 24 & FIFA",
   "IT TAKES TWO CO-OP",
   "GTA V & GTA VI READY",
   "GOD OF WAR RAGNARÖK",
   "MORTAL KOMBAT 1",
   "FORZA HORIZON 5",
-  "NEED FOR SPEED UNBOUND",
-  "BATTLEFIELD 1 & 2042",
-  "NBA 2K & WWE 2K",
-  "240HZ FAST-IPS MONITORS",
+  "120HZ FAST-IPS MONITORS",
   "1 GBPS ULTRA-LOW PING FIBER"
 ];
 
@@ -75,7 +75,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col pt-0 bg-[#080C14] text-white relative">
       <Hero />
 
-      {/* Flat Pricing Highlight Banner */}
+      {/* Transparent Rate Card Banner */}
       <section className="py-10 sm:py-12 bg-[#0D131F] text-white relative z-10 border-y border-[#00D2FF]/20">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-5 text-center md:text-left">
@@ -84,23 +84,26 @@ export default function Home() {
             </div>
             <div>
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#00D2FF] font-bold block mb-1">
-                Transparent &amp; Affordable Pricing
+                Transparent Hourly Rate Card
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white">
-                Game at Just <span className="text-[#00D2FF] font-sans not-italic font-bold">₹80</span> / Hour
+                PS5: <span className="text-[#00D2FF] font-sans not-italic font-bold">₹100</span> • PS4: <span className="text-[#00D2FF] font-sans not-italic font-bold">₹80</span> / Hr
               </h2>
+              <span className="text-[11px] text-slate-400 font-light mt-0.5 block">
+                Extra Controller: PS5 ₹80 • PS4 ₹60 | Zero Hidden Charges
+              </span>
             </div>
           </div>
           
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-semibold text-white/90">
             <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <Monitor size={15} className="text-[#00D2FF]" /> PC Rigs Included
+              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS5 4K: ₹100/hr (Ctrl ₹80)
             </div>
             <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS5 4K Included
+              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS4: ₹80/hr (Ctrl ₹60)
             </div>
             <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <ShieldCheck size={15} className="text-[#00D2FF]" /> Zero Hidden Fees
+              <Monitor size={15} className="text-[#00D2FF]" /> 120Hz Fast-IPS Panels
             </div>
           </div>
         </div>
@@ -223,7 +226,7 @@ export default function Home() {
                   Custom RTX Tournament Gaming PC
                 </h3>
                 <p className="text-xs text-slate-300 font-light leading-relaxed mb-4">
-                  Intel/Ryzen + NVIDIA RTX graphics, high-speed NVMe SSD, RGB glass case for 240FPS esports.
+                  Intel/Ryzen + NVIDIA RTX graphics, high-speed NVMe SSD, RGB glass case for high-FPS esports.
                 </p>
                 <div className="space-y-1.5 pt-3 border-t border-slate-800 text-[11px] text-slate-400">
                   <div className="flex items-center gap-1.5"><CheckCircle2 size={12} className="text-[#00D2FF]" /> RTX 4060 / 3060 Ready</div>
@@ -298,16 +301,16 @@ export default function Home() {
              Built by Gamers, for Gamers
            </h2>
            <p className="text-slate-300 leading-relaxed text-base sm:text-lg font-light max-w-2xl mx-auto mb-10">
-             Clutch Gaming Cafe was created to bring tournament-grade gaming hardware, 240Hz Fast-IPS displays, low-latency dedicated optical fiber, and premium lounge comfort directly to gamers in Trichy.
+             Clutch Gaming Cafe was created to bring tournament-grade gaming hardware, 120Hz Fast-IPS displays, low-latency dedicated optical fiber, and premium lounge comfort directly to gamers in Trichy.
            </p>
 
            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-slate-800">
              <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
-               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">₹80</h4>
-               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Hourly Rate</p>
+               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">₹100 / ₹80</h4>
+               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">PS5 / PS4 Rates</p>
              </div>
              <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
-               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">240Hz</h4>
+               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">120Hz</h4>
                <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Fast-IPS Panels</p>
              </div>
              <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
@@ -315,8 +318,8 @@ export default function Home() {
                <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Low Ping Fiber</p>
              </div>
              <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
-               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">PS5 4K</h4>
-               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">OLED Lounge</p>
+               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">PS5 &amp; PS4</h4>
+               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">4K OLED Lounge</p>
              </div>
            </div>
         </div>
@@ -465,7 +468,7 @@ export default function Home() {
               </h2>
 
               <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
-                Located right on the Trichy-Chennai National Highway (1st Floor Above KFC). Step in anytime for high-FPS PC battle stations and 4K PS5 gaming lounge at ₹80/hr.
+                Located right on the Trichy-Chennai National Highway (1st Floor Above KFC). Step in anytime for high-FPS PC battle stations and 4K PS5 / PS4 gaming lounge.
               </p>
 
               {/* 4 Location & Visit Chips */}
@@ -506,7 +509,7 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="text-[9px] uppercase tracking-wider font-bold text-[#00D2FF] block">Pricing</span>
-                    <span className="text-[11px] sm:text-xs text-white/95 font-medium">Flat ₹80 / Hour (PC &amp; PS5)</span>
+                    <span className="text-[11px] sm:text-xs text-white/95 font-medium">PS5: ₹100/hr • PS4: ₹80/hr</span>
                   </div>
                 </div>
               </div>

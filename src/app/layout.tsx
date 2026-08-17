@@ -27,13 +27,14 @@ export const metadata: Metadata = {
     template: "%s | Clutch Gaming Cafe",
   },
   description:
-    "Trichy's premier gaming lounge. High-FPS RTX gaming rigs, 240Hz Fast-IPS monitors, PS5 4K OLED lounge, ultra-low ping fiber at flat ₹80/hour. 1st Floor Above KFC, Samayapuram, Trichy.",
+    "Trichy's premier gaming lounge. High-FPS RTX gaming rigs, 120Hz Fast-IPS monitors, PS5 4K OLED lounge (₹100/hr), PS4 gaming (₹80/hr), ultra-low ping fiber. 1st Floor Above KFC, Samayapuram, Trichy.",
   keywords: [
     "Clutch Gaming Cafe",
     "Gaming Cafe Trichy",
     "PS5 Gaming Lounge Trichy",
+    "PS4 Gaming Cafe Trichy",
     "Gaming Arena Samayapuram",
-    "240Hz PC Gaming Trichy",
+    "120Hz PC Gaming Trichy",
     "FIFA PS5 Gaming Trichy",
     "Esports Cafe Tiruchirappalli",
   ],
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Clutch Gaming Cafe",
     title: "Clutch Gaming Cafe | Premier Gaming Lounge - Trichy",
     description:
-      "Play on high-FPS RTX PC rigs, 240Hz monitors, and PS5 4K OLED lounge with ultra-low ping fiber at just ₹80/hr in Trichy.",
+      "Play on high-FPS RTX PC rigs, 120Hz monitors, PS5 4K OLED lounge (₹100/hr), and PS4 (₹80/hr) with ultra-low ping fiber in Trichy.",
     images: [
       {
         url: "/images/hero_real_arena.jpg",
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clutch Gaming Cafe | Premier Gaming Lounge - Trichy",
     description:
-      "Play on high-FPS RTX PC rigs, 240Hz monitors, and PS5 4K OLED lounge with ultra-low ping fiber at just ₹80/hr in Trichy.",
+      "Play on high-FPS RTX PC rigs, 120Hz monitors, PS5 4K OLED lounge (₹100/hr), and PS4 (₹80/hr) with ultra-low ping fiber in Trichy.",
     images: ["/images/hero_real_arena.jpg"],
   },
   robots: {
@@ -81,7 +82,7 @@ export const metadata: Metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#2A1D1D",
+  themeColor: "#080C14",
 };
 
 export default function RootLayout({
@@ -96,7 +97,7 @@ export default function RootLayout({
     name: "Clutch Gaming Cafe",
     image: "https://clutchgamingcafe.in/images/hero_real_arena.jpg",
     telephone: "+918489800905",
-    priceRange: "₹80/hr",
+    priceRange: "₹80 - ₹100/hr",
     address: {
       "@type": "PostalAddress",
       streetAddress: "1st Floor, No. 21/B, Above KFC, Trichy-Chennai Highway, Samayapuram",

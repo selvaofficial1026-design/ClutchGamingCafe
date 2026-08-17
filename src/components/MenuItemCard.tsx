@@ -106,7 +106,7 @@ function MenuItemCard({
           {description}
         </p>
         <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3.5 border-t border-slate-800 flex justify-between items-center text-[9px] sm:text-[10px] uppercase tracking-wider font-bold">
-          <span className="text-slate-400 text-[8.5px] sm:text-[9px] tracking-widest">Rate: ₹80/hr</span>
+          <span className="text-slate-400 text-[8.5px] sm:text-[9px] tracking-widest">{price ? `Rate: ${price}` : 'PS5: ₹100/hr • PS4: ₹80/hr'}</span>
           {youtubeId && (
             <span className="text-[#00D2FF] flex items-center gap-1.5 group-hover:underline">
               <span>Watch Trailer</span>

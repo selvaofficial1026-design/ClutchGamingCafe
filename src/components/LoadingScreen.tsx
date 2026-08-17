@@ -57,7 +57,7 @@ export default function LoadingScreen() {
 
             {/* Subtitle */}
             <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-[#00D2FF] font-bold mb-6">
-              Samayapuram, Trichy • Standard: ₹80 / Hr
+              Samayapuram, Trichy • PS5: ₹100/Hr • PS4: ₹80/Hr
             </p>
 
             {/* 3-Second Smooth Cyber Progress Bar */}

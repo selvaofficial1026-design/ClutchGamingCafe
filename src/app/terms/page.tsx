@@ -13,7 +13,7 @@ export default function TermsPage() {
           <p className="text-xs uppercase tracking-widest text-[#00D2FF] font-bold">Clutch Gaming Cafe • Trichy</p>
           
           <h2 className="text-2xl font-serif text-white mt-8 italic">1. Station Rates &amp; Usage</h2>
-          <p>The standard rate is ₹80 per hour per station (PC Battle Arena or PS5 Lounge). Time begins once logged into the station.</p>
+          <p>Station rates are ₹100 per hour for PlayStation 5 (Extra controller: ₹80) and ₹80 per hour for PlayStation 4 / PC (Extra controller: ₹60). Time begins once logged into the station.</p>
           
           <h2 className="text-2xl font-serif text-white mt-8 italic">2. Hardware &amp; Peripherals Care</h2>
           <p>All gaming rigs, mechanical keyboards, mice, headsets, and PS5 DualSense controllers are high-end precision equipment. Please handle with care. Any deliberate hardware damage is subject to replacement costs.</p>

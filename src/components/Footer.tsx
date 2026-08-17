@@ -152,13 +152,13 @@ export default function Footer() {
           {/* Arena Brief (Desktop Only) */}
           <div className="hidden md:block col-span-1 space-y-2">
             <h4 className="font-serif text-sm sm:text-base font-bold italic text-[#00D2FF]">
-              The Arena
+              The Arena &amp; Store
             </h4>
             <p className="text-slate-300 text-[11px] font-light leading-relaxed">
-              High-FPS battle stations, 240Hz Fast-IPS monitors, and PS5 4K OLED lounge at ₹80/hr.
+              High-FPS battle stations, 120Hz Fast-IPS displays, PS5 4K OLED lounge (₹100/hr), and PS4 gaming (₹80/hr).
             </p>
             <div className="inline-block px-2.5 py-0.5 rounded-full bg-[#0D131F] border border-[#00D2FF]/30 text-[9px] uppercase tracking-widest font-bold text-[#00D2FF] shadow-[0_0_10px_rgba(0,210,255,0.2)]">
-              ₹80 / Hour Standard Rate
+              PS5: ₹100/Hr • PS4: ₹80/Hr
             </div>
           </div>
 
@@ -169,7 +169,7 @@ export default function Footer() {
       {/* Bottom Bar: Copyright */}
       <div className="max-w-7xl mx-auto pt-4 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left text-slate-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.16em] relative z-10">
         <p>© {new Date().getFullYear()} Clutch Gaming Cafe. All rights reserved.</p>
-        <p className="text-[#00D2FF]/90 text-[9px] sm:text-[10px] tracking-widest font-semibold">Trichy&apos;s Premier Gaming Lounge • ₹80 / Hr</p>
+        <p className="text-[#00D2FF]/90 text-[9px] sm:text-[10px] tracking-widest font-semibold">Trichy&apos;s Premier Gaming Lounge • PS5: ₹100/Hr • PS4: ₹80/Hr</p>
       </div>
     </footer>
   );

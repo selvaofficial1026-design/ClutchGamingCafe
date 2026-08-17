@@ -27,22 +27,22 @@ import { cn } from "@/lib/utils";
 
 const keyStats = [
   { value: "700+", label: "Games Pre-Installed", desc: "Steam, Epic, Riot, EA & PSN Ready" },
-  { value: "240Hz", label: "Fast-IPS Displays", desc: "1ms GtG Response & G-Sync" },
+  { value: "120Hz", label: "Fast-IPS Displays", desc: "1ms GtG Response & G-Sync" },
   { value: "1 Gbps", label: "Dedicated Fiber", desc: "Ultra-Low 10-15ms Server Ping" },
-  { value: "₹80", label: "Flat Hourly Rate", desc: "All PC & PS5 Setups Included" }
+  { value: "₹100/₹80", label: "Hourly Pricing", desc: "PS5: ₹100/hr • PS4: ₹80/hr" }
 ];
 
 const zones = [
   {
     id: "zone-01",
     pinNumber: "01",
-    pinLabel: "PC ARENA",
+    pinLabel: "ARENA",
     zone: "Zone 01",
-    title: "240Hz PC Battle Arena",
-    subtitle: "High-FPS PC Gaming Rigs",
+    title: "120Hz Battle Arena",
+    subtitle: "High-FPS PC & Console Rigs",
     desc: "Equipped with mechanical keyboards, studio noise-isolating headsets, high-DPI optical mice, and high-back ergonomic gaming chairs for long competitive sessions.",
     image: "/images/arena/zone_pc_arena.jpg",
-    specs: ["240Hz Fast-IPS", "RTX Architecture", "1 Gbps Leased Fiber"],
+    specs: ["120Hz Fast-IPS", "RTX Architecture", "1 Gbps Leased Fiber"],
     coords: "Sector A • Northern Hub"
   },
   {
@@ -285,22 +285,22 @@ export default function AboutPage() {
                 className="flex items-center gap-6 sm:gap-8 md:gap-10 whitespace-nowrap px-4 sm:px-6"
               >
                 {[
-                  "240Hz Fast-IPS Displays",
+                  "120Hz Fast-IPS Displays",
                   "RTX High-FPS PC Battle Rigs",
                   "1 Gbps Dedicated Low-Ping Fiber",
                   "PS5 4K 60FPS OLED Lounge",
                   "Sony DualSense Haptic Feedback",
                   "Ultra-Fast NVMe Gen4 Storage",
                   "15ms Stable Ping to Mumbai",
-                  "₹80 / Hour Standard Rate",
-                  "240Hz Fast-IPS Displays",
+                  "PS5: ₹100/hr • PS4: ₹80/hr",
+                  "120Hz Fast-IPS Displays",
                   "RTX High-FPS PC Battle Rigs",
                   "1 Gbps Dedicated Low-Ping Fiber",
                   "PS5 4K 60FPS OLED Lounge",
                   "Sony DualSense Haptic Feedback",
                   "Ultra-Fast NVMe Gen4 Storage",
                   "15ms Stable Ping to Mumbai",
-                  "₹80 / Hour Standard Rate"
+                  "PS5: ₹100/hr • PS4: ₹80/hr"
                 ].map((specItem, sI) => (
                   <React.Fragment key={sI}>
                     <span className="text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white flex items-center gap-2">
@@ -494,13 +494,13 @@ export default function AboutPage() {
               </h3>
 
               <p className="text-slate-300 text-xs sm:text-sm md:text-base font-light leading-relaxed">
-                Engineered with 240Hz Fast-IPS panels, high-grade RTX architecture, optical mechanical switches, and dual-zone industrial climate control for zero frame drops.
+                Engineered with 120Hz Fast-IPS panels, high-grade RTX architecture, optical mechanical switches, and dual-zone industrial climate control for zero frame drops.
               </p>
 
               {/* Hardware-Specific Info Tags */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
                 <span className="px-3 py-1.5 rounded-lg bg-[#080C14] border border-slate-800 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
-                  <Monitor size={13} className="text-[#00D2FF]" /> 240Hz Fast-IPS (0.5ms GTG)
+                  <Monitor size={13} className="text-[#00D2FF]" /> 120Hz Fast-IPS (1ms GTG)
                 </span>
                 <span className="px-3 py-1.5 rounded-lg bg-[#080C14] border border-slate-800 text-[10px] sm:text-xs text-white/90 font-medium flex items-center gap-1.5">
                   <Cpu size={13} className="text-[#00D2FF]" /> High-Performance RTX Rigs
@@ -509,7 +509,7 @@ export default function AboutPage() {
                   <Gamepad2 size={13} className="text-[#00D2FF]" /> PS5 4K OLED HDR Lounge
                 </span>
                 <span className="px-3 py-1.5 rounded-lg bg-[#080C14] border border-slate-800 text-[10px] sm:text-xs text-[#00D2FF] font-bold">
-                  Flat ₹80 / Hr
+                  PS5: ₹100/hr • PS4: ₹80/hr
                 </span>
               </div>
             </div>

@@ -23,8 +23,8 @@ export default function Footer() {
                 <span className="font-serif text-base sm:text-xl font-bold tracking-tight italic text-white leading-tight">
                   CLUTCH <span className="text-[#00D2FF]">GAMING CAFE</span>
                 </span>
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] text-[#00D2FF]/90 font-bold">
-                  Trichy • ₹80 / Hour
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] text-[#00D2FF]/90 font-bold">
+                  PS5: ₹100/Hr • PS4: ₹80/Hr
                 </span>
               </div>
             </Link>
@@ -157,8 +157,9 @@ export default function Footer() {
             <p className="text-slate-300 text-[11px] font-light leading-relaxed">
               Sony PlayStation 5 (4K 120Hz) and PlayStation 4 console lounge with 120Hz Fast-IPS displays.
             </p>
-            <div className="inline-block px-2.5 py-0.5 rounded-full bg-[#0D131F] border border-[#00D2FF]/30 text-[9px] uppercase tracking-widest font-bold text-[#00D2FF] shadow-[0_0_10px_rgba(0,210,255,0.2)]">
-              PS5: ₹100/Hr • PS4: ₹80/Hr
+            <div className="inline-flex flex-col gap-0.5 px-3 py-1.5 rounded-xl bg-[#0D131F] border border-[#00D2FF]/30 text-[9.5px] uppercase tracking-wider font-bold text-[#00D2FF] shadow-[0_0_10px_rgba(0,210,255,0.2)]">
+              <span>PS5: ₹100/Hr • PS4: ₹80/Hr</span>
+              <span className="text-[8.5px] text-slate-400 font-medium normal-case tracking-normal">Extra Controller: PS5 ₹80 • PS4 ₹60</span>
             </div>
           </div>
 

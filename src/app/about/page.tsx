@@ -23,7 +23,8 @@ import {
   Cpu,
   Zap,
   ShieldCheck,
-  Clock
+  Clock,
+  CheckCircle2
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -89,6 +90,7 @@ const zones = [
 export default function AboutPage() {
   const [hoveredZone, setHoveredZone] = useState<string | null>(null);
   const [zoomedZoneIndex, setZoomedZoneIndex] = useState<number | null>(null);
+  const [mobileCompareTab, setMobileCompareTab] = useState<"sidebyside" | "ps5" | "ps4">("sidebyside");
 
   // Esc key listener for zoom modal
   useEffect(() => {
@@ -193,37 +195,247 @@ export default function AboutPage() {
             title="PlayStation 5 vs PlayStation 4 Specifications"
           />
 
+          {/* MOBILE VIEW (Screen < 768px): Zero-Scroll Interactive Responsive Cards */}
+          <div className="block md:hidden mt-6">
+            
+            {/* Mobile View Toggle Pills */}
+            <div className="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-[#0D131F] border border-slate-800 mb-5">
+              <button
+                onClick={() => setMobileCompareTab("sidebyside")}
+                className={cn(
+                  "py-2 px-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer",
+                  mobileCompareTab === "sidebyside"
+                    ? "bg-[#00D2FF] text-[#080C14] font-black shadow-[0_0_12px_rgba(0,210,255,0.5)]"
+                    : "text-slate-300 hover:text-white"
+                )}
+              >
+                Side-by-Side
+              </button>
+              <button
+                onClick={() => setMobileCompareTab("ps5")}
+                className={cn(
+                  "py-2 px-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer",
+                  mobileCompareTab === "ps5"
+                    ? "bg-[#00D2FF] text-[#080C14] font-black shadow-[0_0_12px_rgba(0,210,255,0.5)]"
+                    : "text-slate-300 hover:text-white"
+                )}
+              >
+                PS5 (₹100)
+              </button>
+              <button
+                onClick={() => setMobileCompareTab("ps4")}
+                className={cn(
+                  "py-2 px-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer",
+                  mobileCompareTab === "ps4"
+                    ? "bg-[#00D2FF] text-[#080C14] font-black shadow-[0_0_12px_rgba(0,210,255,0.5)]"
+                    : "text-slate-300 hover:text-white"
+                )}
+              >
+                PS4 (₹80)
+              </button>
+            </div>
+
+            {/* Mobile Content 1: Side-by-Side Specs Grid */}
+            {mobileCompareTab === "sidebyside" && (
+              <div className="space-y-3">
+                
+                {/* 1. Rates */}
+                <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-300 mb-3">
+                    <Zap size={14} className="text-[#00D2FF]" />
+                    <span>Hourly Rate &amp; Extra Controller</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div className="p-3 rounded-xl bg-[#080C14] border border-[#00D2FF]/30">
+                      <span className="text-[9px] uppercase tracking-widest text-[#00D2FF] font-bold block mb-1">PS5 4K</span>
+                      <span className="text-base font-bold text-[#00D2FF] block">₹100 / Hr</span>
+                      <span className="text-[10px] text-slate-400">Extra Ctrl: ₹80/hr</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-[#080C14] border border-slate-700">
+                      <span className="text-[9px] uppercase tracking-widest text-slate-300 font-bold block mb-1">PS4 HD</span>
+                      <span className="text-base font-bold text-white block">₹80 / Hr</span>
+                      <span className="text-[10px] text-slate-400">Extra Ctrl: ₹60/hr</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2. Visuals & Framerate */}
+                <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-300 mb-3">
+                    <Monitor size={14} className="text-[#00D2FF]" />
+                    <span>Resolution, Framerate &amp; Displays</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div className="p-3 rounded-xl bg-[#080C14] border border-slate-800 text-xs">
+                      <span className="text-[9px] uppercase tracking-widest text-[#00D2FF] font-bold block mb-1">PS5</span>
+                      <span className="font-bold text-white block text-[11px] leading-tight">4K 120FPS HDR</span>
+                      <span className="text-[10px] text-slate-400 mt-1 block">120Hz Fast-IPS &amp; 4K OLED</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-[#080C14] border border-slate-800 text-xs">
+                      <span className="text-[9px] uppercase tracking-widest text-slate-400 font-bold block mb-1">PS4</span>
+                      <span className="font-bold text-white block text-[11px] leading-tight">1080p 60FPS</span>
+                      <span className="text-[10px] text-slate-400 mt-1 block">120Hz Fast-IPS Display</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3. Controller & Haptics */}
+                <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-300 mb-3">
+                    <Gamepad2 size={14} className="text-[#00D2FF]" />
+                    <span>Controller &amp; Feedback</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div className="p-3 rounded-xl bg-[#080C14] border border-slate-800">
+                      <span className="text-[9px] uppercase tracking-widest text-[#00D2FF] font-bold block mb-1">DualSense</span>
+                      <span className="text-[10.5px] text-slate-200 font-medium leading-tight block">Haptic Feedback &amp; Adaptive Triggers</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-[#080C14] border border-slate-800">
+                      <span className="text-[9px] uppercase tracking-widest text-slate-400 font-bold block mb-1">DualShock 4</span>
+                      <span className="text-[10.5px] text-slate-300 font-medium leading-tight block">Precision Analog Sticks &amp; Light Bar</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 4. Storage & Audio */}
+                <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-300 mb-3">
+                    <Cpu size={14} className="text-[#00D2FF]" />
+                    <span>Storage Speed &amp; 3D Audio</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <div className="p-3 rounded-xl bg-[#080C14] border border-slate-800">
+                      <span className="text-[9px] uppercase tracking-widest text-[#00D2FF] font-bold block mb-1">PS5</span>
+                      <span className="text-[10.5px] text-white font-medium block">Gen4 NVMe SSD (Instant)</span>
+                      <span className="text-[10px] text-slate-400 block mt-0.5">Tempest 3D Audio</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-[#080C14] border border-slate-800">
+                      <span className="text-[9px] uppercase tracking-widest text-slate-400 font-bold block mb-1">PS4</span>
+                      <span className="text-[10.5px] text-white font-medium block">1TB Fast Storage</span>
+                      <span className="text-[10px] text-slate-400 block mt-0.5">Virtual Surround</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 5. Top Games */}
+                <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-300 mb-3">
+                    <Sparkles size={14} className="text-[#00D2FF]" />
+                    <span>Top Featured Games</span>
+                  </div>
+                  <div className="space-y-2 text-xs">
+                    <div className="p-2.5 rounded-xl bg-[#080C14] border border-[#00D2FF]/20">
+                      <span className="text-[9px] uppercase tracking-widest text-[#00D2FF] font-bold block mb-0.5">PS5 Favorites:</span>
+                      <span className="text-[10.5px] text-slate-300">EA FC 24 (FIFA), God of War Ragnarök, Spider-Man 2, MK1, Tekken 8</span>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-[#080C14] border border-slate-800">
+                      <span className="text-[9px] uppercase tracking-widest text-slate-400 font-bold block mb-0.5">PS4 Favorites:</span>
+                      <span className="text-[10.5px] text-slate-300">EA FC 24, GTA V, Mortal Kombat 11, WWE 2K, Cricket 24</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            )}
+
+            {/* Mobile Content 2: Dedicated PS5 Card */}
+            {mobileCompareTab === "ps5" && (
+              <div className="p-5 rounded-2xl bg-[#0D131F] border border-[#00D2FF]/50 shadow-[0_10px_30px_rgba(0,210,255,0.15)] space-y-4">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <div>
+                    <span className="bg-[#00D2FF] text-[#080C14] text-[9px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-full block w-max mb-1">
+                      Flagship Arena
+                    </span>
+                    <h3 className="font-serif text-xl font-bold italic text-white">Sony PlayStation 5</h3>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-lg font-bold text-[#00D2FF] font-sans block">₹100 / Hr</span>
+                    <span className="text-[9.5px] text-slate-400">Ctrl: ₹80/hr</span>
+                  </div>
+                </div>
+
+                <div className="space-y-2 text-xs text-slate-300">
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Visuals:</strong> 4K 120FPS HDR with Ray Tracing</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Displays:</strong> 120Hz Fast-IPS &amp; 4K OLED Lounge</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Controller:</strong> DualSense Haptic Triggers</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Storage:</strong> Ultra-Fast Gen4 SSD (Instant Load)</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Audio:</strong> Tempest 3D Spatial AudioTech</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Top Games:</strong> EA FC 24, God of War Ragnarök, Spider-Man 2, MK1</span></div>
+                </div>
+              </div>
+            )}
+
+            {/* Mobile Content 3: Dedicated PS4 Card */}
+            {mobileCompareTab === "ps4" && (
+              <div className="p-5 rounded-2xl bg-[#0D131F] border border-slate-700 shadow-[0_10px_30px_rgba(0,0,0,0.8)] space-y-4">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                  <div>
+                    <span className="bg-slate-800 text-[#00D2FF] border border-[#00D2FF]/40 text-[9px] uppercase tracking-widest font-bold px-2.5 py-0.5 rounded-full block w-max mb-1">
+                      Top Value Arena
+                    </span>
+                    <h3 className="font-serif text-xl font-bold italic text-white">Sony PlayStation 4</h3>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-lg font-bold text-white font-sans block">₹80 / Hr</span>
+                    <span className="text-[9.5px] text-slate-400">Ctrl: ₹60/hr</span>
+                  </div>
+                </div>
+
+                <div className="space-y-2 text-xs text-slate-300">
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Visuals:</strong> 1080p Full HD / 4K Boost Mode</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Displays:</strong> 120Hz Fast-IPS Low Latency</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Controller:</strong> DualShock 4 Wireless Gamepads</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Storage:</strong> 1TB High-Capacity Fast Storage</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Audio:</strong> PlayStation Virtual Surround Sound</span></div>
+                  <div className="flex items-start gap-2"><CheckCircle2 size={13} className="text-[#00D2FF] shrink-0 mt-0.5" /> <span><strong>Top Games:</strong> EA FC 24, GTA V, Mortal Kombat 11, WWE 2K</span></div>
+                </div>
+              </div>
+            )}
+
+            {/* Mobile Bottom CTA */}
+            <div className="mt-4 p-4 rounded-2xl bg-[#080C14] border border-slate-800 text-center space-y-2.5">
+              <span className="text-[11px] text-slate-400 block">Zero wait-time • Direct walk-in entry</span>
+              <Link
+                href="/contact"
+                className="w-full py-3 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest flex items-center justify-center gap-1.5 shadow-[0_0_15px_rgba(0,210,255,0.4)] active:scale-95"
+              >
+                Claim Station Now
+              </Link>
+            </div>
+
+          </div>
+
+          {/* DESKTOP & TABLET VIEW (Screen >= 768px): Full Wide Luxury Dark Table */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 sm:mt-12 overflow-hidden rounded-2xl sm:rounded-[2rem] border border-slate-800 bg-[#0D131F] shadow-[0_20px_50px_rgba(0,0,0,0.85)]"
+            className="hidden md:block mt-8 sm:mt-12 overflow-hidden rounded-[2rem] border border-slate-800 bg-[#0D131F] shadow-[0_20px_50px_rgba(0,0,0,0.85)]"
           >
-            {/* Table Container with Horizontal Scroll on Mobile */}
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse min-w-[620px] sm:min-w-[700px]">
+              <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="border-b border-slate-800 bg-[#080C14]">
-                    <th className="p-4 sm:p-5 text-xs uppercase tracking-[0.2em] font-bold text-slate-400 w-1/3">
+                    <th className="p-5 text-xs uppercase tracking-[0.2em] font-bold text-slate-400 w-1/3">
                       Station Feature
                     </th>
-                    <th className="p-4 sm:p-5 w-1/3 border-x border-slate-800/80 bg-[#00D2FF]/5">
+                    <th className="p-5 w-1/3 border-x border-slate-800/80 bg-[#00D2FF]/5">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-serif text-base sm:text-lg font-bold text-white italic">
+                        <span className="font-serif text-lg font-bold text-white italic">
                           PlayStation 5
                         </span>
-                        <span className="bg-[#00D2FF] text-[#080C14] text-[9px] uppercase tracking-widest font-black px-2 py-0.5 rounded-full">
+                        <span className="bg-[#00D2FF] text-[#080C14] text-[9px] uppercase tracking-widest font-black px-2.5 py-0.5 rounded-full">
                           Flagship 4K
                         </span>
                       </div>
                     </th>
-                    <th className="p-4 sm:p-5 w-1/3">
+                    <th className="p-5 w-1/3">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-serif text-base sm:text-lg font-bold text-white italic">
+                        <span className="font-serif text-lg font-bold text-white italic">
                           PlayStation 4
                         </span>
-                        <span className="bg-slate-800 text-[#00D2FF] border border-[#00D2FF]/40 text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 rounded-full">
+                        <span className="bg-slate-800 text-[#00D2FF] border border-[#00D2FF]/40 text-[9px] uppercase tracking-widest font-bold px-2.5 py-0.5 rounded-full">
                           Top Value
                         </span>
                       </div>
@@ -233,29 +445,29 @@ export default function AboutPage() {
                 <tbody className="divide-y divide-slate-800/60 text-xs sm:text-sm font-light">
                   {/* Hourly Rate */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <Zap size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Hourly Station Rate</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5">
-                      <span className="text-base sm:text-lg font-bold text-[#00D2FF] font-sans">₹100 / Hour</span>
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5">
+                      <span className="text-lg font-bold text-[#00D2FF] font-sans">₹100 / Hour</span>
                     </td>
-                    <td className="p-4 sm:p-5">
-                      <span className="text-base sm:text-lg font-bold text-white font-sans">₹80 / Hour</span>
+                    <td className="p-5">
+                      <span className="text-lg font-bold text-white font-sans">₹80 / Hour</span>
                     </td>
                   </tr>
 
                   {/* Extra Controller Rate */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <Gamepad2 size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Extra Controller Rate</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5">
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5">
                       <span className="font-bold text-white">₹80 / Hour</span>
                       <span className="text-[10px] text-slate-400 block mt-0.5">Per additional player</span>
                     </td>
-                    <td className="p-4 sm:p-5">
+                    <td className="p-5">
                       <span className="font-bold text-white">₹60 / Hour</span>
                       <span className="text-[10px] text-slate-400 block mt-0.5">Per additional player</span>
                     </td>
@@ -263,15 +475,15 @@ export default function AboutPage() {
 
                   {/* Resolution & Frame Rate */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <Monitor size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Resolution &amp; Framerate</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
                       <span className="font-semibold text-white">4K Ultra HD &amp; 120FPS HDR</span>
                       <span className="text-[11px] text-slate-400 block mt-0.5">Ray Tracing Hardware Enabled</span>
                     </td>
-                    <td className="p-4 sm:p-5 text-slate-300">
+                    <td className="p-5 text-slate-300">
                       <span className="font-semibold text-white">1080p Full HD / 4K Boost</span>
                       <span className="text-[11px] text-slate-400 block mt-0.5">Smooth 60FPS Fidelity</span>
                     </td>
@@ -279,29 +491,29 @@ export default function AboutPage() {
 
                   {/* Display Technology */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <Monitor size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Display Panels</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
                       120Hz Fast-IPS &amp; 4K OLED Lounge Displays
                     </td>
-                    <td className="p-4 sm:p-5 text-slate-300">
+                    <td className="p-5 text-slate-300">
                       120Hz Fast-IPS Low Latency Panels
                     </td>
                   </tr>
 
                   {/* Controller & Immersion */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <Gamepad2 size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Controller &amp; Haptics</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
                       <span className="font-semibold text-[#00D2FF]">Sony DualSense Wireless</span>
                       <span className="text-[11px] text-slate-400 block mt-0.5">Dynamic Haptic Feedback &amp; Adaptive Triggers</span>
                     </td>
-                    <td className="p-4 sm:p-5 text-slate-300">
+                    <td className="p-5 text-slate-300">
                       <span className="font-semibold text-white">Sony DualShock 4 Wireless</span>
                       <span className="text-[11px] text-slate-400 block mt-0.5">Precision Analog Sticks &amp; Light Bar</span>
                     </td>
@@ -309,56 +521,56 @@ export default function AboutPage() {
 
                   {/* Storage & Load Speeds */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <Cpu size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Storage &amp; Load Times</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
                       Ultra-Fast Gen4 NVMe SSD (Instant Game Loads)
                     </td>
-                    <td className="p-4 sm:p-5 text-slate-300">
+                    <td className="p-5 text-slate-300">
                       1TB High-Capacity Fast Storage
                     </td>
                   </tr>
 
                   {/* Sound & Audio */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <ShieldCheck size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Audio Technology</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
                       Tempest 3D AudioTech Spatial Sound
                     </td>
-                    <td className="p-4 sm:p-5 text-slate-300">
+                    <td className="p-5 text-slate-300">
                       PlayStation Virtual Surround Sound
                     </td>
                   </tr>
 
                   {/* Top Featured Games */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <Sparkles size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Featured Games</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-slate-200">
                       EA FC 24 (FIFA), God of War Ragnarök, Spider-Man 2, MK1, Tekken 8, It Takes Two
                     </td>
-                    <td className="p-4 sm:p-5 text-slate-300">
+                    <td className="p-5 text-slate-300">
                       EA FC 24, GTA V, Mortal Kombat 11, WWE 2K, Cricket 24, Uncharted 4
                     </td>
                   </tr>
 
                   {/* Network Connectivity */}
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="p-4 sm:p-5 text-white font-semibold flex items-center gap-2">
+                    <td className="p-5 text-white font-semibold flex items-center gap-2">
                       <Clock size={14} className="text-[#00D2FF] shrink-0" />
                       <span>Network Routing</span>
                     </td>
-                    <td className="p-4 sm:p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-[#00D2FF] font-medium">
+                    <td className="p-5 border-x border-slate-800/80 bg-[#00D2FF]/5 text-[#00D2FF] font-medium">
                       Dedicated Low-Ping Optical Fiber (Sub-15ms)
                     </td>
-                    <td className="p-4 sm:p-5 text-[#00D2FF] font-medium">
+                    <td className="p-5 text-[#00D2FF] font-medium">
                       Dedicated Low-Ping Optical Fiber (Sub-15ms)
                     </td>
                   </tr>
@@ -367,13 +579,13 @@ export default function AboutPage() {
             </div>
 
             {/* Bottom Table Footer Note */}
-            <div className="p-4 sm:p-5 bg-[#080C14] border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+            <div className="p-5 bg-[#080C14] border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
               <span className="text-xs text-slate-400 font-light">
                 * Zero membership or advance deposit required. Walk in directly to choose your station.
               </span>
               <Link
                 href="/contact"
-                className="px-6 py-2 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-[11px] uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_15px_rgba(0,210,255,0.4)] shrink-0 active:scale-95"
+                className="px-6 py-2.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-[11px] uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_15px_rgba(0,210,255,0.4)] shrink-0 active:scale-95"
               >
                 Claim Station Now
               </Link>

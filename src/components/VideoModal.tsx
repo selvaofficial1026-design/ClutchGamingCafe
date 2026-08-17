@@ -11,7 +11,6 @@ interface VideoModalProps {
 }
 
 export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps) {
-  // Prevent scrolling and listen for Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -47,11 +46,11 @@ export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/85 backdrop-blur-md cursor-pointer"
+            className="absolute inset-0 bg-black/90 backdrop-blur-md cursor-pointer"
             onClick={onClose}
           />
           
-          {/* Compact Medium-Size Video Modal Container */}
+          {/* Compact Video Modal Container */}
           <motion.div
             initial={{ scale: 0.9, opacity: 0, y: 15 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -60,16 +59,16 @@ export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps
             role="dialog"
             aria-modal="true"
             aria-label="Game trailer video"
-            className="relative w-full max-w-[92%] sm:max-w-xl md:max-w-2xl lg:max-w-[780px] bg-coffee-dark rounded-[1.75rem] overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_35px_rgba(200,149,95,0.25)] border border-cappuccino/40 z-10 flex flex-col"
+            className="relative w-full max-w-[92%] sm:max-w-xl md:max-w-2xl lg:max-w-[780px] bg-[#0D131F] rounded-[1.75rem] overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_35px_rgba(0,210,255,0.3)] border border-[#00D2FF]/40 z-10 flex flex-col"
           >
-            {/* Sleek Top Header Bar */}
-            <div className="flex items-center justify-between px-5 py-3.5 bg-[#1F1515] border-b border-white/10 select-none">
+            {/* Header Bar */}
+            <div className="flex items-center justify-between px-5 py-3.5 bg-[#080C14] border-b border-slate-800 select-none">
               <div className="flex items-center gap-2">
-                <Flame size={15} className="text-cappuccino" />
+                <Flame size={15} className="text-[#00D2FF]" />
                 <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-white/90">
                   Official 4K Game Trailer
                 </span>
-                <span className="text-[9px] uppercase tracking-widest bg-cappuccino/20 text-cappuccino px-2 py-0.5 rounded-full font-semibold hidden sm:inline-block">
+                <span className="text-[9px] uppercase tracking-widest bg-[#00D2FF]/20 text-[#00D2FF] px-2 py-0.5 rounded-full font-bold hidden sm:inline-block">
                   Clutch Arena
                 </span>
               </div>
@@ -77,7 +76,7 @@ export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="flex items-center gap-1.5 px-3 py-1 bg-white/10 hover:bg-cappuccino text-white hover:text-coffee-dark rounded-full transition-all duration-200 text-xs font-bold active:scale-95 cursor-pointer"
+                className="flex items-center gap-1.5 px-3 py-1 bg-slate-800 hover:bg-[#00D2FF] text-white hover:text-[#080C14] rounded-full transition-all duration-200 text-xs font-bold active:scale-95 cursor-pointer"
                 title="Close (Esc)"
                 aria-label="Close trailer modal"
               >
@@ -86,7 +85,7 @@ export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps
               </button>
             </div>
 
-            {/* Video Player 16:9 Aspect Frame */}
+            {/* Video Player 16:9 Frame */}
             <div className="relative aspect-video w-full bg-black">
               <iframe
                 className="w-full h-full border-0"
@@ -97,14 +96,14 @@ export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps
               />
             </div>
 
-            {/* Compact Bottom Caption Bar with Direct YouTube Link */}
-            <div className="px-5 py-2.5 bg-[#170E0E] flex items-center justify-between text-white/60 text-[11px] border-t border-white/5">
-              <span className="text-cappuccino font-semibold">Standard Rate: ₹80 / Hour</span>
+            {/* Bottom Caption Bar */}
+            <div className="px-5 py-2.5 bg-[#080C14] flex items-center justify-between text-slate-400 text-[11px] border-t border-slate-800">
+              <span className="text-[#00D2FF] font-semibold">Standard Rate: ₹80 / Hour</span>
               <a 
                 href={`https://www.youtube.com/watch?v=${videoId}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-cappuccino transition-colors flex items-center gap-1.5 font-medium"
+                className="text-slate-300 hover:text-[#00D2FF] transition-colors flex items-center gap-1.5 font-medium"
               >
                 <span>Watch on YouTube</span>
                 <ExternalLink size={12} />

@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F9F5EE;
-  --foreground: #1A1A1A;
-  --coffee-dark: #2A1D1D;
-  --cappuccino: #C8955F;
-  --cream: #F3E4CF;
-  --cream-light: #F9F5EE;
-  --gold: #DDA922;
-  --text-dark: #1A1A1A;
+  --background: #080C14;
+  --foreground: #F8FAFC;
+  --coffee-dark: #0D131F;
+  --cappuccino: #00D2FF;
+  --cream: #1E293B;
+  --cream-light: #111827;
+  --gold: #38BDF8;
+  --text-dark: #FFFFFF;
 }
 
 @theme {
   --breakpoint-xs: 480px;
 
-  --color-primary: #2A1D1D;
-  --color-secondary: #C8955F;
-  --color-coffee-dark: #2A1D1D;
-  --color-cappuccino: #C8955F;
-  --color-background: #F9F5EE;
-  --color-foreground: #1A1A1A;
-  --color-cream: #F3E4CF;
-  --color-cream-light: #F9F5EE;
-  --color-gold: #DDA922;
-  --color-text-dark: #1A1A1A;
+  --color-primary: #0D131F;
+  --color-secondary: #00D2FF;
+  --color-coffee-dark: #0D131F;
+  --color-cappuccino: #00D2FF;
+  --color-background: #080C14;
+  --color-foreground: #F8FAFC;
+  --color-cream: #1E293B;
+  --color-cream-light: #111827;
+  --color-gold: #38BDF8;
+  --color-text-dark: #FFFFFF;
   
   --font-serif: var(--font-playfair), serif;
   --font-sans: var(--font-inter), sans-serif;
@@ -31,8 +31,8 @@
   --radius-premium: 18px;
   --radius-2xl: 24px;
   
-  --shadow-premium: 0 12px 30px rgba(0, 0, 0, 0.08);
-  --shadow-premium-hover: 0 18px 40px rgba(0, 0, 0, 0.12);
+  --shadow-premium: 0 12px 30px rgba(0, 210, 255, 0.12);
+  --shadow-premium-hover: 0 18px 40px rgba(0, 210, 255, 0.28);
 }
 
 @layer base {
@@ -54,19 +54,19 @@
     font-family: var(--font-playfair), serif;
     font-weight: 700;
     line-height: 1.2;
-    color: var(--coffee-dark);
+    color: #FFFFFF;
   }
 }
 
 .bg-premium-gradient {
-  background: linear-gradient(135deg, #F5EBDD, #FAF7F2);
+  background: linear-gradient(135deg, #0D131F, #111827);
 }
 
 .text-balance {
   text-wrap: balance;
 }
 
-/* Grain Texture Overlay — Reliable Base64 SVG (No Network Delay) */
+/* Grain Texture Overlay */
 .grain-overlay {
   position: fixed;
   top: -50%;
@@ -76,7 +76,7 @@
   width: 200%;
   height: 200%;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.038;
+  opacity: 0.035;
   pointer-events: none;
   z-index: 5;
   animation: noise 0.3s steps(2) infinite;
@@ -100,7 +100,7 @@
   }
   .aura-blob {
     animation: none !important;
-    opacity: 0.03 !important;
+    opacity: 0.04 !important;
   }
 }
 
@@ -126,7 +126,7 @@
   perspective: 1000px;
 }
 
-/* Luxury Aura Animations */
+/* Cyber Electric Blue Aura Animations */
 .aura-container {
   position: fixed;
   inset: 0;
@@ -140,14 +140,14 @@
   width: 60vmax;
   height: 60vmax;
   border-radius: 50%;
-  opacity: 0.06;
-  background: radial-gradient(circle at center, var(--cappuccino) 0%, rgba(200,160,120,0) 65%);
+  opacity: 0.07;
+  background: radial-gradient(circle at center, #00D2FF 0%, rgba(0, 210, 255, 0) 65%);
   animation: float 18s infinite alternate ease-in-out;
   will-change: transform;
 }
 
 .aura-blob-1 { top: -10%; left: -10%; animation-delay: 0s; }
-.aura-blob-2 { bottom: -10%; right: -10%; background: radial-gradient(circle at center, var(--coffee-dark) 0%, rgba(20,15,10,0) 65%); animation-delay: -9s; }
+.aura-blob-2 { bottom: -10%; right: -10%; background: radial-gradient(circle at center, #0284C7 0%, rgba(2, 132, 199, 0) 65%); animation-delay: -9s; }
 
 @keyframes float {
   0% { transform: translate3d(0, 0, 0) scale(1); }

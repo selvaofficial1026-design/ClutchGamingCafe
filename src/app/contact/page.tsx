@@ -10,7 +10,7 @@ const fullMapQueryUrl = "https://www.google.com/maps/search/?api=1&query=1st+Flo
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen flex flex-col pt-0 bg-background relative overflow-hidden">
+    <main className="min-h-screen flex flex-col pt-0 bg-[#080C14] text-white relative overflow-hidden">
       
       {/* Hero Section */}
       <section className="relative h-[48vh] md:h-[52vh] w-full flex items-center justify-center overflow-hidden">
@@ -20,10 +20,10 @@ export default function ContactPage() {
             alt="Clutch Gaming Cafe Location"
             fill
             unoptimized
-            className="object-cover brightness-[0.3] scale-105"
+            className="object-cover brightness-[0.25] scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080C14] via-[#080C14]/60 to-black/80" />
         </div>
         
         <div className="relative z-10 text-center px-6">
@@ -31,7 +31,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-block px-6 py-2 mb-6 border border-cappuccino/40 rounded-full text-cappuccino text-[10px] font-bold tracking-[0.3em] uppercase backdrop-blur-md bg-white/5 shadow-[0_0_15px_rgba(200,160,120,0.2)]"
+            className="inline-block px-6 py-2 mb-6 border border-[#00D2FF]/40 rounded-full text-[#00D2FF] text-[10px] font-bold tracking-[0.3em] uppercase backdrop-blur-md bg-[#080C14]/80 shadow-[0_0_15px_rgba(0,210,255,0.25)]"
           >
             Arena Location &amp; Visit Details
           </motion.span>
@@ -55,7 +55,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-white/80 text-sm md:text-base font-light max-w-xl mx-auto"
+            className="text-slate-300 text-sm md:text-base font-light max-w-xl mx-auto"
           >
             Located on the 1st Floor (Above KFC) on Trichy-Chennai Highway, Samayapuram, Tiruchirappalli. Walk-in anytime!
           </motion.p>
@@ -63,10 +63,9 @@ export default function ContactPage() {
       </section>
 
       {/* Continuous Kinetic Location Ticker Strip */}
-      <section className="py-2.5 sm:py-3.5 bg-coffee-dark border-y border-cappuccino/20 overflow-hidden relative z-10">
-        {/* Left & Right Edge Fade Masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-coffee-dark to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-coffee-dark to-transparent z-10 pointer-events-none" />
+      <section className="py-2.5 sm:py-3.5 bg-[#0D131F] border-y border-slate-800 overflow-hidden relative z-10">
+        <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-[#0D131F] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#0D131F] to-transparent z-10 pointer-events-none" />
 
         <div className="flex w-max">
           <motion.div
@@ -92,10 +91,10 @@ export default function ContactPage() {
             ].map((locItem, lI) => (
               <React.Fragment key={lI}>
                 <span className="text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cappuccino animate-pulse shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00D2FF] animate-pulse shrink-0 shadow-[0_0_6px_#00D2FF]" />
                   <span>{locItem}</span>
                 </span>
-                <span className="text-cappuccino/50 text-xs">•</span>
+                <span className="text-[#00D2FF]/50 text-xs">•</span>
               </React.Fragment>
             ))}
           </motion.div>
@@ -117,65 +116,65 @@ export default function ContactPage() {
               className="space-y-6 flex flex-col justify-between"
             >
               <div className="space-y-3">
-                <span className="text-[10px] uppercase tracking-[0.4em] text-cappuccino font-bold block">
+                <span className="text-[10px] uppercase tracking-[0.4em] text-[#00D2FF] font-bold block">
                   Trichy Headquarters
                 </span>
-                <h2 className="text-3xl md:text-4xl font-serif text-coffee-dark italic leading-tight">
+                <h2 className="text-3xl md:text-4xl font-serif text-white italic leading-tight">
                   Where to Find Us &amp; Game
                 </h2>
-                <p className="text-coffee-dark/70 text-sm leading-relaxed">
-                  We are open 7 days a week with direct walk-in access. Standard rate is <strong className="text-coffee-dark font-bold">₹80 / Hour</strong> with zero hidden charges.
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  We are open 7 days a week with direct walk-in access. Standard rate is <strong className="text-[#00D2FF] font-bold">₹80 / Hour</strong> with zero hidden charges.
                 </p>
               </div>
 
               <div className="space-y-4">
                 
-                {/* Address Card with Hover Lift & Golden Glow */}
-                <div className="group flex items-start gap-4 sm:gap-5 p-4.5 sm:p-6 rounded-[1.75rem] bg-white border border-cream hover:border-cappuccino hover:shadow-[0_20px_45px_rgba(200,149,95,0.22)] hover:-translate-y-2 hover:scale-[1.015] transition-all duration-500 cursor-pointer relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-cappuccino/10 rounded-full blur-2xl group-hover:bg-cappuccino/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-background rounded-2xl flex items-center justify-center shrink-0 text-cappuccino group-hover:bg-cappuccino group-hover:text-coffee-dark group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-sm">
+                {/* Address Card */}
+                <div className="group flex items-start gap-4 sm:gap-5 p-4.5 sm:p-6 rounded-[1.75rem] bg-[#0D131F] border border-slate-800 hover:border-[#00D2FF]/60 hover:shadow-[0_15px_40px_rgba(0,210,255,0.2)] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#00D2FF]/10 rounded-full blur-2xl group-hover:bg-[#00D2FF]/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-[#080C14] rounded-2xl flex items-center justify-center shrink-0 text-[#00D2FF] group-hover:bg-[#00D2FF] group-hover:text-[#080C14] group-hover:scale-110 transition-all duration-500 shadow-sm">
                     <MapPin size={22} />
                   </div>
                   <div className="relative z-10">
-                    <h4 className="font-bold text-coffee-dark/50 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-cappuccino transition-colors">Official Postal Address</h4>
-                    <p className="text-coffee-dark text-base md:text-lg font-bold leading-snug group-hover:text-coffee-dark transition-colors">
+                    <h4 className="font-bold text-slate-400 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-[#00D2FF] transition-colors">Official Postal Address</h4>
+                    <p className="text-white text-base md:text-lg font-bold leading-snug">
                       1st Floor, No. 21/B, Trichy-Chennai Highway
                     </p>
-                    <p className="text-coffee-dark/70 text-sm mt-1">
+                    <p className="text-slate-400 text-sm mt-1">
                       Above KFC, Samayapuram, Tiruchirappalli, Tamil Nadu – 621112
                     </p>
                   </div>
                 </div>
 
-                {/* Hours & Rate Card with Hover Lift & Golden Glow */}
-                <div className="group flex items-start gap-4 sm:gap-5 p-4.5 sm:p-6 rounded-[1.75rem] bg-white border border-cream hover:border-cappuccino hover:shadow-[0_20px_45px_rgba(200,149,95,0.22)] hover:-translate-y-2 hover:scale-[1.015] transition-all duration-500 cursor-pointer relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-cappuccino/10 rounded-full blur-2xl group-hover:bg-cappuccino/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-background rounded-2xl flex items-center justify-center shrink-0 text-cappuccino group-hover:bg-cappuccino group-hover:text-coffee-dark group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-sm">
+                {/* Hours & Rate Card */}
+                <div className="group flex items-start gap-4 sm:gap-5 p-4.5 sm:p-6 rounded-[1.75rem] bg-[#0D131F] border border-slate-800 hover:border-[#00D2FF]/60 hover:shadow-[0_15px_40px_rgba(0,210,255,0.2)] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#00D2FF]/10 rounded-full blur-2xl group-hover:bg-[#00D2FF]/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-[#080C14] rounded-2xl flex items-center justify-center shrink-0 text-[#00D2FF] group-hover:bg-[#00D2FF] group-hover:text-[#080C14] group-hover:scale-110 transition-all duration-500 shadow-sm">
                     <Clock size={22} />
                   </div>
                   <div className="relative z-10">
-                    <h4 className="font-bold text-coffee-dark/50 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-cappuccino transition-colors">Operating Hours &amp; Rate</h4>
-                    <p className="text-coffee-dark text-base md:text-lg font-bold">
+                    <h4 className="font-bold text-slate-400 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-[#00D2FF] transition-colors">Operating Hours &amp; Rate</h4>
+                    <p className="text-white text-base md:text-lg font-bold">
                       Open Everyday: 10:00 AM – 11:00 PM
                     </p>
-                    <p className="text-cappuccino text-sm font-bold mt-1 flex items-center gap-1.5">
+                    <p className="text-[#00D2FF] text-sm font-bold mt-1 flex items-center gap-1.5">
                       <Sparkles size={14} /> Standard Rate: ₹80 / Hour (PC &amp; PS5)
                     </p>
                   </div>
                 </div>
 
-                {/* Phone & Direct Contact with Hover Lift & Golden Glow */}
-                <div className="group flex items-start gap-4 sm:gap-5 p-4.5 sm:p-6 rounded-[1.75rem] bg-white border border-cream hover:border-cappuccino hover:shadow-[0_20px_45px_rgba(200,149,95,0.22)] hover:-translate-y-2 hover:scale-[1.015] transition-all duration-500 cursor-pointer relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-cappuccino/10 rounded-full blur-2xl group-hover:bg-cappuccino/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-background rounded-2xl flex items-center justify-center shrink-0 text-cappuccino group-hover:bg-[#007AFF] group-hover:text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-sm">
+                {/* Phone & Direct Contact */}
+                <div className="group flex items-start gap-4 sm:gap-5 p-4.5 sm:p-6 rounded-[1.75rem] bg-[#0D131F] border border-slate-800 hover:border-[#00D2FF]/60 hover:shadow-[0_15px_40px_rgba(0,210,255,0.2)] hover:-translate-y-1.5 transition-all duration-500 cursor-pointer relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#00D2FF]/10 rounded-full blur-2xl group-hover:bg-[#00D2FF]/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-[#080C14] rounded-2xl flex items-center justify-center shrink-0 text-[#00D2FF] group-hover:bg-[#00D2FF] group-hover:text-[#080C14] group-hover:scale-110 transition-all duration-500 shadow-sm">
                     <Phone size={22} />
                   </div>
                   <div className="relative z-10">
-                    <h4 className="font-bold text-coffee-dark/50 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-cappuccino transition-colors">Direct Phone &amp; WhatsApp</h4>
-                    <p className="text-coffee-dark text-base md:text-lg font-bold group-hover:text-[#007AFF] transition-colors">
+                    <h4 className="font-bold text-slate-400 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-[#00D2FF] transition-colors">Direct Phone &amp; WhatsApp</h4>
+                    <p className="text-white text-base md:text-lg font-bold group-hover:text-[#00D2FF] transition-colors">
                       +91 93454 69023
                     </p>
-                    <p className="text-coffee-dark/60 text-xs mt-1">
+                    <p className="text-slate-400 text-xs mt-1">
                       Direct line available for directions, queries, and group sessions.
                     </p>
                   </div>
@@ -189,7 +188,7 @@ export default function ContactPage() {
                   href={fullMapQueryUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-4 px-6 bg-coffee-dark text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-cappuccino hover:text-coffee-dark hover:shadow-[0_12px_30px_rgba(200,149,95,0.4)] transition-all active:scale-95 flex items-center justify-center gap-2"
+                  className="flex-1 py-4 px-6 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_25px_rgba(0,210,255,0.7)] transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Navigation size={16} /> Open Google Maps
                 </a>
@@ -197,7 +196,7 @@ export default function ContactPage() {
                   href="https://wa.me/919345469023"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-4 px-6 bg-[#25D366] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-[#1EBE5D] hover:shadow-[0_12px_30px_rgba(37,211,102,0.4)] transition-all active:scale-95 flex items-center justify-center gap-2"
+                  className="flex-1 py-4 px-6 bg-[#25D366] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-[#1EBE5D] hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <MessageSquare size={16} /> WhatsApp Us
                 </a>
@@ -205,7 +204,7 @@ export default function ContactPage() {
 
             </motion.div>
 
-            {/* Arena Highlights & Visitor Information Card with Ambient Glow - Compact & Professional */}
+            {/* Arena Highlights & Visitor Information Card */}
             <motion.div 
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
@@ -213,85 +212,84 @@ export default function ContactPage() {
                transition={{ delay: 0.2, duration: 0.8 }}
                className="flex flex-col justify-between"
             >
-              <div className="group bg-[#180E0E] text-white p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-[2.25rem] shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1 hover:border-cappuccino/50 relative overflow-hidden h-full flex flex-col justify-between border border-cappuccino/30 transition-all duration-500">
+              <div className="group bg-[#0D131F] text-white p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-[2.25rem] shadow-[0_15px_45px_rgba(0,0,0,0.8)] hover:shadow-[0_20px_50px_rgba(0,210,255,0.22)] hover:-translate-y-1 hover:border-[#00D2FF]/50 relative overflow-hidden h-full flex flex-col justify-between border border-slate-800 transition-all duration-500">
                 
-                {/* Clean Warm Golden Subtle Glow */}
                 <div 
-                  className="absolute top-0 right-0 w-72 h-72 pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-700" 
-                  style={{ background: "radial-gradient(circle at top right, rgba(200,149,95,0.18) 0%, transparent 65%)" }} 
+                  className="absolute top-0 right-0 w-72 h-72 pointer-events-none opacity-30 group-hover:opacity-60 transition-opacity duration-700" 
+                  style={{ background: "radial-gradient(circle at top right, rgba(0,210,255,0.2) 0%, transparent 65%)" }} 
                 />
                 
                 <div className="relative z-10 space-y-4">
                   <div>
                     {/* Live Status Pill */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/15 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.22em] mb-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/30 text-[#00D2FF] text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.22em] mb-2">
+                      <span className="w-2 h-2 rounded-full bg-[#00D2FF] shadow-[0_0_6px_#00D2FF] animate-pulse" />
                       <span>Zero Wait-Time • Instant Station Assignment</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-serif italic text-white leading-tight group-hover:text-cappuccino transition-colors">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-serif italic text-white leading-tight group-hover:text-[#00D2FF] transition-colors">
                       Walk In &amp; Claim Your Rig
                     </h3>
                   </div>
 
-                  <p className="text-white/75 text-xs sm:text-sm font-light leading-relaxed">
+                  <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
                     No advance deposit or membership needed. Walk in directly, pick any 240Hz PC station or PS5 recliner, and enjoy ice-cold AC comfort at flat ₹80/hr.
                   </p>
 
                   {/* 3-Step Walk-In Process */}
-                  <div className="hidden sm:grid grid-cols-3 gap-2 py-2 border-y border-white/10 text-center">
-                    <div className="p-2 rounded-xl bg-[#221515] border border-cappuccino/15">
-                      <span className="text-[9px] font-bold text-cappuccino uppercase tracking-widest block">01. Walk-In</span>
-                      <span className="text-[10px] text-white/80">Direct Entry</span>
+                  <div className="hidden sm:grid grid-cols-3 gap-2 py-2 border-y border-slate-800 text-center">
+                    <div className="p-2 rounded-xl bg-[#080C14] border border-slate-800">
+                      <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">01. Walk-In</span>
+                      <span className="text-[10px] text-slate-300">Direct Entry</span>
                     </div>
-                    <div className="p-2 rounded-xl bg-[#221515] border border-cappuccino/15">
-                      <span className="text-[9px] font-bold text-cappuccino uppercase tracking-widest block">02. Pick Rig</span>
-                      <span className="text-[10px] text-white/80">PC or PS5</span>
+                    <div className="p-2 rounded-xl bg-[#080C14] border border-slate-800">
+                      <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">02. Pick Rig</span>
+                      <span className="text-[10px] text-slate-300">PC or PS5</span>
                     </div>
-                    <div className="p-2 rounded-xl bg-[#221515] border border-cappuccino/15">
-                      <span className="text-[9px] font-bold text-cappuccino uppercase tracking-widest block">03. Play</span>
-                      <span className="text-[10px] text-white/80">Flat ₹80 / Hr</span>
+                    <div className="p-2 rounded-xl bg-[#080C14] border border-slate-800">
+                      <span className="text-[9px] font-bold text-[#00D2FF] uppercase tracking-widest block">03. Play</span>
+                      <span className="text-[10px] text-slate-300">Flat ₹80 / Hr</span>
                     </div>
                   </div>
 
                   {/* 6 Real Venue & Amenity Chips */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                      <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                      <div className="w-6 h-6 rounded-lg bg-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] shrink-0">
                         <MapPin size={13} />
                       </div>
                       <span className="text-[10px] sm:text-xs text-white/95 font-medium">1st Floor (Above KFC), Trichy Hwy</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                      <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                      <div className="w-6 h-6 rounded-lg bg-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] shrink-0">
                         <Navigation size={13} />
                       </div>
                       <span className="text-[10px] sm:text-xs text-white/95 font-medium">Dedicated Free Parking On-Site</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                      <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                      <div className="w-6 h-6 rounded-lg bg-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] shrink-0">
                         <ShieldCheck size={13} />
                       </div>
                       <span className="text-[10px] sm:text-xs text-white/95 font-medium">100% UPS &amp; Dual Fiber Backup</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                      <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                      <div className="w-6 h-6 rounded-lg bg-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] shrink-0">
                         <Sparkles size={13} />
                       </div>
                       <span className="text-[10px] sm:text-xs text-white/95 font-medium">Sanitized Stations &amp; Clean Headsets</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                      <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                      <div className="w-6 h-6 rounded-lg bg-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] shrink-0">
                         <Clock size={13} />
                       </div>
                       <span className="text-[10px] sm:text-xs text-white/95 font-medium">Open 10:00 AM – 11:00 PM Daily</span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                      <div className="w-6 h-6 rounded-lg bg-cappuccino/20 flex items-center justify-center text-cappuccino shrink-0">
+                    <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                      <div className="w-6 h-6 rounded-lg bg-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] shrink-0">
                         <Sparkles size={13} />
                       </div>
                       <span className="text-[10px] sm:text-xs text-white/95 font-medium">Ice-Cold AC &amp; Ergonomic Seating</span>
@@ -300,18 +298,18 @@ export default function ContactPage() {
                 </div>
 
                 {/* Direct Call Strip */}
-                <div className="mt-5 pt-4 border-t border-white/10 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div className="mt-5 pt-4 border-t border-slate-800 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-3">
                   <div className="text-center sm:text-left">
-                    <span className="text-[9.5px] uppercase tracking-widest text-cappuccino font-bold block">
+                    <span className="text-[9.5px] uppercase tracking-widest text-[#00D2FF] font-bold block">
                       Direct Walk-In Helpline
                     </span>
-                    <span className="text-[11px] text-white/70 font-light">
+                    <span className="text-[11px] text-slate-400 font-light">
                       Call anytime for station availability &amp; routes
                     </span>
                   </div>
                   <a
                     href="tel:+919345469023"
-                    className="w-full sm:w-auto px-5 py-2.5 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.6)] transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full sm:w-auto px-5 py-2.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(0,210,255,0.7)] transition-all active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Phone size={13} />
                     <span>Direct Call</span>
@@ -323,25 +321,23 @@ export default function ContactPage() {
 
           </div>
 
-
-
-          {/* Quick Route Guide Bar with Hover Lift */}
-          <div className="group mt-12 p-8 md:p-10 rounded-[2.25rem] bg-white border border-cream hover:border-cappuccino hover:shadow-[0_20px_50px_rgba(200,149,95,0.22)] hover:-translate-y-2 transition-all duration-500 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden cursor-pointer">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-cappuccino/10 rounded-full blur-3xl group-hover:bg-cappuccino/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
+          {/* Quick Route Guide Bar */}
+          <div className="group mt-12 p-8 md:p-10 rounded-[2.25rem] bg-[#0D131F] border border-slate-800 hover:border-[#00D2FF]/60 hover:shadow-[0_15px_45px_rgba(0,210,255,0.2)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden cursor-pointer">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#00D2FF]/10 rounded-full blur-3xl group-hover:bg-[#00D2FF]/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
             <div className="relative z-10">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-cappuccino font-bold block mb-1">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#00D2FF] font-bold block mb-1">
                 Landmark &amp; Parking
               </span>
-              <h3 className="text-xl font-serif text-coffee-dark font-bold italic mb-1 group-hover:text-cappuccino transition-colors">
+              <h3 className="text-xl font-serif text-white font-bold italic mb-1 group-hover:text-[#00D2FF] transition-colors">
                 Easy Highway Accessibility &amp; Ample Parking
               </h3>
-              <p className="text-coffee-dark/70 text-xs md:text-sm">
+              <p className="text-slate-300 text-xs md:text-sm">
                 Located on the 1st Floor directly above KFC on the main Trichy-Chennai Highway, Samayapuram. Dedicated two-wheeler and four-wheeler customer parking available.
               </p>
             </div>
             <Link 
               href="/portfolio"
-              className="relative z-10 px-8 py-3.5 bg-coffee-dark text-white rounded-full font-bold text-xs uppercase tracking-widest hover:bg-cappuccino hover:text-coffee-dark transition-all shrink-0 active:scale-95 shadow-md hover:shadow-lg"
+              className="relative z-10 px-8 py-3.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all shrink-0 active:scale-95 shadow-[0_0_20px_rgba(0,210,255,0.5)]"
             >
               Explore 700+ Games
             </Link>

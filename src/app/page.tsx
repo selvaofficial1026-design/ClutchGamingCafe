@@ -40,8 +40,6 @@ const featuredItems = [
   }
 ];
 
-
-
 const testimonials = [
   {
     name: "Sanjay & Squad",
@@ -56,7 +54,7 @@ const testimonials = [
 ];
 
 const tickerHighlights = [
-  "₹80 / HOUR STANDARD RATE",
+  "₹80 / HOUR FLAT RATE",
   "EA SPORTS FC 24 & FIFA",
   "IT TAKES TWO CO-OP",
   "GTA V & GTA VI READY",
@@ -74,48 +72,48 @@ export default function Home() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   return (
-    <main className="min-h-screen flex flex-col pt-0 bg-background relative">
+    <main className="min-h-screen flex flex-col pt-0 bg-[#080C14] text-white relative">
       <Hero />
 
       {/* Flat Pricing Highlight Banner */}
-      <section className="py-12 bg-coffee-dark text-white relative z-10 border-y border-cappuccino/20">
+      <section className="py-10 sm:py-12 bg-[#0D131F] text-white relative z-10 border-y border-[#00D2FF]/20">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-5 text-center md:text-left">
-            <div className="w-16 h-16 rounded-2xl bg-cappuccino/20 border border-cappuccino/40 flex items-center justify-center text-cappuccino shrink-0 hidden sm:flex">
-              <Zap size={32} />
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#00D2FF]/15 border border-[#00D2FF]/40 flex items-center justify-center text-[#00D2FF] shrink-0 hidden sm:flex shadow-[0_0_20px_rgba(0,210,255,0.3)]">
+              <Zap size={30} />
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-cappuccino font-bold block mb-1">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#00D2FF] font-bold block mb-1">
                 Transparent &amp; Affordable Pricing
               </span>
-              <h2 className="text-3xl md:text-4xl font-serif italic text-white">
-                Game at Just <span className="text-cappuccino font-sans not-italic font-bold">₹80</span> / Hour
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white">
+                Game at Just <span className="text-[#00D2FF] font-sans not-italic font-bold">₹80</span> / Hour
               </h2>
             </div>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-white/80">
-            <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2.5 rounded-full">
-              <Monitor size={16} className="text-cappuccino" /> PC Rigs Included
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-semibold text-white/90">
+            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
+              <Monitor size={15} className="text-[#00D2FF]" /> PC Rigs Included
             </div>
-            <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2.5 rounded-full">
-              <Gamepad2 size={16} className="text-cappuccino" /> PS5 4K Included
+            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
+              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS5 4K Included
             </div>
-            <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2.5 rounded-full">
-              <ShieldCheck size={16} className="text-cappuccino" /> Zero Extra Charges
+            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
+              <ShieldCheck size={15} className="text-[#00D2FF]" /> Zero Hidden Fees
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Arena & Games Showcase */}
-      <section className="py-20 md:py-32 px-6 md:px-12 bg-premium-gradient relative z-10">
+      <section className="py-16 sm:py-24 md:py-32 px-6 md:px-12 bg-gradient-to-b from-[#080C14] via-[#0D131F]/60 to-[#080C14] relative z-10">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             subtitle="The Highlights"
             title="Featured Games &amp; Battle Stations"
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {featuredItems.map((item, index) => (
               <MenuItemCard 
                 key={index} 
@@ -125,65 +123,63 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="mt-16 md:mt-20 text-center">
+          <div className="mt-14 sm:mt-16 md:mt-20 text-center">
             <Link
               href="/portfolio"
-              className="inline-block px-12 py-5 bg-coffee-dark text-white rounded-full font-bold text-xs uppercase tracking-[0.3em] hover:bg-cappuccino hover:text-coffee-dark transition-all shadow-premium hover:shadow-premium-hover active:scale-95 cursor-pointer"
+              className="inline-block px-10 sm:px-12 py-4 sm:py-5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-[0.25em] hover:bg-white transition-all shadow-[0_10px_35px_rgba(0,210,255,0.4)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.7)] active:scale-95 cursor-pointer"
             >
-              View More Games Vault
+              Explore Full Game Vault
             </Link>
           </div>
         </div>
       </section>
 
-
-
       {/* Condensed About Section */}
-      <section id="about" className="py-20 md:py-24 px-6 md:px-12 bg-background overflow-hidden relative z-10">
+      <section id="about" className="py-16 sm:py-20 md:py-24 px-6 md:px-12 bg-[#080C14] overflow-hidden relative z-10 border-t border-slate-800">
         <div className="max-w-4xl mx-auto text-center">
-           <span className="text-[10px] uppercase tracking-[0.5em] text-cappuccino font-bold mb-6 block">Our Philosophy</span>
-           <h2 className="text-4xl md:text-6xl font-serif text-coffee-dark italic leading-tight mb-8">
+           <span className="text-[10px] uppercase tracking-[0.5em] text-[#00D2FF] font-bold mb-4 block">Our Philosophy</span>
+           <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif text-white italic leading-tight mb-6">
              Built by Gamers, for Gamers
            </h2>
-           <p className="text-coffee-dark/70 leading-relaxed text-lg font-light max-w-2xl mx-auto mb-10">
-             Clutch Gaming Cafe was created to bring high-performance gaming hardware, 240Hz high-FPS displays, low-latency dedicated optical fiber, and delicious cafe comfort directly to gamers in Trichy.
+           <p className="text-slate-300 leading-relaxed text-base sm:text-lg font-light max-w-2xl mx-auto mb-10">
+             Clutch Gaming Cafe was created to bring tournament-grade gaming hardware, 240Hz Fast-IPS displays, low-latency dedicated optical fiber, and premium lounge comfort directly to gamers in Trichy.
            </p>
 
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-cream">
-             <div>
-               <h4 className="text-3xl font-serif text-coffee-dark italic mb-1">₹80</h4>
-               <p className="text-[10px] uppercase tracking-widest text-coffee-dark/50 font-bold">Hourly Rate</p>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-slate-800">
+             <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">₹80</h4>
+               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Hourly Rate</p>
              </div>
-             <div>
-               <h4 className="text-3xl font-serif text-coffee-dark italic mb-1">240Hz+</h4>
-               <p className="text-[10px] uppercase tracking-widest text-coffee-dark/50 font-bold">Fast-IPS Displays</p>
+             <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">240Hz</h4>
+               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Fast-IPS Panels</p>
              </div>
-             <div>
-               <h4 className="text-3xl font-serif text-coffee-dark italic mb-1">1 Gbps</h4>
-               <p className="text-[10px] uppercase tracking-widest text-coffee-dark/50 font-bold">Low Ping Fiber</p>
+             <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">1 Gbps</h4>
+               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">Low Ping Fiber</p>
              </div>
-             <div>
-               <h4 className="text-3xl font-serif text-coffee-dark italic mb-1">PS5 4K</h4>
-               <p className="text-[10px] uppercase tracking-widest text-coffee-dark/50 font-bold">OLED Lounge</p>
+             <div className="p-4 rounded-2xl bg-[#0D131F] border border-slate-800">
+               <h4 className="text-2xl sm:text-3xl font-serif text-[#00D2FF] italic mb-1">PS5 4K</h4>
+               <p className="text-[9.5px] uppercase tracking-widest text-slate-400 font-bold">OLED Lounge</p>
              </div>
            </div>
         </div>
       </section>
 
       {/* Continuous Capabilities Ticker */}
-      <section className="py-10 bg-coffee-dark overflow-hidden border-y border-white/10">
+      <section className="py-8 sm:py-10 bg-[#0D131F] overflow-hidden border-y border-slate-800">
         <div className="flex w-max">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
             transition={{ ease: "linear", duration: 35, repeat: Infinity }}
-            className="flex items-center gap-12 whitespace-nowrap px-6"
+            className="flex items-center gap-10 sm:gap-12 whitespace-nowrap px-6"
           >
             {[...tickerHighlights, ...tickerHighlights].map((item, i) => (
               <React.Fragment key={i}>
-                <span className="text-lg md:text-2xl font-bold font-serif italic text-white/90 tracking-widest flex items-center gap-2">
-                  <Flame size={16} className="text-cappuccino" /> {item}
+                <span className="text-base sm:text-xl md:text-2xl font-bold font-serif italic text-white tracking-widest flex items-center gap-2">
+                  <Flame size={16} className="text-[#00D2FF]" /> {item}
                 </span>
-                <span className="text-cappuccino text-2xl opacity-60">•</span>
+                <span className="text-[#00D2FF] text-2xl opacity-60">•</span>
               </React.Fragment>
             ))}
           </motion.div>
@@ -205,16 +201,17 @@ export default function Home() {
             fill
             quality={80}
             sizes="100vw"
-            className="object-cover brightness-[0.28]"
+            className="object-cover brightness-[0.25]"
           />
+          <div className="absolute inset-0 bg-[#080C14]/60" />
         </motion.div>
         <div className="relative z-10 h-full flex items-center justify-center px-6">
           <div className="text-center">
-            <span className="text-[10px] uppercase tracking-[0.5em] text-cappuccino font-bold mb-4 block">The Clutch Standard</span>
-            <h2 className="text-4xl md:text-6xl font-serif text-white italic mb-6">High FPS. Low Latency. Pure Passion.</h2>
+            <span className="text-[10px] uppercase tracking-[0.5em] text-[#00D2FF] font-bold mb-4 block">The Clutch Standard</span>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif text-white italic mb-6">High FPS. Low Latency. Pure Passion.</h2>
             <Link
               href="/contact"
-              className="px-8 py-3.5 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition-all shadow-lg active:scale-95 cursor-pointer"
+              className="px-8 py-3.5 bg-[#00D2FF] text-[#080C14] rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_25px_rgba(0,210,255,0.6)] active:scale-95 cursor-pointer"
             >
               Visit Us in Trichy
             </Link>
@@ -222,8 +219,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section - Compact & Unique Dark Glowing Style */}
-      <section className="py-12 sm:py-20 md:py-28 px-4 sm:px-8 md:px-12 bg-background relative z-10">
+      {/* Testimonials Section */}
+      <section className="py-14 sm:py-20 md:py-28 px-4 sm:px-8 md:px-12 bg-[#080C14] relative z-10">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             subtitle="Gamer Community"
@@ -238,40 +235,40 @@ export default function Home() {
                 whileHover={{ y: -6, scale: 1.015 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="bg-gradient-to-br from-[#2A1D1D] to-[#181010] p-5 sm:p-7 md:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-white flex flex-col justify-between shadow-premium hover:shadow-[0_15px_40px_rgba(200,160,120,0.22)] transition-all relative overflow-hidden group border border-cappuccino/25"
+                className="bg-[#0D131F] p-5 sm:p-7 md:p-8 rounded-[1.5rem] sm:rounded-[2rem] text-white flex flex-col justify-between shadow-[0_10px_35px_rgba(0,0,0,0.7)] hover:shadow-[0_15px_40px_rgba(0,210,255,0.22)] transition-all relative overflow-hidden group border border-slate-800 hover:border-[#00D2FF]/50"
               >
                 {/* Subtle Ambient Aura */}
-                <div className="absolute top-0 right-0 w-36 sm:w-48 h-36 sm:h-48 bg-cappuccino/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-cappuccino/20 transition-colors duration-500 blur-[35px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-36 sm:w-48 h-36 sm:h-48 bg-[#00D2FF]/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-[#00D2FF]/20 transition-colors duration-500 blur-[40px] pointer-events-none" />
                 
                 {/* Top Row: 5-Star Rating & Verified Badge */}
                 <div className="flex items-center justify-between gap-2 mb-3.5 relative z-10">
-                  <div className="flex items-center gap-1 text-cappuccino">
+                  <div className="flex items-center gap-1 text-[#00D2FF]">
                     {[...Array(5)].map((_, sI) => (
-                      <Star key={sI} size={13} fill="currentColor" className="drop-shadow-[0_0_8px_rgba(200,149,95,0.6)]" />
+                      <Star key={sI} size={13} fill="currentColor" className="drop-shadow-[0_0_8px_#00D2FF]" />
                     ))}
                   </div>
-                  <span className="text-[8.5px] uppercase tracking-wider font-bold text-cappuccino bg-white/5 border border-cappuccino/30 px-2.5 py-0.5 rounded-full backdrop-blur-xs">
+                  <span className="text-[8.5px] uppercase tracking-wider font-bold text-[#00D2FF] bg-[#080C14] border border-[#00D2FF]/30 px-2.5 py-0.5 rounded-full backdrop-blur-xs">
                     5.0 ★ Verified
                   </span>
                 </div>
                 
                 {/* Compact Quote Text */}
-                <p className="text-sm sm:text-base md:text-lg font-serif leading-snug sm:leading-relaxed mb-4 sm:mb-6 italic relative z-10 text-white/95 drop-shadow-sm">
+                <p className="text-sm sm:text-base md:text-lg font-serif leading-snug sm:leading-relaxed mb-4 sm:mb-6 italic relative z-10 text-white drop-shadow-sm">
                   &ldquo;{test.quote}&rdquo;
                 </p>
                 
                 {/* User Info Footer */}
-                <div className="relative z-10 flex items-center justify-between pt-3 border-t border-white/10">
+                <div className="relative z-10 flex items-center justify-between pt-3 border-t border-slate-800">
                   <div className="flex items-center gap-2.5 sm:gap-3">
-                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-cappuccino/20 border border-cappuccino/40 flex items-center justify-center text-cappuccino shadow-sm group-hover:bg-cappuccino group-hover:text-coffee-dark transition-colors duration-500 shrink-0">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#00D2FF]/20 border border-[#00D2FF]/40 flex items-center justify-center text-[#00D2FF] shadow-sm group-hover:bg-[#00D2FF] group-hover:text-[#080C14] transition-colors duration-500 shrink-0">
                       <User2 size={16} />
                     </div>
                     <div>
                       <h4 className="font-bold text-xs sm:text-sm text-white leading-tight">{test.name}</h4>
-                      <p className="text-cappuccino font-sans text-[8.5px] sm:text-[9.5px] font-bold uppercase tracking-widest">{test.role}</p>
+                      <p className="text-[#00D2FF] font-sans text-[8.5px] sm:text-[9.5px] font-bold uppercase tracking-widest">{test.role}</p>
                     </div>
                   </div>
-                  <span className="text-[8px] uppercase tracking-widest text-white/40 font-bold hidden xs:inline-block">
+                  <span className="text-[8px] uppercase tracking-widest text-slate-400 font-bold hidden xs:inline-block">
                     Trichy Arena
                   </span>
                 </div>
@@ -281,14 +278,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Prominent Location Banner for Visitors - Compact & Balanced Gaming Sanctuary Card */}
-      <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-8 md:px-12 bg-white relative z-10 border-t border-cream">
-        <div className="group max-w-5xl mx-auto rounded-2xl sm:rounded-[2.25rem] bg-[#180E0E] text-white p-6 sm:p-8 md:p-10 relative overflow-hidden shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1 border border-cappuccino/30 hover:border-cappuccino/60 transition-all duration-500">
+      {/* Prominent Location Banner for Visitors */}
+      <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-8 md:px-12 bg-[#080C14] relative z-10 border-t border-slate-800">
+        <div className="group max-w-5xl mx-auto rounded-2xl sm:rounded-[2.25rem] bg-[#0D131F] text-white p-6 sm:p-8 md:p-10 relative overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.8)] hover:shadow-[0_20px_50px_rgba(0,210,255,0.25)] hover:-translate-y-1 border border-slate-800 hover:border-[#00D2FF]/50 transition-all duration-500">
           
-          {/* Subtle Ambient Golden Glow */}
+          {/* Subtle Ambient Glow */}
           <div 
             className="absolute -right-10 -bottom-10 w-64 sm:w-80 h-64 sm:h-80 pointer-events-none opacity-30 group-hover:opacity-60 transition-opacity duration-700" 
-            style={{ background: "radial-gradient(circle at bottom right, rgba(200,149,95,0.2) 0%, transparent 65%)" }} 
+            style={{ background: "radial-gradient(circle at bottom right, rgba(0,210,255,0.2) 0%, transparent 65%)" }} 
           />
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
@@ -302,57 +299,57 @@ export default function Home() {
               className="lg:col-span-7 space-y-3.5"
             >
               {/* Live Status Pill */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cappuccino/10 border border-cappuccino/30 text-cappuccino text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em]">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/30 text-[#00D2FF] text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.25em]">
+                <span className="w-2 h-2 rounded-full bg-[#00D2FF] shadow-[0_0_8px_#00D2FF] animate-pulse" />
                 <span>Prime Highway Landmark • Direct Walk-In</span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl font-serif italic text-white leading-tight">
-                Visit Clutch Gaming Cafe <span className="text-cappuccino font-sans not-italic text-xs sm:text-sm font-bold uppercase tracking-wider block sm:inline-block sm:ml-2">Samayapuram, Trichy</span>
+                Visit Clutch Gaming Cafe <span className="text-[#00D2FF] font-sans not-italic text-xs sm:text-sm font-bold uppercase tracking-wider block sm:inline-block sm:ml-2">Samayapuram, Trichy</span>
               </h2>
 
-              <p className="text-white/75 text-xs sm:text-sm font-light leading-relaxed">
+              <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
                 Located right on the Trichy-Chennai National Highway (1st Floor Above KFC). Step in anytime for high-FPS PC battle stations and 4K PS5 gaming lounge at ₹80/hr.
               </p>
 
               {/* 4 Location & Visit Chips */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                  <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-[#00D2FF]/15 flex items-center justify-center shrink-0 text-[#00D2FF]">
                     <MapPin size={14} />
                   </div>
                   <div>
-                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block">Landmark</span>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-[#00D2FF] block">Landmark</span>
                     <span className="text-[11px] sm:text-xs text-white/95 font-medium">1st Floor (Above KFC), Samayapuram</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                  <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-[#00D2FF]/15 flex items-center justify-center shrink-0 text-[#00D2FF]">
                     <Clock size={14} />
                   </div>
                   <div>
-                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block">Schedule</span>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-[#00D2FF] block">Schedule</span>
                     <span className="text-[11px] sm:text-xs text-white/95 font-medium">10:00 AM – 11:00 PM (All 7 Days)</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                  <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-[#00D2FF]/15 flex items-center justify-center shrink-0 text-[#00D2FF]">
                     <Navigation size={14} />
                   </div>
                   <div>
-                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block">Accessibility</span>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-[#00D2FF] block">Accessibility</span>
                     <span className="text-[11px] sm:text-xs text-white/95 font-medium">Highway Frontage &amp; Free Parking</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                  <div className="w-7 h-7 rounded-lg bg-cappuccino/15 flex items-center justify-center shrink-0 text-cappuccino">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                  <div className="w-7 h-7 rounded-lg bg-[#00D2FF]/15 flex items-center justify-center shrink-0 text-[#00D2FF]">
                     <Sparkles size={14} />
                   </div>
                   <div>
-                    <span className="text-[9px] uppercase tracking-wider font-bold text-cappuccino block">Pricing</span>
+                    <span className="text-[9px] uppercase tracking-wider font-bold text-[#00D2FF] block">Pricing</span>
                     <span className="text-[11px] sm:text-xs text-white/95 font-medium">Flat ₹80 / Hour (PC &amp; PS5)</span>
                   </div>
                 </div>
@@ -365,16 +362,16 @@ export default function Home() {
                 href="https://www.google.com/maps/search/?api=1&query=1st+Floor+No+21%2FB+Above+KFC+Trichy-Chennai+Highway+Samayapuram+Tiruchirappalli+Tamil+Nadu+621112" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-6 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.5)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-3.5 px-6 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest text-center hover:bg-white hover:shadow-[0_0_25px_rgba(0,210,255,0.7)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <MapPin size={15} />
                 <span>Get Google Maps Route</span>
               </a>
               <a 
                 href="tel:+919345469023" 
-                className="w-full py-3.5 px-6 border border-white/20 bg-white/[0.03] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 hover:border-cappuccino/50 transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
+                className="w-full py-3.5 px-6 border border-slate-700 bg-[#080C14]/90 text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-[#00D2FF]/15 hover:border-[#00D2FF] hover:text-[#00D2FF] transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
               >
-                <Phone size={15} className="text-cappuccino" /> 
+                <Phone size={15} className="text-[#00D2FF]" /> 
                 <span>Direct Call</span>
               </a>
             </div>

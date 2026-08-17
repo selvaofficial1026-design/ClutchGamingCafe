@@ -59,10 +59,13 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover brightness-[0.38] scale-105"
+          className="object-cover brightness-[0.32] scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1F1515] via-black/40 to-black/75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080C14] via-[#080C14]/60 to-black/85" />
       </motion.div>
+
+      {/* Cyber Cyan Ambient Orb */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[600px] h-96 sm:h-[600px] bg-[#00D2FF]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <motion.div 
         style={{ 
@@ -74,18 +77,18 @@ export default function Hero() {
         className="relative z-20 text-center px-6 sm:px-12 max-w-5xl my-auto"
       >
         <div>
-          <span className="inline-block px-4 sm:px-6 py-2 mb-6 sm:mb-8 border border-cappuccino/60 rounded-full text-cappuccino text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase backdrop-blur-md bg-black/60 shadow-lg">
+          <span className="inline-block px-4 sm:px-6 py-2 mb-6 sm:mb-8 border border-[#00D2FF]/50 rounded-full text-[#00D2FF] text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase backdrop-blur-md bg-[#080C14]/80 shadow-[0_0_20px_rgba(0,210,255,0.25)]">
             Trichy&apos;s Premier Gaming Lounge • Standard: ₹80 / Hour
           </span>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white mb-8 sm:mb-10 tracking-tight leading-[1.1] text-balance drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white mb-8 sm:mb-10 tracking-tight leading-[1.1] text-balance drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]">
             Clutch Every Round. <br />
-            <span className="italic font-normal text-cappuccino drop-shadow-xl">Play At Peak Performance.</span>
+            <span className="italic font-normal text-[#00D2FF] drop-shadow-[0_0_35px_rgba(0,210,255,0.4)]">Play At Peak Performance.</span>
           </h1>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-7">
             <Magnetic>
               <Link
                 href="/portfolio"
-                className="group relative w-full sm:w-auto px-10 sm:px-12 py-4 sm:py-5 bg-cappuccino text-coffee-dark rounded-full font-black text-xs sm:text-sm tracking-widest uppercase overflow-hidden transition-all duration-300 shadow-[0_10px_35px_rgba(200,149,95,0.5)] hover:shadow-[0_15px_45px_rgba(200,149,95,0.7)] hover:bg-white hover:text-coffee-dark active:scale-95 flex items-center justify-center cursor-pointer"
+                className="group relative w-full sm:w-auto px-10 sm:px-12 py-4 sm:py-5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs sm:text-sm tracking-widest uppercase overflow-hidden transition-all duration-300 shadow-[0_10px_35px_rgba(0,210,255,0.4)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.7)] hover:bg-white active:scale-95 flex items-center justify-center cursor-pointer"
               >
                 <span className="relative z-10 font-bold">Explore Top Games</span>
                 <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 pointer-events-none" />
@@ -94,7 +97,7 @@ export default function Hero() {
             <Magnetic>
               <Link
                 href="/contact"
-                className="group w-full sm:w-auto px-10 sm:px-12 py-4 sm:py-5 bg-white text-coffee-dark hover:bg-cappuccino hover:text-white rounded-full font-black text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] active:scale-95 flex items-center justify-center cursor-pointer"
+                className="group w-full sm:w-auto px-10 sm:px-12 py-4 sm:py-5 bg-[#0D131F]/90 text-white border border-[#00D2FF]/40 hover:bg-[#00D2FF]/15 hover:border-[#00D2FF] hover:text-[#00D2FF] rounded-full font-black text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.6)] active:scale-95 flex items-center justify-center cursor-pointer backdrop-blur-md"
               >
                 Find Our Location
               </Link>
@@ -113,7 +116,7 @@ export default function Hero() {
         transition={{ delay: 1.2, duration: 0.8 }}
       >
         <span className="text-[9px] uppercase tracking-[0.3em] text-white/60 font-bold">Scroll to explore</span>
-        <div className="w-[1px] h-16 sm:h-24 bg-gradient-to-b from-cappuccino to-transparent" />
+        <div className="w-[1px] h-16 sm:h-24 bg-gradient-to-b from-[#00D2FF] to-transparent shadow-[0_0_8px_#00D2FF]" />
       </motion.div>
     </section>
   );

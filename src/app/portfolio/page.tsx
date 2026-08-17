@@ -136,12 +136,12 @@ export default function PortfolioPage() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col pt-32 bg-background">
+    <main className="min-h-screen flex flex-col pt-32 bg-[#080C14] text-white">
       
       {/* Decorative Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-cappuccino/5 rounded-full blur-[120px]" />
-        <div className="absolute top-[40%] -right-[5%] w-[30%] h-[50%] bg-coffee-dark/5 rounded-full blur-[100px]" />
+        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-[#00D2FF]/5 rounded-full blur-[140px]" />
+        <div className="absolute top-[40%] -right-[5%] w-[30%] h-[50%] bg-[#0284C7]/5 rounded-full blur-[120px]" />
       </div>
 
       <section className="relative z-10 px-0 md:px-12 py-12 md:py-20">
@@ -153,17 +153,16 @@ export default function PortfolioPage() {
 
           {/* Quick Rate Pill */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-            <div className="px-6 py-2.5 rounded-full bg-coffee-dark text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-sm">
-              <Sparkles size={14} className="text-cappuccino" /> Standard Rate: ₹80 / Hour (All PC &amp; PS5 Setups)
+            <div className="px-6 py-2.5 rounded-full bg-[#0D131F] text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 border border-[#00D2FF]/30 shadow-[0_0_15px_rgba(0,210,255,0.15)]">
+              <Sparkles size={14} className="text-[#00D2FF]" /> Standard Rate: ₹80 / Hour (All PC &amp; PS5 Setups)
             </div>
           </div>
 
           {/* Categories - Mobile (3 on top, 2 on bottom) / Desktop (Fluid Row) */}
           <div className="mb-10 md:mb-16">
             
-            {/* Mobile Layout: 3 on Top (All, Action & Open World, Co-op & Sports), 2 on Bottom (Racing & Fighting, FPS Warfare) */}
+            {/* Mobile Layout: 3 on Top, 2 on Bottom */}
             <div className="flex flex-col items-center gap-2 sm:hidden px-1">
-              {/* Top Row: 3 Categories */}
               <div className="grid grid-cols-3 gap-1.5 w-full">
                 {categories.slice(0, 3).map((cat) => (
                   <button
@@ -172,8 +171,8 @@ export default function PortfolioPage() {
                     className={cn(
                       "py-2 px-1.5 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
                       activeCategory === cat 
-                        ? "bg-coffee-dark text-white shadow-md scale-[1.02]" 
-                        : "bg-white text-coffee-dark/80 border border-cream hover:border-cappuccino/40"
+                        ? "bg-[#00D2FF] text-[#080C14] shadow-[0_0_15px_rgba(0,210,255,0.6)] font-black scale-[1.02]" 
+                        : "bg-[#0D131F] text-slate-300 border border-slate-800 hover:border-[#00D2FF]/40"
                     )}
                   >
                     <span>{cat}</span>
@@ -181,7 +180,6 @@ export default function PortfolioPage() {
                 ))}
               </div>
 
-              {/* Bottom Row: 2 Categories */}
               <div className="grid grid-cols-2 gap-2 w-full max-w-[310px]">
                 {categories.slice(3, 5).map((cat) => (
                   <button
@@ -190,8 +188,8 @@ export default function PortfolioPage() {
                     className={cn(
                       "py-2 px-2 rounded-full text-[9.5px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
                       activeCategory === cat 
-                        ? "bg-coffee-dark text-white shadow-md scale-[1.02]" 
-                        : "bg-white text-coffee-dark/80 border border-cream hover:border-cappuccino/40"
+                        ? "bg-[#00D2FF] text-[#080C14] shadow-[0_0_15px_rgba(0,210,255,0.6)] font-black scale-[1.02]" 
+                        : "bg-[#0D131F] text-slate-300 border border-slate-800 hover:border-[#00D2FF]/40"
                     )}
                   >
                     <span>{cat}</span>
@@ -200,7 +198,7 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            {/* Tablet & Desktop Layout: Single Fluid Row */}
+            {/* Tablet & Desktop Layout */}
             <div className="hidden sm:flex flex-wrap justify-center gap-2 sm:gap-3 px-2">
               {categories.map((cat) => (
                 <button
@@ -209,15 +207,15 @@ export default function PortfolioPage() {
                   className={cn(
                     "relative py-2.5 sm:py-3 px-4 sm:px-6 rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 overflow-hidden flex items-center justify-center cursor-pointer",
                     activeCategory === cat 
-                      ? "text-white shadow-xl scale-105" 
-                      : "text-coffee-dark/70 hover:text-coffee-dark bg-white/70 hover:bg-white backdrop-blur-sm border border-cream hover:border-cappuccino/40 hover:shadow-md"
+                      ? "text-[#080C14] shadow-[0_0_20px_rgba(0,210,255,0.6)] font-black scale-105" 
+                      : "text-slate-300 hover:text-white bg-[#0D131F] hover:bg-[#131C2E] border border-slate-800 hover:border-[#00D2FF]/40"
                   )}
                 >
                   <span className="relative z-10">{cat} <span className="opacity-60 ml-1 font-normal">({getCategoryCount(cat)})</span></span>
                   {activeCategory === cat && (
                     <motion.div 
                       layoutId="activeCategory"
-                      className="absolute inset-0 bg-coffee-dark"
+                      className="absolute inset-0 bg-[#00D2FF]"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
@@ -237,47 +235,46 @@ export default function PortfolioPage() {
           />
         </div>
 
-        {/* Walk-in CTA Strip - Clean Dark Gaming Sanctuary Card */}
+        {/* Walk-in CTA Strip */}
         <div className="max-w-4xl mx-auto mt-12 sm:mt-16 px-4 sm:px-6">
-          <div className="group p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-[2.25rem] bg-[#180E0E] text-white border border-cappuccino/30 shadow-premium hover:shadow-[0_25px_60px_rgba(0,0,0,0.8),0_0_35px_rgba(200,149,95,0.25)] hover:-translate-y-1 relative overflow-hidden transition-all duration-500 text-center">
+          <div className="group p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-[2.25rem] bg-[#0D131F] text-white border border-slate-800 hover:border-[#00D2FF]/50 shadow-[0_15px_45px_rgba(0,0,0,0.8)] hover:shadow-[0_20px_50px_rgba(0,210,255,0.22)] hover:-translate-y-1 relative overflow-hidden transition-all duration-500 text-center">
             
-            {/* Clean Subtle Warm Radial Glow — Zero White Glare */}
             <div 
-              className="absolute top-0 right-0 w-72 h-72 pointer-events-none opacity-35 group-hover:opacity-60 transition-opacity duration-700" 
-              style={{ background: "radial-gradient(circle at top right, rgba(200,149,95,0.18) 0%, transparent 65%)" }} 
+              className="absolute top-0 right-0 w-72 h-72 pointer-events-none opacity-30 group-hover:opacity-60 transition-opacity duration-700" 
+              style={{ background: "radial-gradient(circle at top right, rgba(0,210,255,0.2) 0%, transparent 65%)" }} 
             />
             <div 
-              className="absolute bottom-0 left-0 w-60 h-60 pointer-events-none opacity-25" 
-              style={{ background: "radial-gradient(circle at bottom left, rgba(200,149,95,0.12) 0%, transparent 65%)" }} 
+              className="absolute bottom-0 left-0 w-60 h-60 pointer-events-none opacity-20" 
+              style={{ background: "radial-gradient(circle at bottom left, rgba(0,210,255,0.15) 0%, transparent 65%)" }} 
             />
             
             <div className="relative z-10 space-y-4">
               
               {/* Top Rate & Status Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cappuccino/15 border border-cappuccino/40 text-cappuccino text-[9.5px] sm:text-xs font-bold uppercase tracking-[0.25em] shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/40 text-[#00D2FF] text-[9.5px] sm:text-xs font-bold uppercase tracking-[0.25em] shadow-xs">
                 <Flame size={14} className="animate-pulse" />
                 <span>700+ Titles • Direct Walk-In • ₹80/Hr</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white italic leading-tight">
-                Massive Game Vault &amp; <span className="text-cappuccino not-italic font-bold">High-FPS Gaming</span>
+                Massive Game Vault &amp; <span className="text-[#00D2FF] not-italic font-bold">High-FPS Gaming</span>
               </h3>
 
-              <p className="text-white/75 text-xs sm:text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed">
+              <p className="text-slate-300 text-xs sm:text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed">
                 All major Triple-A and competitive eSports titles pre-installed on ultra-fast Gen4 NVMe arrays. Play solo campaigns, multiplayer showdowns, or PS5 4K lounge co-op at flat ₹80/hr.
               </p>
 
               {/* 3 Gaming-Specific Feature Badges */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 py-2 max-w-2xl mx-auto text-left">
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                  <Gamepad2 size={16} className="text-cappuccino shrink-0" />
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                  <Gamepad2 size={16} className="text-[#00D2FF] shrink-0" />
                   <div>
-                    <span className="text-[9px] uppercase font-bold text-cappuccino block">Library</span>
+                    <span className="text-[9px] uppercase font-bold text-[#00D2FF] block">Library</span>
                     <span className="text-[10px] sm:text-xs font-bold text-white/95">700+ Pre-Installed Titles</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
                   <ShieldCheck size={16} className="text-emerald-400 shrink-0" />
                   <div>
                     <span className="text-[9px] uppercase font-bold text-emerald-400 block">Low Ping</span>
@@ -285,10 +282,10 @@ export default function PortfolioPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#241717] border border-cappuccino/20 group-hover:border-cappuccino/40 transition-colors">
-                  <Sparkles size={16} className="text-cappuccino shrink-0" />
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">
+                  <Sparkles size={16} className="text-[#00D2FF] shrink-0" />
                   <div>
-                    <span className="text-[9px] uppercase font-bold text-cappuccino block">Cloud Sync</span>
+                    <span className="text-[9px] uppercase font-bold text-[#00D2FF] block">Cloud Sync</span>
                     <span className="text-[10px] sm:text-xs font-bold text-white/95">Steam, Epic &amp; Riot Ready</span>
                   </div>
                 </div>
@@ -298,16 +295,16 @@ export default function PortfolioPage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                 <Link 
                   href="/contact"
-                  className="w-full sm:w-auto px-7 py-3.5 bg-cappuccino text-coffee-dark rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white hover:shadow-[0_0_20px_rgba(200,149,95,0.6)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full sm:w-auto px-7 py-3.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white hover:shadow-[0_0_25px_rgba(0,210,255,0.7)] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <MapPin size={15} />
                   <span>Get Arena Location</span>
                 </Link>
                 <a 
                   href="tel:+919345469023"
-                  className="w-full sm:w-auto px-7 py-3.5 border border-white/20 bg-white/[0.03] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-white/10 hover:border-cappuccino/50 transition-all flex items-center justify-center gap-2 active:scale-95"
+                  className="w-full sm:w-auto px-7 py-3.5 border border-slate-700 bg-[#080C14]/90 text-white rounded-full font-bold text-xs uppercase tracking-widest text-center hover:bg-[#00D2FF]/15 hover:border-[#00D2FF] hover:text-[#00D2FF] transition-all flex items-center justify-center gap-2 active:scale-95"
                 >
-                  <Trophy size={15} className="text-cappuccino" />
+                  <Trophy size={15} className="text-[#00D2FF]" />
                   <span>Direct Call</span>
                 </a>
               </div>

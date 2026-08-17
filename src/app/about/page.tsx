@@ -64,14 +64,14 @@ const zones = [
   {
     id: "zone-03",
     pinNumber: "03",
-    pinLabel: "FUEL CAFE",
+    pinLabel: "SNACKS & JUICES",
     zone: "Zone 03",
-    title: "The Fuel Cafe Counter",
-    subtitle: "Artisan Beverages & Gourmet Food",
-    desc: "Recharge your energy with roasted espresso blends, chilled iced mochas, thick shakes, crisp seasoned fries, and loaded sandwiches served straight to your station.",
+    title: "Snacks & Refreshment Counter",
+    subtitle: "Crispy Lays, Chilled Juices & Cold Drinks",
+    desc: "Recharge your energy during long FIFA tournaments and co-op campaigns with crispy Lays chips, chilled fruit juices, cold beverages, and quick bites served directly to your station.",
     image: "/images/arena/zone_cafe_fuel.jpg",
-    specs: ["Cold Brews & Shakes", "Fresh Gourmet Food", "Desk Delivery"],
-    coords: "Sector C • Central Cafe Bar"
+    specs: ["Crispy Lays Chips", "Chilled Fresh Juices", "Station Delivery"],
+    coords: "Sector C • Central Fuel Bar"
   },
   {
     id: "zone-04",

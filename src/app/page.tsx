@@ -68,7 +68,8 @@ const tickerHighlights = [
   "MORTAL KOMBAT 11",
   "FORZA HORIZON 5",
   "120HZ FAST-IPS DISPLAYS",
-  "ULTRA-LOW PING DEDICATED FIBER"
+  "ULTRA-LOW PING DEDICATED FIBER",
+  "CHILLED JUICES & LAYS SNACKS"
 ];
 
 export default function Home() {

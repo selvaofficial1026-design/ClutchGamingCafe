@@ -278,7 +278,7 @@ export default function ContactPage() {
                       <div className="w-6 h-6 rounded-lg bg-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] shrink-0">
                         <Sparkles size={13} />
                       </div>
-                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Sanitized Stations &amp; Clean Headsets</span>
+                      <span className="text-[10px] sm:text-xs text-white/95 font-medium">Chilled Juices &amp; Lays Snacks</span>
                     </div>
 
                     <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#080C14] border border-slate-800 group-hover:border-[#00D2FF]/40 transition-colors">

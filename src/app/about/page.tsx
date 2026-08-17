@@ -137,7 +137,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-5 py-2 mb-6 border border-[#00D2FF]/40 rounded-full text-[#00D2FF] text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase backdrop-blur-md bg-[#080C14]/80 shadow-[0_0_20px_rgba(0,210,255,0.25)]"
           >
-            <Sparkles size={14} /> Trichy&apos;s Premier Gaming Lounge • Standard: ₹80 / Hour
+            <Sparkles size={14} /> Trichy&apos;s Premier Gaming Lounge • PS5: ₹100/Hr • PS4: ₹80/Hr
           </motion.span>
           
           {/* Kinetic Word-by-Word Slide-In from Left */}

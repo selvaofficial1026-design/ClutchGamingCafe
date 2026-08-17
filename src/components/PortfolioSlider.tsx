@@ -151,7 +151,7 @@ export default function PortfolioSlider({ items, onPlay, isPaused = false }: Por
                     {item.description}
                   </p>
                   <div className="mt-3 pt-2.5 border-t border-slate-800 flex justify-between items-center text-[9px] sm:text-[10px] uppercase tracking-wider font-bold">
-                    <span className="text-slate-400">Rate: ₹80 / Hour</span>
+                    <span className="text-[#00D2FF]">PS5 ₹100 • PS4 ₹80/hr</span>
                     <span className="text-[#00D2FF] flex items-center gap-1 group-hover/card:underline">
                       Watch <Play size={9} fill="currentColor" />
                     </span>

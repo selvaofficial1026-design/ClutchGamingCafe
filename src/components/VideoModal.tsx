@@ -98,7 +98,7 @@ export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps
 
             {/* Bottom Caption Bar */}
             <div className="px-5 py-2.5 bg-[#080C14] flex items-center justify-between text-slate-400 text-[11px] border-t border-slate-800">
-              <span className="text-[#00D2FF] font-semibold">Standard Rate: ₹80 / Hour</span>
+              <span className="text-[#00D2FF] font-semibold">PS5: ₹100/Hr • PS4: ₹80/Hr</span>
               <a 
                 href={`https://www.youtube.com/watch?v=${videoId}`}
                 target="_blank"

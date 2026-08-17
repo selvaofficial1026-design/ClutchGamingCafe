@@ -80,14 +80,14 @@ export default function ContactPage() {
               "Open Everyday: 10:00 AM – 11:00 PM",
               "Dedicated Customer Parking",
               "Direct Walk-in Welcome",
-              "Standard Rate: ₹80 / Hour",
+              "PS5 4K: ₹100/Hr • PS4 HD: ₹80/Hr",
               "1st Floor (Above KFC)",
               "Trichy-Chennai National Highway",
               "Samayapuram, Tiruchirappalli",
               "Open Everyday: 10:00 AM – 11:00 PM",
               "Dedicated Customer Parking",
               "Direct Walk-in Welcome",
-              "Standard Rate: ₹80 / Hour"
+              "PS5 4K: ₹100/Hr • PS4 HD: ₹80/Hr"
             ].map((locItem, lI) => (
               <React.Fragment key={lI}>
                 <span className="text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white flex items-center gap-2">
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   Where to Find Us &amp; Game
                 </h2>
                 <p className="text-slate-300 text-sm leading-relaxed">
-                  We are open 7 days a week with direct walk-in access. Standard rate is <strong className="text-[#00D2FF] font-bold">₹80 / Hour</strong> with zero hidden charges.
+                  We are open 7 days a week with direct walk-in access. Station rates are <strong className="text-[#00D2FF] font-bold">PS5: ₹100/Hr • PS4: ₹80/Hr</strong> with zero hidden charges.
                 </p>
               </div>
 
@@ -153,12 +153,12 @@ export default function ContactPage() {
                     <Clock size={22} />
                   </div>
                   <div className="relative z-10">
-                    <h4 className="font-bold text-slate-400 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-[#00D2FF] transition-colors">Operating Hours &amp; Rate</h4>
+                    <h4 className="font-bold text-slate-400 uppercase tracking-[0.2em] text-[10px] mb-1 group-hover:text-[#00D2FF] transition-colors">Operating Hours &amp; Rates</h4>
                     <p className="text-white text-base md:text-lg font-bold">
                       Open Everyday: 10:00 AM – 11:00 PM
                     </p>
-                    <p className="text-[#00D2FF] text-sm font-bold mt-1 flex items-center gap-1.5">
-                      <Sparkles size={14} /> Standard Rate: ₹80 / Hour (PC &amp; PS5)
+                    <p className="text-[#00D2FF] text-xs sm:text-sm font-bold mt-1 flex flex-wrap items-center gap-1.5">
+                      <Sparkles size={14} className="shrink-0" /> PS5: ₹100/Hr • PS4: ₹80/Hr <span className="text-slate-400 font-normal text-[11px]">(Extra Ctrl: PS5 ₹80 • PS4 ₹60)</span>
                     </p>
                   </div>
                 </div>

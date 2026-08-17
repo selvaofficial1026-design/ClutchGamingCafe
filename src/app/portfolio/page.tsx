@@ -9,35 +9,42 @@ import { cn } from "@/lib/utils";
 import { Sparkles, MapPin, Trophy, Flame, Gamepad2, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
-const categories = ["All", "Action & Open World", "Co-op & Sports", "Racing & Fighting", "FPS Warfare"];
+export interface PortfolioGameItem extends PortfolioItem {
+  isMultiplayer?: boolean;
+}
 
-const portfolioItems: PortfolioItem[] = [
-  // 1. FIFA / FC 24
+const categories = ["All", "Multiplayer", "Action & Open World", "Co-op & Sports", "Racing & Fighting", "FPS Warfare"];
+
+const portfolioItems: PortfolioGameItem[] = [
+  // 1. EA Sports FC 24
   {
     name: "EA Sports FC 24 (FIFA)",
-    description: "The pinnacle of football realism with HyperMotionV, authentic club atmospheres, and intense 2-player local co-op showdowns.",
+    description: "The pinnacle of football realism with HyperMotionV, authentic club atmospheres, and intense 2 to 4 player local co-op showdowns.",
     image: "/images/games/fifa.jpg",
     category: "Co-op & Sports",
+    isMultiplayer: true,
     is4K: true,
     videoId: "vLj-27T-SEQ"
   },
-  // 2. It Takes Two
+  // 2. WWE 2K26
+  {
+    name: "WWE 2K26",
+    description: "Next-gen sports entertainment and arena spectacle. Unleash devastating finishers, 4-player Royal Rumbles, and brutal TLC matches in 4K 60FPS.",
+    image: "/images/games/wwe2k26.jpg",
+    category: "Multiplayer",
+    isMultiplayer: true,
+    is4K: true,
+    videoId: "9o4v6lC1f-o"
+  },
+  // 3. It Takes Two
   {
     name: "It Takes Two",
-    description: "Game of the Year winner purely engineered for two players. Embark on a wild, heartwarming journey with split-screen gameplay.",
+    description: "Game of the Year winner purely engineered for two players. Embark on a wild, heartwarming journey with seamless split-screen co-op.",
     image: "/images/games/ittakestwo.jpg",
     category: "Co-op & Sports",
+    isMultiplayer: true,
     is4K: true,
     videoId: "GAW7VC5H4W4"
-  },
-  // 3. GTA V
-  {
-    name: "Grand Theft Auto V",
-    description: "Explore the sprawling sun-soaked metropolis of Los Santos. Jump into GTA Online heists, custom stunts, and roleplay servers.",
-    image: "/images/games/gta5.jpg",
-    category: "Action & Open World",
-    is4K: true,
-    videoId: "QkkoHAzjnUs"
   },
   // 4. GTA VI
   {
@@ -48,7 +55,17 @@ const portfolioItems: PortfolioItem[] = [
     is4K: true,
     videoId: "QdBZY2fkU-0"
   },
-  // 5. God of War Ragnarök
+  // 5. GTA V
+  {
+    name: "Grand Theft Auto V",
+    description: "Explore the sprawling metropolis of Los Santos. Jump into GTA Online squad heists, custom stunt races, and roleplay servers.",
+    image: "/images/games/gta5.jpg",
+    category: "Action & Open World",
+    isMultiplayer: true,
+    is4K: true,
+    videoId: "QkkoHAzjnUs"
+  },
+  // 6. God of War Ragnarök
   {
     name: "God of War Ragnarök",
     description: "Join Kratos and Atreus as they journey through the Nine Realms facing Norse gods and monsters in glorious 4K 60FPS fidelity.",
@@ -57,52 +74,67 @@ const portfolioItems: PortfolioItem[] = [
     is4K: true,
     videoId: "hfJ4Km46A-0"
   },
-  // 6. Mortal Kombat 1
+  // 7. Mortal Kombat 1
   {
     name: "Mortal Kombat 1",
-    description: "Visceral next-generation fighting action featuring a reborn universe, fluid combos, Kameo fighters, and devastating Fatalities.",
+    description: "Visceral next-generation 1v1 fighting action featuring a reborn universe, fluid combos, Kameo fighters, and devastating Fatalities.",
     image: "/images/games/mortalkombat.jpg",
     category: "Racing & Fighting",
+    isMultiplayer: true,
     is4K: true,
     videoId: "MY4bT1wZz_E"
   },
-  // 7. Forza Horizon 5
+  // 8. Forza Horizon 5
   {
     name: "Forza Horizon 5",
-    description: "Lead breathtaking expeditions across the vibrant landscapes of Mexico with hundreds of world-class high-performance cars.",
+    description: "Lead breathtaking expeditions across the vibrant landscapes of Mexico with online convoy racing in hundreds of hypercars.",
     image: "/images/games/forza.jpg",
     category: "Racing & Fighting",
+    isMultiplayer: true,
     is4K: true,
     videoId: "FYH9n37B7Yw"
   },
-  // 8. Need for Speed Unbound
+  // 9. Need for Speed Unbound
   {
     name: "Need for Speed Unbound",
-    description: "Tear up the city streets with signature graffiti effects, intense police chases, precision drifting, and high-stakes pink-slip races.",
+    description: "Tear up the city streets with signature graffiti effects, intense police chases, precision drifting, and high-stakes multiplayer races.",
     image: "/images/games/nfs.jpg",
     category: "Racing & Fighting",
+    isMultiplayer: true,
     is4K: true,
     videoId: "H2Y8XCe7F9E"
   },
-  // 9. Battlefield 1
+  // 10. Battlefield 2042
+  {
+    name: "Battlefield 2042 (BF6)",
+    description: "Massive 128-player all-out warfare in near-future combat. Dominate shifting battlegrounds with wingsuits, tanks, and squad tactics.",
+    image: "/images/games/bf2042.jpg",
+    category: "FPS Warfare",
+    isMultiplayer: true,
+    is4K: true,
+    videoId: "ASzOzrB-a9E"
+  },
+  // 11. Battlefield 1
   {
     name: "Battlefield 1",
     description: "Experience the dawn of all-out warfare in an epic, gritty WW1 setting with 64-player multiplayer combat and dynamic destruction.",
     image: "/images/games/bf1.jpg",
     category: "FPS Warfare",
+    isMultiplayer: true,
     is4K: true,
     videoId: "4pY3hlQEOc0"
   },
-  // 10. Battlefield 2042
+  // 12. NBA 2K25
   {
-    name: "Battlefield 2042 (BF6)",
-    description: "Massive 128-player battles in near-future combat. Dominate shifting battlegrounds with wingsuits, tanks, and squad tactics.",
-    image: "/images/games/bf2042.jpg",
-    category: "FPS Warfare",
+    name: "NBA 2K Series",
+    description: "Next-generation basketball sports simulation. Compete in high-stakes online matchups and 2-4 player arena faceoffs.",
+    image: "/images/games/nba2k.jpg",
+    category: "Co-op & Sports",
+    isMultiplayer: true,
     is4K: true,
-    videoId: "ASzOzrB-a9E"
+    videoId: "M5uH8fL-2jA"
   },
-  // 11. A Plague Tale: Requiem
+  // 13. A Plague Tale: Requiem
   {
     name: "A Plague Tale: Requiem",
     description: "A spectacular heart-rending journey across a breathtaking medieval world twisted by supernatural forces with stunning ray tracing.",
@@ -110,15 +142,6 @@ const portfolioItems: PortfolioItem[] = [
     category: "Action & Open World",
     is4K: true,
     videoId: "r4D3kQ_oH1s"
-  },
-  // 12. NBA 2K & WWE 2K Series
-  {
-    name: "NBA 2K / WWE 2K Series",
-    description: "Next-generation sports simulation and arena entertainment. Compete in high-stakes basketball or brutal ladder matches with friends.",
-    image: "/images/games/nba2k.jpg",
-    category: "Co-op & Sports",
-    is4K: true,
-    videoId: "M5uH8fL-2jA"
   }
 ];
 
@@ -128,10 +151,13 @@ export default function PortfolioPage() {
 
   const filteredItems = activeCategory === "All" 
     ? portfolioItems 
+    : activeCategory === "Multiplayer"
+    ? portfolioItems.filter(item => item.isMultiplayer || item.category === "Multiplayer")
     : portfolioItems.filter(item => item.category === activeCategory);
 
   const getCategoryCount = (category: string) => {
     if (category === "All") return portfolioItems.length;
+    if (category === "Multiplayer") return portfolioItems.filter(item => item.isMultiplayer || item.category === "Multiplayer").length;
     return portfolioItems.filter(item => item.category === category).length;
   };
 
@@ -161,7 +187,7 @@ export default function PortfolioPage() {
           {/* Categories - Mobile (3 on top, 2 on bottom) / Desktop (Fluid Row) */}
           <div className="mb-10 md:mb-16">
             
-            {/* Mobile Layout: 3 on Top, 2 on Bottom */}
+            {/* Mobile Layout: 3 on Top, 3 on Bottom (Grid 3x2) */}
             <div className="flex flex-col items-center gap-2 sm:hidden px-1">
               <div className="grid grid-cols-3 gap-1.5 w-full">
                 {categories.slice(0, 3).map((cat) => (
@@ -169,7 +195,7 @@ export default function PortfolioPage() {
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={cn(
-                      "py-2 px-1.5 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
+                      "py-2 px-1 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
                       activeCategory === cat 
                         ? "bg-[#00D2FF] text-[#080C14] shadow-[0_0_15px_rgba(0,210,255,0.6)] font-black scale-[1.02]" 
                         : "bg-[#0D131F] text-slate-300 border border-slate-800 hover:border-[#00D2FF]/40"
@@ -180,13 +206,13 @@ export default function PortfolioPage() {
                 ))}
               </div>
 
-              <div className="grid grid-cols-2 gap-2 w-full max-w-[310px]">
-                {categories.slice(3, 5).map((cat) => (
+              <div className="grid grid-cols-3 gap-1.5 w-full">
+                {categories.slice(3, 6).map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={cn(
-                      "py-2 px-2 rounded-full text-[9.5px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
+                      "py-2 px-1 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
                       activeCategory === cat 
                         ? "bg-[#00D2FF] text-[#080C14] shadow-[0_0_15px_rgba(0,210,255,0.6)] font-black scale-[1.02]" 
                         : "bg-[#0D131F] text-slate-300 border border-slate-800 hover:border-[#00D2FF]/40"

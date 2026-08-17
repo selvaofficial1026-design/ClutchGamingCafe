@@ -61,6 +61,7 @@ const tickerHighlights = [
   "SONY PS5 4K 120HZ",
   "SONY PS4 HD GAMING",
   "EA SPORTS FC 24 & FIFA",
+  "WWE 2K26 MULTIPLAYER",
   "IT TAKES TWO CO-OP",
   "GTA V & GTA VI READY",
   "GOD OF WAR RAGNARÖK",

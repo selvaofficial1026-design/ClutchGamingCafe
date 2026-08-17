@@ -45,7 +45,7 @@ const products: Product[] = [
       "1 Year Sony India Warranty"
     ],
     image: "/images/store/ps5.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the Sony PlayStation 5 Slim Disc Edition (1TB). Please share current stock availability and pricing details."
+    whatsappMessage: "🎮 *CLUTCH GAMING CAFE — STORE INQUIRY*\n━━━━━━━━━━━━━━━━━━━━\n📌 *Product:* Sony PS5 Slim (Disc Edition • 1TB)\n✨ *Condition:* Brand New Box Pack\n🛡️ *Warranty:* 1 Year Sony Official Warranty\n📍 *Pickup/Delivery:* Trichy (Store Handover / Fast Dispatch)\n━━━━━━━━━━━━━━━━━━━━\nHello Clutch Team, I would like to know the best price, live stock availability, and payment details for this console."
   },
   {
     id: "ps5-slim-digital",
@@ -61,7 +61,7 @@ const products: Product[] = [
       "1 Year Sony India Warranty"
     ],
     image: "/images/store/ps5.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the Sony PlayStation 5 Slim Digital Edition (1TB). Please share stock availability and best pricing deal."
+    whatsappMessage: "🎮 *CLUTCH GAMING CAFE — STORE INQUIRY*\n━━━━━━━━━━━━━━━━━━━━\n📌 *Product:* Sony PS5 Slim (Digital Edition • 1TB)\n✨ *Condition:* Brand New Box Pack\n🛡️ *Warranty:* 1 Year Sony Official Warranty\n📍 *Pickup/Delivery:* Trichy (Store Handover / Fast Dispatch)\n━━━━━━━━━━━━━━━━━━━━\nHello Clutch Team, I would like to know the best price and current availability for the PS5 Digital Edition."
   },
   {
     id: "ps4-pro-1tb",
@@ -77,7 +77,7 @@ const products: Product[] = [
       "Deep Cleaned & Tested 100%"
     ],
     image: "/images/store/ps4.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I am interested in buying the PS4 Pro 1TB 4K Edition. Please share available units and pricing."
+    whatsappMessage: "🎮 *CLUTCH GAMING CAFE — STORE INQUIRY*\n━━━━━━━━━━━━━━━━━━━━\n📌 *Product:* Sony PS4 Pro (1TB • 4K Edition)\n✨ *Condition:* 100% Certified & Deep Serviced\n🎮 *Includes:* 1x DualShock 4 Controller + Cables\n🕹️ *Games:* Preloaded Game Bundles Available\n━━━━━━━━━━━━━━━━━━━━\nHello Clutch Team, I am interested in buying the PS4 Pro 1TB console. Please share available units, game list, and best price."
   },
   {
     id: "ps4-slim-1tb",
@@ -93,7 +93,7 @@ const products: Product[] = [
       "Ready to Plug & Play"
     ],
     image: "/images/store/ps4.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the PlayStation 4 Slim console. Please share price options and stock details."
+    whatsappMessage: "🎮 *CLUTCH GAMING CAFE — STORE INQUIRY*\n━━━━━━━━━━━━━━━━━━━━\n📌 *Product:* Sony PS4 Slim (1TB / 500GB)\n✨ *Condition:* 100% Certified Tested\n🎮 *Includes:* 1x Original DualShock 4 Controller\n━━━━━━━━━━━━━━━━━━━━\nHello Clutch Team, I want to purchase a PS4 Slim console. Please share pricing for 500GB/1TB options and ready stock details."
   },
   {
     id: "dualsense-accessories",
@@ -109,7 +109,7 @@ const products: Product[] = [
       "1 Year Warranty Backed"
     ],
     image: "/images/store/controllers.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy Sony PS5 DualSense controllers. Please share available colors and pricing."
+    whatsappMessage: "🎮 *CLUTCH GAMING CAFE — ACCESSORIES INQUIRY*\n━━━━━━━━━━━━━━━━━━━━\n📌 *Item:* Sony PS5 DualSense Wireless Controller\n✨ *Type:* 100% Original Sony\n🎨 *Colors:* Midnight Black / White / Cosmic Red\n━━━━━━━━━━━━━━━━━━━━\nHello Clutch Team, I want to buy Sony PS5 DualSense controllers. Please share available colors and price."
   },
   {
     id: "dualshock4-accessories",
@@ -125,7 +125,7 @@ const products: Product[] = [
       "Tested & Quality Certified"
     ],
     image: "/images/store/controllers.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy Sony PS4 DualShock 4 controllers. Please share available colors and pricing."
+    whatsappMessage: "🎮 *CLUTCH GAMING CAFE — ACCESSORIES INQUIRY*\n━━━━━━━━━━━━━━━━━━━━\n📌 *Item:* Sony PS4 DualShock 4 Wireless Controller\n✨ *Type:* 100% Original Sony Gamepad\n━━━━━━━━━━━━━━━━━━━━\nHello Clutch Team, I want to buy Sony PS4 DualShock 4 controllers. Please share available stock and price."
   },
   {
     id: "console-service",
@@ -141,7 +141,7 @@ const products: Product[] = [
       "SSD / Storage Upgrades"
     ],
     image: "/images/arena/zone_vip_lan.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to book a thermal service / repair for my PlayStation Console (PS4/PS5)."
+    whatsappMessage: "🔧 *CLUTCH GAMING CAFE — SERVICE BOOKING*\n━━━━━━━━━━━━━━━━━━━━\n📌 *Service:* PlayStation Thermal Service & Repair\n🛠️ *Scope:* Deep Dust Cleaning / Thermal Paste / Stick Drift / Storage Upgrade\n📍 *Lounge:* 1st Floor Above KFC, Samayapuram, Trichy\n━━━━━━━━━━━━━━━━━━━━\nHello Clutch Team, I want to book a service/cleaning for my PlayStation Console (PS4/PS5). Please guide me on timings and service cost."
   }
 ];
 
@@ -317,7 +317,7 @@ export default function SalesPage() {
             ))}
           </div>
 
-          {/* Compact Direct Consultation Banner */}
+          {/* Compact Direct Consultation Banner (Direct Call Only) */}
           <div className="mt-10 sm:mt-14 p-5 sm:p-8 rounded-2xl bg-[#0D131F] border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
             <div className="space-y-1 max-w-xl">
               <span className="text-[9.5px] uppercase tracking-[0.25em] font-bold text-[#00D2FF] block">
@@ -331,22 +331,13 @@ export default function SalesPage() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-2.5 shrink-0 w-full sm:w-auto">
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Clutch Gaming Cafe! I have an inquiry regarding PlayStation console purchase / controller / service.")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-2.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_15px_rgba(0,210,255,0.6)] flex items-center justify-center gap-1.5 active:scale-95"
-              >
-                <MessageSquare size={13} />
-                <span>WhatsApp Us</span>
-              </a>
+            <div className="flex shrink-0 w-full sm:w-auto justify-center md:justify-end">
               <a
                 href="tel:+918489800905"
-                className="px-6 py-2.5 border border-slate-700 bg-[#080C14]/90 text-white rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#00D2FF]/15 hover:border-[#00D2FF] hover:text-[#00D2FF] transition-all flex items-center justify-center gap-1.5 active:scale-95"
+                className="w-full sm:w-auto px-7 py-3 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-[0_0_20px_rgba(0,210,255,0.6)] flex items-center justify-center gap-2 active:scale-95 cursor-pointer"
               >
-                <Phone size={13} className="text-[#00D2FF]" />
-                <span>Direct Call</span>
+                <Phone size={14} className="fill-current" />
+                <span>Direct Call: 84898 00905</span>
               </a>
             </div>
           </div>

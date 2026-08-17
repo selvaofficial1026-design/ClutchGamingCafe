@@ -30,7 +30,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const keyStats = [
-  { value: "700+", label: "Games Available", desc: "Top PlayStation & EA Titles Ready" },
+  { value: "400+", label: "Games Available", desc: "Top PlayStation & EA Titles Ready" },
   { value: "120Hz", label: "Fast-IPS Displays", desc: "Ultra-Fluid Low Latency Panels" },
   { value: "Low Ping", label: "Dedicated Fiber", desc: "Stable Sub-15ms Server Routing" },
   { value: "₹100/₹80", label: "Hourly Pricing", desc: "PS5: ₹100/hr • PS4: ₹80/hr" }
@@ -678,7 +678,7 @@ export default function AboutPage() {
                 href="/portfolio"
                 className="px-8 py-4 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(0,210,255,0.5)] active:scale-95 cursor-pointer"
               >
-                <span>700+ Games Vault</span>
+                <span>400+ Games Vault</span>
                 <ArrowUpRight size={16} />
               </Link>
             </div>

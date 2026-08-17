@@ -339,7 +339,7 @@ export default function ContactPage() {
               href="/portfolio"
               className="relative z-10 px-8 py-3.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all shrink-0 active:scale-95 shadow-[0_0_20px_rgba(0,210,255,0.5)]"
             >
-              Explore 700+ Games
+              Explore 400+ Games
             </Link>
           </div>
 

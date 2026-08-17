@@ -279,15 +279,15 @@ export default function PortfolioPage() {
               {/* Top Rate & Status Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/40 text-[#00D2FF] text-[9.5px] sm:text-xs font-bold uppercase tracking-[0.25em] shadow-xs">
                 <Flame size={14} className="animate-pulse" />
-                <span>700+ Titles • Direct Walk-In • ₹80/Hr</span>
+                <span>400+ Titles • Direct Walk-In • PS5 ₹100 • PS4 ₹80</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white italic leading-tight">
-                Massive Game Vault &amp; <span className="text-[#00D2FF] not-italic font-bold">High-FPS Gaming</span>
+                Massive Game Vault &amp; <span className="text-[#00D2FF] not-italic font-bold">120Hz Console Gaming</span>
               </h3>
 
               <p className="text-slate-300 text-xs sm:text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed">
-                All major Triple-A and competitive eSports titles pre-installed on ultra-fast Gen4 NVMe arrays. Play solo campaigns, multiplayer showdowns, or PS5 4K lounge co-op at flat ₹80/hr.
+                All major PlayStation titles pre-installed on ultra-fast Gen4 NVMe arrays. Play solo campaigns, multiplayer showdowns, or PS5 4K lounge co-op (PS5: ₹100/hr • PS4: ₹80/hr).
               </p>
 
               {/* 3 Gaming-Specific Feature Badges */}
@@ -296,7 +296,7 @@ export default function PortfolioPage() {
                   <Gamepad2 size={16} className="text-[#00D2FF] shrink-0" />
                   <div>
                     <span className="text-[9px] uppercase font-bold text-[#00D2FF] block">Library</span>
-                    <span className="text-[10px] sm:text-xs font-bold text-white/95">700+ Pre-Installed Titles</span>
+                    <span className="text-[10px] sm:text-xs font-bold text-white/95">400+ PlayStation Titles</span>
                   </div>
                 </div>
 

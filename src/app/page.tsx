@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 import MenuItemCard from "@/components/MenuItemCard";
 import SectionHeading from "@/components/SectionHeading";
 import VideoModal from "@/components/VideoModal";
-import { Star, User2, MapPin, Phone, Clock, Zap, Monitor, Gamepad2, ShieldCheck, Flame, Trophy, Play, Quote, CheckCircle2, Navigation, Sparkles } from "lucide-react";
+import { Star, User2, MapPin, Phone, Clock, Zap, Monitor, Gamepad2, ShieldCheck, Flame, Trophy, Play, Quote, CheckCircle2, Navigation, Sparkles, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 
 const featuredItems = [

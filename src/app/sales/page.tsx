@@ -29,8 +29,7 @@ interface Product {
   name: string;
   category: "ps5" | "ps4" | "pc" | "service" | "accessories";
   badge: string;
-  price: string;
-  originalPrice?: string;
+  availability: string;
   description: string;
   specs: string[];
   features: string[];
@@ -43,136 +42,132 @@ const products: Product[] = [
     id: "ps5-slim-disc",
     name: "Sony PlayStation 5 Slim (Disc Edition • 1TB)",
     category: "ps5",
-    badge: "Bestseller",
-    price: "₹49,990",
-    originalPrice: "₹54,990",
-    description: "Brand new Sony PS5 Slim Disc Edition with 1TB ultra-fast Gen4 SSD. Enjoy 4K 120FPS ray-traced gaming and DualSense haptics.",
+    badge: "Official Sony",
+    availability: "In Stock • Best Deal",
+    description: "Brand new Sony PS5 Slim Disc Edition with 1TB ultra-fast Gen4 SSD. Enjoy 4K 120FPS ray-traced gaming, Ultra HD Blu-ray, and DualSense haptics.",
     specs: [
-      "1TB Custom Gen4 NVMe SSD",
+      "1TB Custom Gen4 NVMe SSD Storage",
       "Ultra HD 4K Blu-ray Disc Drive",
       "4K 120Hz & 8K HDR Output Support",
-      "Tempest 3D AudioTech Engine",
+      "Tempest 3D AudioTech Sound Engine",
       "DualSense Wireless Controller Included",
-      "1 Year Sony India Official Warranty"
+      "1 Year Sony India Official Manufacturer Warranty"
     ],
-    features: ["100% Genuine Box Pack", "Free Game Setup", "Same-Day Handover"],
-    image: "/images/games/fifa.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the Sony PlayStation 5 Slim Disc Edition (1TB). Please share current stock availability, payment methods, and pickup/delivery details."
+    features: ["100% Genuine Box Pack", "Free Game Setup", "Store Handover / Fast Dispatch"],
+    image: "/images/store/ps5.jpg",
+    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the Sony PlayStation 5 Slim Disc Edition (1TB). Please share current stock availability, best pricing, and payment/pickup details."
   },
   {
     id: "ps5-slim-digital",
     name: "Sony PlayStation 5 Slim (Digital Edition • 1TB)",
     category: "ps5",
-    badge: "Popular Deal",
-    price: "₹44,990",
-    originalPrice: "₹49,990",
-    description: "Sleek all-digital PS5 with 1TB SSD. Instant digital game library downloads with blazing fast load speeds.",
+    badge: "Official Sony",
+    availability: "In Stock • Best Deal",
+    description: "Sleek all-digital PS5 with 1TB SSD. Instant digital game library downloads with blazing-fast load speeds.",
     specs: [
       "1TB High-Speed NVMe Storage",
       "All-Digital Compact Form Factor",
-      "Ray Tracing & 120FPS Fidelity",
-      "DualSense Adaptive Triggers",
-      "1 Year Official Manufacturer Warranty"
+      "Ray Tracing & 120FPS Game Fidelity",
+      "DualSense Adaptive Triggers & Haptics",
+      "1 Year Official Sony India Warranty"
     ],
-    features: ["Instant Setup", "PSN Account Assistance", "Store Pickup Available"],
-    image: "/images/games/godofwar.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the Sony PlayStation 5 Slim Digital Edition (1TB). Please share stock availability and best price deal."
+    features: ["Instant Setup", "PSN Account Setup Assistance", "Store Pickup Available"],
+    image: "/images/store/ps5.jpg",
+    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the Sony PlayStation 5 Slim Digital Edition (1TB). Please share stock availability and best pricing deal."
   },
   {
     id: "ps4-pro-1tb",
     name: "Sony PlayStation 4 Pro (1TB • 4K Enhanced)",
     category: "ps4",
-    badge: "Top Value",
-    price: "₹23,990",
-    originalPrice: "₹29,990",
+    badge: "Certified Tested",
+    availability: "Ready Stock",
     description: "Certified tested & serviced PS4 Pro 1TB console. Delivers 4K boost mode performance for God of War, GTA V, and FC 24.",
     specs: [
-      "1TB Storage (Huge Game Capacity)",
-      "4K HDR & Pro Boost Mode",
+      "1TB Storage (Huge Game Library Capacity)",
+      "4K HDR & Pro Boost Mode Performance",
       "1x Sony DualShock 4 Wireless Controller",
-      "Deep Thermal Cleaned & New Paste",
+      "Deep Thermal Cleaned with New Thermal Paste",
       "Preloaded Games Available On Demand",
       "Store Testing & Replacement Warranty"
     ],
     features: ["Fully Tested 100%", "Preloaded Hit Games", "Ready to Plug & Play"],
-    image: "/images/games/gta5.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I am interested in buying the PS4 Pro 1TB 4K Edition. Please share available units, game bundles, and warranty details."
+    image: "/images/store/ps4.jpg",
+    whatsappMessage: "Hello Clutch Gaming Cafe! I am interested in buying the PS4 Pro 1TB 4K Edition. Please share available units, game bundles, and pricing."
   },
   {
     id: "ps4-slim-1tb",
     name: "Sony PlayStation 4 Slim (1TB / 500GB Edition)",
     category: "ps4",
-    badge: "Budget Friendly",
-    price: "₹18,990",
-    originalPrice: "₹24,990",
+    badge: "Certified Tested",
+    availability: "Ready Stock",
     description: "Compact, silent, and highly reliable PS4 Slim console. Ideal for family gaming, FIFA tournaments, and solo campaigns.",
     specs: [
-      "1TB / 500GB High-Speed Storage",
+      "1TB / 500GB High-Speed Storage Options",
       "Whisper-Quiet Slim Chassis",
       "1x Original DualShock 4 Controller",
-      "All Connection Cables Included",
-      "Tested with 100% Quality Check"
+      "All Connection Cables & Power Supply Included",
+      "Tested with 100% Comprehensive Quality Check"
     ],
     features: ["Budget Friendly", "Low Power Draw", "Ready to Game"],
-    image: "/images/games/ittakestwo.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the PlayStation 4 Slim console. Please share price options (500GB/1TB) and condition."
+    image: "/images/store/ps4.jpg",
+    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy the PlayStation 4 Slim console. Please share price options (500GB/1TB) and stock details."
   },
   {
     id: "custom-rtx-gaming-pc",
     name: "Custom RTX Tournament Gaming PC Rig",
     category: "pc",
-    badge: "High FPS Rig",
-    price: "From ₹58,000",
+    badge: "Custom Build",
+    availability: "Built to Order",
     description: "Custom-tailored battle station built for high-FPS competitive esports and 1440p ultra gaming. Assembled with branded parts and stress-tested.",
     specs: [
-      "Intel Core i5 13th/14th Gen or Ryzen 5",
+      "Intel Core i5 13th/14th Gen or AMD Ryzen 5",
       "NVIDIA GeForce RTX 4060 / 3060 8GB/12GB",
       "16GB / 32GB DDR4/DDR5 RGB Gaming RAM",
       "1TB M.2 NVMe Gen4 High-Speed SSD",
       "650W 80+ Bronze Certified Power Supply",
       "Panoramic Tempered Glass RGB Cabinet",
-      "3 Years Brand Warranty on Components"
+      "3 Years Brand Warranty on Internal Components"
     ],
     features: ["Custom Built", "Zero Bottleneck", "High-FPS Competitive Ready"],
-    image: "/images/arena/zone_pc_arena.jpg",
+    image: "/images/store/pc.jpg",
     whatsappMessage: "Hello Clutch Gaming Cafe! I want to build/buy a Custom RTX Gaming PC. Please share configuration options and quotation."
   },
   {
     id: "dualsense-accessories",
     name: "Sony DualSense & DualShock Wireless Controllers",
     category: "accessories",
-    badge: "Original Sony",
-    price: "From ₹2,490",
+    badge: "100% Original",
+    availability: "In Stock",
     description: "100% genuine wireless gamepads in multiple colorways. Perfect for 2-player local co-op and tournament matches.",
     specs: [
       "PS5 DualSense (Haptic & Adaptive Triggers)",
       "PS4 DualShock 4 Wireless Controllers",
-      "Colors: Midnight Black, White, Cosmic Red",
+      "Colors: Midnight Black, White, Cosmic Red, Blue",
       "Ergonomic Non-Slip Precision Grip",
       "Built-in Microphone & Headset Jack"
     ],
-    features: ["100% Original", "Instant Stock", "Warranty Backed"],
-    image: "/images/arena/zone_ps5_lounge.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy PS5 DualSense / PS4 DualShock controllers. Please share available colors and price."
+    features: ["100% Original Sony", "Instant Stock", "Warranty Backed"],
+    image: "/images/store/controllers.jpg",
+    whatsappMessage: "Hello Clutch Gaming Cafe! I want to buy PS5 DualSense / PS4 DualShock controllers. Please share available colors and pricing."
   },
   {
     id: "console-pc-service",
-    name: "Console & PC Thermal Service / Chipset Repair",
+    name: "Console & PC Thermal Service / Hardware Repair",
     category: "service",
     badge: "Expert Service",
-    price: "From ₹499",
+    availability: "Same-Day Service",
     description: "Professional gaming console and PC maintenance. Fix overheating, fan noise, controller stick drift, and storage upgrades.",
     specs: [
       "PS4 & PS5 Deep Dust Cleaning & Heatsink Wash",
-      "Premium Thermal Paste & Liquid Metal Service",
-      "Controller Analog Stick Drift Fix / Replacement",
-      "HDD to SSD Upgrade & Data Cloning",
-      "PC Cable Management & Thermal Optimization",
-      "Same-Day Quick Turnaround in Trichy"
+      "Premium Thermal Paste & Liquid Metal Replacement",
+      "Controller Analog Stick Drift Fix & Button Servicing",
+      "HDD to SSD Upgrade & High-Speed Data Cloning",
+      "PC Cable Management & Thermal Airflow Optimization",
+      "Same-Day Quick Turnaround at Samayapuram Lounge"
     ],
-    features: ["Expert Technicians", "Before/After Temps Check", "Affordable Rates"],
+    features: ["Expert Technicians", "Before/After Temps Check", "Affordable Service"],
     image: "/images/arena/zone_vip_lan.jpg",
-    whatsappMessage: "Hello Clutch Gaming Cafe! I want to book a service/repair for my PlayStation Console / Gaming PC. Please guide me on timings and quote."
+    whatsappMessage: "Hello Clutch Gaming Cafe! I want to book a service/repair for my PlayStation Console / Gaming PC. Please guide me on timings and service cost."
   }
 ];
 
@@ -202,7 +197,7 @@ export default function SalesPage() {
           {/* Header */}
           <SectionHeading
             subtitle="Clutch Gaming Store"
-            title="Sales, Custom Rigs & Console Services"
+            title="Sales, Custom Rigs &amp; Console Services"
           />
 
           {/* Quick Store Trust Badges */}
@@ -212,8 +207,8 @@ export default function SalesPage() {
                 <ShieldCheck size={20} />
               </div>
               <div>
-                <span className="text-xs sm:text-sm font-bold text-white block">100% Tested</span>
-                <span className="text-[10px] text-slate-400">Genuine Units &amp; Warranty</span>
+                <span className="text-xs sm:text-sm font-bold text-white block">100% Genuine</span>
+                <span className="text-[10px] text-slate-400">Tested &amp; Certified Units</span>
               </div>
             </div>
 
@@ -222,7 +217,7 @@ export default function SalesPage() {
                 <Truck size={20} />
               </div>
               <div>
-                <span className="text-xs sm:text-sm font-bold text-white block">Fast Delivery</span>
+                <span className="text-xs sm:text-sm font-bold text-white block">Fast Handover</span>
                 <span className="text-[10px] text-slate-400">Trichy &amp; Surrounding Areas</span>
               </div>
             </div>
@@ -242,7 +237,7 @@ export default function SalesPage() {
                 <MessageSquare size={20} />
               </div>
               <div>
-                <span className="text-xs sm:text-sm font-bold text-white block">WhatsApp Direct</span>
+                <span className="text-xs sm:text-sm font-bold text-white block">Direct Inquiry</span>
                 <span className="text-[10px] text-slate-400">+91 84898 00905</span>
               </div>
             </div>
@@ -251,10 +246,10 @@ export default function SalesPage() {
           {/* Category Filter Tabs */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
             {[
-              { id: "all", label: "All Store Items" },
+              { id: "all", label: "All Products & Services" },
               { id: "ps5", label: "PlayStation 5" },
               { id: "ps4", label: "PlayStation 4" },
-              { id: "pc", label: "Gaming PC Rigs" },
+              { id: "pc", label: "Custom Gaming PCs" },
               { id: "accessories", label: "Controllers & Gear" },
               { id: "service", label: "Console & PC Service" },
             ].map((tab) => (
@@ -292,7 +287,7 @@ export default function SalesPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D131F] via-[#0D131F]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D131F] via-[#0D131F]/30 to-transparent" />
                   
                   {/* Badge Top Left */}
                   <div className="absolute top-3 left-3 z-10">
@@ -301,16 +296,11 @@ export default function SalesPage() {
                     </span>
                   </div>
 
-                  {/* Price Tag Bottom Right */}
+                  {/* Availability Tag Bottom Right */}
                   <div className="absolute bottom-3 right-3 z-10 bg-[#080C14]/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-slate-700 shadow-xl">
-                    <span className="text-sm sm:text-base font-bold text-[#00D2FF] font-sans block leading-none">
-                      {product.price}
+                    <span className="text-xs font-bold text-[#00D2FF] font-sans block leading-none">
+                      {product.availability}
                     </span>
-                    {product.originalPrice && (
-                      <span className="text-[10px] text-slate-500 line-through block mt-0.5">
-                        {product.originalPrice}
-                      </span>
-                    )}
                   </div>
                 </div>
 
@@ -328,7 +318,7 @@ export default function SalesPage() {
                     {/* Specs Bullet Points */}
                     <div className="space-y-1.5 pt-3 border-t border-slate-800">
                       <span className="text-[9.5px] uppercase tracking-widest font-bold text-[#00D2FF] block mb-2">
-                        Specifications &amp; Inclusions:
+                        Specifications &amp; Features:
                       </span>
                       {product.specs.map((spec, sI) => (
                         <div key={sI} className="flex items-start gap-2 text-[11px] text-slate-300">
@@ -339,7 +329,7 @@ export default function SalesPage() {
                     </div>
                   </div>
 
-                  {/* Buy Now on WhatsApp Action Button */}
+                  {/* Order on WhatsApp Action Button */}
                   <div className="pt-4 border-t border-slate-800">
                     <a
                       href={createWhatsAppLink(product.whatsappMessage)}
@@ -348,7 +338,7 @@ export default function SalesPage() {
                       className="w-full py-3.5 px-5 bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-full font-bold text-xs uppercase tracking-widest text-center transition-all duration-200 flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_25px_rgba(37,211,102,0.55)] active:scale-95 cursor-pointer"
                     >
                       <MessageSquare size={15} />
-                      <span>Buy Now on WhatsApp</span>
+                      <span>Order on WhatsApp</span>
                     </a>
                   </div>
 
@@ -361,13 +351,13 @@ export default function SalesPage() {
           <div className="mt-14 sm:mt-20 p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-[2.25rem] bg-[#0D131F] border border-slate-800 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 text-center md:text-left">
             <div className="space-y-2 max-w-2xl">
               <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#00D2FF] block">
-                Looking for Custom Configuration or Bulk Deals?
+                Looking for Custom Rig Specs or Bulk Deals?
               </span>
               <h3 className="text-2xl sm:text-3xl font-serif text-white italic">
-                Get Instant Pricing on Any Console or Rig
+                Get Best Pricing on Any Console or Rig
               </h3>
               <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
-                Connect directly with our hardware specialists for stock inquiries, game preloading, trade-ins, or on-site testing at our Samayapuram lounge.
+                Connect directly with our team for live stock availability, game preloading, trade-ins, or on-site testing at our Samayapuram lounge.
               </p>
             </div>
 

@@ -81,8 +81,8 @@ export default function Home() {
 
       {/* Transparent Rate Card Banner */}
       <section className="py-10 sm:py-12 bg-[#0D131F] text-white relative z-10 border-y border-[#00D2FF]/20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-5 text-center md:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
+          <div className="flex items-center gap-4 sm:gap-5 text-center md:text-left">
             <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#00D2FF]/15 border border-[#00D2FF]/40 flex items-center justify-center text-[#00D2FF] shrink-0 hidden sm:flex shadow-[0_0_20px_rgba(0,210,255,0.3)]">
               <Zap size={30} />
             </div>
@@ -99,22 +99,22 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-semibold text-white/90">
-            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS5 4K 120Hz: ₹100/hr
+          <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 text-xs font-semibold text-white/90">
+            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs">
+              <Gamepad2 size={15} className="text-[#00D2FF] shrink-0" /> PS5 4K: ₹100/hr
             </div>
-            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <Gamepad2 size={15} className="text-[#00D2FF]" /> PS4 HD: ₹80/hr
+            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs">
+              <Gamepad2 size={15} className="text-[#00D2FF] shrink-0" /> PS4 HD: ₹80/hr
             </div>
-            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-4 py-2.5 rounded-full">
-              <Monitor size={15} className="text-[#00D2FF]" /> 120Hz Fast-IPS Displays
+            <div className="flex items-center gap-2 bg-[#080C14] border border-slate-700 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs">
+              <Monitor size={15} className="text-[#00D2FF] shrink-0" /> 120Hz Fast-IPS Displays
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Arena & Games Showcase */}
-      <section className="py-16 sm:py-24 md:py-32 px-6 md:px-12 bg-gradient-to-b from-[#080C14] via-[#0D131F]/60 to-[#080C14] relative z-10">
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-12 bg-gradient-to-b from-[#080C14] via-[#0D131F]/60 to-[#080C14] relative z-10">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             subtitle="The Highlights"
@@ -123,17 +123,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {featuredItems.map((item, index) => (
               <MenuItemCard 
-                key={index} 
+                key={item.name} 
                 index={index} 
                 {...item} 
                 onPlay={(id) => setActiveVideo(id)}
               />
             ))}
           </div>
-          <div className="mt-14 sm:mt-16 md:mt-20 text-center">
+          <div className="mt-12 sm:mt-16 md:mt-20 text-center px-2">
             <Link
               href="/portfolio"
-              className="inline-block px-10 sm:px-12 py-4 sm:py-5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-[0.25em] hover:bg-white transition-all shadow-[0_10px_35px_rgba(0,210,255,0.4)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.7)] active:scale-95 cursor-pointer"
+              className="inline-block w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-[0.18em] sm:tracking-[0.25em] hover:bg-white transition-all shadow-[0_10px_35px_rgba(0,210,255,0.4)] hover:shadow-[0_15px_45px_rgba(0,210,255,0.7)] active:scale-95 cursor-pointer text-center"
             >
               Explore Full Game Vault
             </Link>
@@ -142,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* Condensed About Section */}
-      <section id="about" className="py-16 sm:py-20 md:py-24 px-6 md:px-12 bg-[#080C14] overflow-hidden relative z-10 border-t border-slate-800">
+      <section id="about" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 bg-[#080C14] overflow-hidden relative z-10 border-t border-slate-800">
         <div className="max-w-4xl mx-auto text-center">
            <span className="text-[10px] uppercase tracking-[0.5em] text-[#00D2FF] font-bold mb-4 block">Our Philosophy</span>
            <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif text-white italic leading-tight mb-6">
@@ -285,9 +285,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Prominent Location Banner for Visitors */}
-      <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-8 md:px-12 bg-[#080C14] relative z-10 border-t border-slate-800">
-        <div className="group max-w-5xl mx-auto rounded-2xl sm:rounded-[2.25rem] bg-[#0D131F] text-white p-6 sm:p-8 md:p-10 relative overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.8)] hover:shadow-[0_20px_50px_rgba(0,210,255,0.25)] hover:-translate-y-1 border border-slate-800 hover:border-[#00D2FF]/50 transition-all duration-500">
+      {/* Location & Operating Hours Action Card */}
+      <section id="location" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 bg-gradient-to-t from-[#0D131F] to-[#080C14] relative z-10 border-t border-slate-800">
+        <div className="group max-w-5xl mx-auto rounded-2xl sm:rounded-[2.25rem] bg-[#0D131F] text-white p-5 sm:p-8 md:p-10 relative overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.8)] hover:shadow-[0_20px_50px_rgba(0,210,255,0.25)] hover:-translate-y-1 border border-slate-800 hover:border-[#00D2FF]/50 transition-all duration-500">
           
           {/* Subtle Ambient Glow */}
           <div 

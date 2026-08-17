@@ -136,7 +136,7 @@ export default function Navbar() {
           aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-nav"
-          className="md:hidden p-2 text-white hover:text-[#00D2FF] transition-colors shrink-0"
+          className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center p-2 text-white hover:text-[#00D2FF] transition-colors shrink-0"
           onClick={toggleMenu}
         >
           {isOpen ? <X size={26} /> : <Menu size={26} />}
@@ -147,6 +147,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-nav"
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
@@ -160,12 +161,12 @@ export default function Navbar() {
               <button
                 onClick={closeMenu}
                 aria-label="Close mobile menu"
-                className="text-white hover:text-[#00D2FF]"
+                className="min-w-[44px] min-h-[44px] flex items-center justify-center -mr-2 text-white hover:text-[#00D2FF] transition-colors cursor-pointer"
               >
-                <X size={36} />
+                <X size={32} />
               </button>
             </div>
-            <div className="flex flex-col gap-7 mt-6">
+            <div className="flex flex-col gap-6 mt-4">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
@@ -177,7 +178,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={closeMenu}
                     className={cn(
-                      "text-2xl font-serif font-bold tracking-widest uppercase transition-colors duration-200",
+                      "text-2xl font-serif font-bold tracking-widest uppercase transition-colors duration-200 py-1.5 block",
                       pathname === link.href ? "text-[#00D2FF]" : "text-white/80 hover:text-[#00D2FF]"
                     )}
                   >
@@ -186,11 +187,11 @@ export default function Navbar() {
                 </motion.div>
               ))}
             </div>
-            <div className="mt-auto space-y-4 pt-6 border-t border-white/10">
+            <div className="mt-auto space-y-3 pt-6 border-t border-white/10">
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#00D2FF] font-bold">Connect With Us</p>
               <div className="flex gap-6 text-white/80">
-                <a href="https://www.instagram.com/clutch.trichy/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest hover:text-[#00D2FF] transition-colors">Instagram</a>
-                <a href="https://wa.me/918489800905" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest hover:text-[#00D2FF] transition-colors">WhatsApp</a>
+                <a href="https://www.instagram.com/clutch.trichy/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest hover:text-[#00D2FF] transition-colors py-2 inline-block">Instagram</a>
+                <a href="https://wa.me/918489800905" target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase tracking-widest hover:text-[#00D2FF] transition-colors py-2 inline-block">WhatsApp</a>
               </div>
             </div>
           </motion.div>

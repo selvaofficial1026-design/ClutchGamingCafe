@@ -76,12 +76,12 @@ export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="flex items-center gap-1.5 px-3 py-1 bg-slate-800 hover:bg-[#00D2FF] text-white hover:text-[#080C14] rounded-full transition-all duration-200 text-xs font-bold active:scale-95 cursor-pointer"
+                className="min-w-[40px] min-h-[40px] sm:min-w-0 sm:min-h-0 flex items-center justify-center gap-1.5 px-3 py-2 sm:py-1 bg-slate-800 hover:bg-[#00D2FF] text-white hover:text-[#080C14] rounded-full transition-all duration-200 text-xs font-bold active:scale-95 cursor-pointer"
                 title="Close (Esc)"
                 aria-label="Close trailer modal"
               >
                 <span className="text-[10px] uppercase tracking-wider hidden sm:inline-block">Close</span>
-                <X size={16} />
+                <X size={18} />
               </button>
             </div>
 
@@ -97,7 +97,7 @@ export default function VideoModal({ isOpen, onClose, videoId }: VideoModalProps
             </div>
 
             {/* Bottom Caption Bar */}
-            <div className="px-5 py-2.5 bg-[#080C14] flex items-center justify-between text-slate-400 text-[11px] border-t border-slate-800">
+            <div className="px-4 sm:px-5 py-2.5 bg-[#080C14] flex flex-wrap items-center justify-between gap-1.5 text-slate-400 text-[10px] sm:text-[11px] border-t border-slate-800">
               <span className="text-[#00D2FF] font-semibold">PS5: ₹100/Hr • PS4: ₹80/Hr</span>
               <a 
                 href={`https://www.youtube.com/watch?v=${videoId}`}

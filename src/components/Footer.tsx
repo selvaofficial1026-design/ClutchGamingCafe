@@ -36,10 +36,10 @@ export default function Footer() {
                 href="https://www.instagram.com/clutch.trichy/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-8 h-8 rounded-full bg-[#0D131F] border border-slate-700 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] active:bg-gradient-to-tr active:from-[#F58529] active:via-[#DD2A7B] active:to-[#8134AF] hover:shadow-[0_0_15px_rgba(221,42,123,0.6)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
+                className="w-10 h-10 sm:w-8 sm:h-8 rounded-full bg-[#0D131F] border border-slate-700 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] active:bg-gradient-to-tr active:from-[#F58529] active:via-[#DD2A7B] active:to-[#8134AF] hover:shadow-[0_0_15px_rgba(221,42,123,0.6)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
                 aria-label="Instagram Profile"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
               </a>
 
               {/* WhatsApp */}
@@ -47,13 +47,13 @@ export default function Footer() {
                 href="https://wa.me/918489800905" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-8 h-8 rounded-full bg-[#0D131F] border border-slate-700 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#25D366] active:bg-[#25D366] hover:shadow-[0_0_15px_rgba(37,211,102,0.6)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
+                className="w-10 h-10 sm:w-8 sm:h-8 rounded-full bg-[#0D131F] border border-slate-700 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#25D366] active:bg-[#25D366] hover:shadow-[0_0_15px_rgba(37,211,102,0.6)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
                 aria-label="WhatsApp Direct Chat"
               >
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
-                  width="16" 
-                  height="16" 
+                  width="17" 
+                  height="17" 
                   viewBox="0 0 24 24" 
                   fill="currentColor" 
                   className="transition-transform group-hover:scale-110"
@@ -65,10 +65,10 @@ export default function Footer() {
               {/* Phone Call */}
               <a 
                 href="tel:+918489800905" 
-                className="w-8 h-8 rounded-full bg-[#0D131F] border border-slate-700 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#00D2FF] hover:text-[#080C14] hover:shadow-[0_0_15px_rgba(0,210,255,0.8)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
+                className="w-10 h-10 sm:w-8 sm:h-8 rounded-full bg-[#0D131F] border border-slate-700 flex items-center justify-center text-white/80 hover:text-white hover:border-transparent hover:bg-[#00D2FF] hover:text-[#080C14] hover:shadow-[0_0_15px_rgba(0,210,255,0.8)] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer" 
                 aria-label="Direct Phone Call"
               >
-                <Phone size={14} className="transition-transform group-hover:scale-110" />
+                <Phone size={15} className="transition-transform group-hover:scale-110" />
               </a>
             </div>
           </div>

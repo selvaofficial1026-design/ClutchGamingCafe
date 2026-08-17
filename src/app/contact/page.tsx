@@ -222,8 +222,8 @@ export default function ContactPage() {
                 <div className="relative z-10 space-y-4">
                   <div>
                     {/* Live Status Pill */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/30 text-[#00D2FF] text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.22em] mb-2">
-                      <span className="w-2 h-2 rounded-full bg-[#00D2FF] shadow-[0_0_6px_#00D2FF] animate-pulse" />
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/30 text-[#00D2FF] text-[8px] sm:text-[10px] font-bold uppercase tracking-normal sm:tracking-[0.22em] mb-2 max-w-full text-center">
+                      <span className="w-2 h-2 rounded-full bg-[#00D2FF] shadow-[0_0_6px_#00D2FF] animate-pulse shrink-0" />
                       <span>Zero Wait-Time • Instant Station Assignment</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-serif italic text-white leading-tight group-hover:text-[#00D2FF] transition-colors">
@@ -322,9 +322,9 @@ export default function ContactPage() {
           </div>
 
           {/* Quick Route Guide Bar */}
-          <div className="group mt-12 p-8 md:p-10 rounded-[2.25rem] bg-[#0D131F] border border-slate-800 hover:border-[#00D2FF]/60 hover:shadow-[0_15px_45px_rgba(0,210,255,0.2)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden cursor-pointer">
+          <div className="group mt-8 sm:mt-12 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-[2.25rem] bg-[#0D131F] border border-slate-800 hover:border-[#00D2FF]/60 hover:shadow-[0_15px_45px_rgba(0,210,255,0.2)] hover:-translate-y-1.5 transition-all duration-500 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden cursor-pointer">
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#00D2FF]/10 rounded-full blur-3xl group-hover:bg-[#00D2FF]/20 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
-            <div className="relative z-10">
+            <div className="relative z-10 text-center md:text-left">
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#00D2FF] font-bold block mb-1">
                 Landmark &amp; Parking
               </span>
@@ -337,7 +337,7 @@ export default function ContactPage() {
             </div>
             <Link 
               href="/portfolio"
-              className="relative z-10 px-8 py-3.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all shrink-0 active:scale-95 shadow-[0_0_20px_rgba(0,210,255,0.5)]"
+              className="relative z-10 w-full sm:w-auto text-center px-8 py-3.5 bg-[#00D2FF] text-[#080C14] rounded-full font-black text-xs uppercase tracking-widest hover:bg-white transition-all shrink-0 active:scale-95 shadow-[0_0_20px_rgba(0,210,255,0.5)]"
             >
               Explore 400+ Games
             </Link>

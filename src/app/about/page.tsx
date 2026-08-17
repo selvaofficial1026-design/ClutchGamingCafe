@@ -134,9 +134,9 @@ export default function AboutPage() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-5 py-2 mb-6 border border-[#00D2FF]/40 rounded-full text-[#00D2FF] text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase backdrop-blur-md bg-[#080C14]/80 shadow-[0_0_20px_rgba(0,210,255,0.25)]"
+            className="inline-flex items-center gap-1.5 px-3.5 sm:px-5 py-1.5 sm:py-2 mb-6 border border-[#00D2FF]/40 rounded-full text-[#00D2FF] text-[9px] sm:text-xs font-bold tracking-normal sm:tracking-[0.25em] uppercase backdrop-blur-md bg-[#080C14]/80 shadow-[0_0_20px_rgba(0,210,255,0.25)] text-center max-w-[94vw]"
           >
-            <Sparkles size={14} /> Trichy&apos;s Premier Gaming Lounge • PS5: ₹100/Hr • PS4: ₹80/Hr
+            <Sparkles size={14} className="shrink-0" /> Trichy&apos;s Premier Gaming Lounge • PS5: ₹100/Hr • PS4: ₹80/Hr
           </motion.span>
           
           {/* Kinetic Word-by-Word Slide-In from Left */}
@@ -202,7 +202,7 @@ export default function AboutPage() {
               <button
                 onClick={() => setMobileCompareTab("sidebyside")}
                 className={cn(
-                  "py-2 px-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer",
+                  "py-2 px-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer min-h-[44px] flex items-center justify-center",
                   mobileCompareTab === "sidebyside"
                     ? "bg-[#00D2FF] text-[#080C14] font-black shadow-[0_0_12px_rgba(0,210,255,0.5)]"
                     : "text-slate-300 hover:text-white"
@@ -213,7 +213,7 @@ export default function AboutPage() {
               <button
                 onClick={() => setMobileCompareTab("ps5")}
                 className={cn(
-                  "py-2 px-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer",
+                  "py-2 px-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer min-h-[44px] flex items-center justify-center",
                   mobileCompareTab === "ps5"
                     ? "bg-[#00D2FF] text-[#080C14] font-black shadow-[0_0_12px_rgba(0,210,255,0.5)]"
                     : "text-slate-300 hover:text-white"
@@ -224,7 +224,7 @@ export default function AboutPage() {
               <button
                 onClick={() => setMobileCompareTab("ps4")}
                 className={cn(
-                  "py-2 px-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer",
+                  "py-2 px-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-200 text-center cursor-pointer min-h-[44px] flex items-center justify-center",
                   mobileCompareTab === "ps4"
                     ? "bg-[#00D2FF] text-[#080C14] font-black shadow-[0_0_12px_rgba(0,210,255,0.5)]"
                     : "text-slate-300 hover:text-white"
@@ -651,7 +651,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 p-8 md:p-12 rounded-[2.5rem] bg-[#0D131F] text-white border border-slate-800 hover:border-[#00D2FF]/40 shadow-[0_15px_45px_rgba(0,0,0,0.8)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8"
+            className="mt-12 sm:mt-16 p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-[2.5rem] bg-[#0D131F] text-white border border-slate-800 hover:border-[#00D2FF]/40 shadow-[0_15px_45px_rgba(0,0,0,0.8)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8"
           >
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#00D2FF]/10 rounded-full blur-[90px] pointer-events-none" />
             
@@ -1003,10 +1003,10 @@ export default function AboutPage() {
                     e.stopPropagation();
                     setZoomedZoneIndex((prev) => (prev !== null ? (prev - 1 + zones.length) % zones.length : 0));
                   }}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/75 hover:bg-[#00D2FF] hover:text-[#080C14] text-white flex items-center justify-center border border-white/20 shadow-lg transition-all cursor-pointer z-10"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-10 sm:h-10 rounded-full bg-black/80 hover:bg-[#00D2FF] hover:text-[#080C14] text-white flex items-center justify-center border border-white/20 shadow-lg transition-all cursor-pointer z-10 min-w-[44px] min-h-[44px]"
                   aria-label="Previous Zone"
                 >
-                  <ChevronLeft size={18} />
+                  <ChevronLeft size={20} />
                 </button>
 
                 <button
@@ -1014,10 +1014,10 @@ export default function AboutPage() {
                     e.stopPropagation();
                     setZoomedZoneIndex((prev) => (prev !== null ? (prev + 1) % zones.length : 0));
                   }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/75 hover:bg-[#00D2FF] hover:text-[#080C14] text-white flex items-center justify-center border border-white/20 shadow-lg transition-all cursor-pointer z-10"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-10 sm:h-10 rounded-full bg-black/80 hover:bg-[#00D2FF] hover:text-[#080C14] text-white flex items-center justify-center border border-white/20 shadow-lg transition-all cursor-pointer z-10 min-w-[44px] min-h-[44px]"
                   aria-label="Next Zone"
                 >
-                  <ChevronRight size={18} />
+                  <ChevronRight size={20} />
                 </button>
               </div>
 

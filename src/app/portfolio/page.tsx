@@ -178,9 +178,10 @@ export default function PortfolioPage() {
           />
 
           {/* Quick Rate Pill */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-            <div className="px-6 py-2.5 rounded-full bg-[#0D131F] text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 border border-[#00D2FF]/30 shadow-[0_0_15px_rgba(0,210,255,0.15)]">
-              <Sparkles size={14} className="text-[#00D2FF]" /> PS5 4K: ₹100/hr (Ctrl ₹80) • PS4 HD: ₹80/hr (Ctrl ₹60)
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-8 sm:mb-12 px-2">
+            <div className="px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-2xl sm:rounded-full bg-[#0D131F] text-white text-[10px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-widest flex items-center justify-center text-center gap-2 border border-[#00D2FF]/30 shadow-[0_0_15px_rgba(0,210,255,0.15)] max-w-full">
+              <Sparkles size={14} className="text-[#00D2FF] shrink-0" /> 
+              <span>PS5 4K: ₹100/hr (Ctrl ₹80) • PS4 HD: ₹80/hr (Ctrl ₹60)</span>
             </div>
           </div>
 
@@ -195,7 +196,7 @@ export default function PortfolioPage() {
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={cn(
-                      "py-2 px-1 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
+                      "py-2.5 px-1.5 rounded-xl text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[44px]",
                       activeCategory === cat 
                         ? "bg-[#00D2FF] text-[#080C14] shadow-[0_0_15px_rgba(0,210,255,0.6)] font-black scale-[1.02]" 
                         : "bg-[#0D131F] text-slate-300 border border-slate-800 hover:border-[#00D2FF]/40"
@@ -212,7 +213,7 @@ export default function PortfolioPage() {
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
                     className={cn(
-                      "py-2 px-1 rounded-full text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[38px]",
+                      "py-2.5 px-1.5 rounded-xl text-[9px] font-bold tracking-tight uppercase transition-all duration-300 flex items-center justify-center text-center cursor-pointer shadow-xs leading-tight min-h-[44px]",
                       activeCategory === cat 
                         ? "bg-[#00D2FF] text-[#080C14] shadow-[0_0_15px_rgba(0,210,255,0.6)] font-black scale-[1.02]" 
                         : "bg-[#0D131F] text-slate-300 border border-slate-800 hover:border-[#00D2FF]/40"
@@ -277,8 +278,8 @@ export default function PortfolioPage() {
             <div className="relative z-10 space-y-4">
               
               {/* Top Rate & Status Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/40 text-[#00D2FF] text-[9.5px] sm:text-xs font-bold uppercase tracking-[0.25em] shadow-xs">
-                <Flame size={14} className="animate-pulse" />
+              <div className="inline-flex items-center justify-center text-center gap-1.5 px-3.5 py-1 rounded-full bg-[#00D2FF]/15 border border-[#00D2FF]/40 text-[#00D2FF] text-[8.5px] sm:text-xs font-bold uppercase tracking-normal sm:tracking-[0.25em] shadow-xs max-w-full">
+                <Flame size={14} className="animate-pulse shrink-0" />
                 <span>400+ Titles • Direct Walk-In • PS5 ₹100 • PS4 ₹80</span>
               </div>
 

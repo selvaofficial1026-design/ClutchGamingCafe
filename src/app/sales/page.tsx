@@ -228,7 +228,7 @@ export default function SalesPage() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={cn(
-                  "px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer",
+                  "px-4 sm:px-5 py-2.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer min-h-[44px] flex items-center justify-center",
                   activeTab === tab.id
                     ? "bg-[#00D2FF] text-[#080C14] font-black shadow-[0_0_15px_rgba(0,210,255,0.6)] scale-105"
                     : "bg-[#0D131F] text-slate-300 hover:text-white border border-slate-800 hover:border-[#00D2FF]/40"
@@ -303,9 +303,9 @@ export default function SalesPage() {
                       href={createWhatsAppLink(product.whatsappMessage)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-2.5 px-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-full font-bold text-[11px] uppercase tracking-wider text-center transition-all duration-200 flex items-center justify-center gap-1.5 shadow-[0_3px_15px_rgba(37,211,102,0.3)] hover:shadow-[0_4px_20px_rgba(37,211,102,0.5)] active:scale-95 cursor-pointer"
+                      className="w-full py-3 px-4 min-h-[44px] bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-full font-bold text-xs uppercase tracking-wider text-center transition-all duration-200 flex items-center justify-center gap-2 shadow-[0_3px_15px_rgba(37,211,102,0.3)] hover:shadow-[0_4px_20px_rgba(37,211,102,0.5)] active:scale-95 cursor-pointer"
                     >
-                      <MessageSquare size={13} />
+                      <MessageSquare size={15} />
                       <span>Order on WhatsApp</span>
                     </a>
                   </div>
